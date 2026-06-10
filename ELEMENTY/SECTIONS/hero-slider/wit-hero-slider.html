@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Akademia WIT - hero slider</title>
+
+    <!-- Bootstrap 5.3.8: projekt korzysta juz z tego importu w bs_tab_acc-flex.html. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./wit-hero-slider.css">
+  </head>
+
+
+  <body class="wit-hero-slider-page">
+
+    <main>
+      <section class="wit-hero-slider-wrap" aria-label="Najważniejsze informacje Akademii WIT">
+        <div
+          id="witHeroCarousel"
+          class="carousel slide carousel-fade wit-hero-slider"
+          data-wit-interval="4000"
+          role="region"
+          aria-label="Slider hero Akademii WIT"
+          aria-roledescription="carousel"
+        >
+          <div class="carousel-indicators wit-hero-slider__indicators">
+            <button type="button" data-bs-target="#witHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slajd 1: Studiuj przyszłość na Akademii WIT"></button>
+            <button type="button" data-bs-target="#witHeroCarousel" data-bs-slide-to="1" aria-label="Slajd 2: Kierunki łączące praktykę i technologię"></button>
+            <button type="button" data-bs-target="#witHeroCarousel" data-bs-slide-to="2" aria-label="Slajd 3: Projekty, wystawy i społeczność WIT"></button>
+          </div>
+
+          <div class="carousel-inner wit-hero-slider__inner">
+            <!-- Slajd: podmien teksty, linki, obraz oraz --wit-hero-object-position. -->
+            <article class="carousel-item wit-hero-slider__item wit-hero-slider__item--light active" style="--wit-hero-object-position: calc(50% + 20%) center;">
+              <img
+                class="wit-hero-slider__image"
+                src="./01-banner-hero-dzien2.jpg"
+                alt="Studentka Akademii WIT na tle kolorowej grafiki ściennej"
+                width="2000"
+                height="700"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+              >
+              <div class="wit-hero-slider__shade" aria-hidden="true"></div>
+              <div class="wit-hero-slider__content-wrap">
+                <div class="wit-hero-slider__content">
+                  <p class="wit-hero-slider__eyebrow">Poznaj uczelnię, która zmieni Twoją przyszłość</p>
+                  <h1 class="wit-hero-slider__title"><span>Dzień Otwarty Akademii WIT</span></h1>
+                  <h1 class="wit-hero-slider__title">13 czerwca</h1>
+                  <br>
+                  <p class="wit-hero-slider__lead">Zobacz, jak wygląda studiowanie spotkaj wykładowców, porozmawiaj ze studentami, poznaj kierunki studiów.</p>
+                  <div class="wit-hero-slider__actions">
+                    <a class="wit-hero-slider__button" href="https://www.wit.edu.pl/studia">Zobacz kierunki studiów</a>
+                    <a class="wit-hero-slider__link" href="https://www.wit.edu.pl/rekrutacja">Jak wygląda rekrutacja?</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-item wit-hero-slider__item" style="--wit-hero-object-position: calc(50% + 20%) center;">
+              <img
+                class="wit-hero-slider__image"
+                src="02-banner-hero-30.jpg"
+                alt="Jubileusz 30-lecia Akademii WIT"
+                width="2000"
+                height="700"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="wit-hero-slider__shade" aria-hidden="true"></div>
+              <div class="wit-hero-slider__content-wrap">
+                <div class="wit-hero-slider__content">
+                  <p class="wit-hero-slider__eyebrow">Obchodzimy jubileusz</p>
+                  <h2 class="wit-hero-slider__title"><span>30 lat Akademii WIT</span></h2>
+                  <h2 class="wit-hero-slider__title">Wiedza. Innowacje. Technologie.</h2>
+                  <p class="wit-hero-slider__lead">W 2026 roku świętujemy 30-lecie Akademii WIT — od trzech dekad łączymy technologię, projektowanie, naukę i&nbsp;praktyczne przygotowanie do przyszłości.</p>
+                  <div class="wit-hero-slider__actions">
+                    <a class="wit-hero-slider__button" href="https://www.wit.edu.pl/uczelnia">Więcej o uczelni</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-item wit-hero-slider__item" style="--wit-hero-object-position: calc(50% + 20%) center;">
+              <img
+                class="wit-hero-slider__image"
+                src="./03-banner-hero-tworz.jpg"
+                alt="Student Akademii WIT w Warszawie"
+                width="2000"
+                height="700"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="wit-hero-slider__shade" aria-hidden="true"></div>
+              <div class="wit-hero-slider__content-wrap">
+                <div class="wit-hero-slider__content">
+                  <!-- <p class="wit-hero-slider__eyebrow">Grafika i nowe media</p> -->
+                  <h2 class="wit-hero-slider__title"><span>Twórz. Koduj. Zarządzaj.</span></h2>
+                  <h2 class="wit-hero-slider__title">Zaprojektuj swoją przyszłość.</h2>
+                  <p class="wit-hero-slider__lead">Po maturze nie musisz iść utartą ścieżką. Możesz projektować, programować, analizować i zarządzać.</p>
+                  <p class="wit-hero-slider__lead">Akademia WIT to studia, które dają kompetencje, spokój i realny wybór.</p>
+                  <div class="wit-hero-slider__actions">
+                    <a class="wit-hero-slider__button" href="https://www.wit.edu.pl/studia">Poznaj ofertę</a>
+                    <a class="wit-hero-slider__link" href="https://www.wit.edu.pl/rekrutacja">Jak wygląda rekrutacja?</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./wit-hero-slider.js"></script>
+  </body>
+</html>
