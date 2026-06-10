@@ -1,0 +1,497 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    @charset "utf-8";
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #menu-glowne-student {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        background: var(--szary-90, #1A1A1A);
+    }
+
+    #menu-glowne-student .menu-glowne-content {
+        display: flex;
+        flex-direction: row;
+        width: 1440px;
+        gap: 20px;
+        padding: 20px;
+
+        border-radius: 20px;
+        background: var(--szary-3, #F7F7F7);
+
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    #menu-glowne-student .menu-glowne-content-left {
+        display: flex;
+        width: 230px;
+        min-width: 200px;
+        max-width: 300px;
+        padding-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        flex-shrink: 0;
+        align-self: stretch;
+    }
+
+    #menu-glowne-student .menu-glowne-content-left h5 {
+        color: var(--szary-90, #1A1A1A);
+        margin: 0;
+        /* main-menu/drop-down/h5-drop-down */
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #menu-glowne-student .menu-glowne-content-left hr {
+        width: 230px;
+        height: 1px;
+        background: #E6E6E6;
+        margin: 0;
+        border: 0;
+    }
+
+    #menu-glowne-student .menu-glowne-content-left p {
+        color: var(--szary-50, #808080);
+
+        margin: 0;
+        /* main-menu/drop-down/p-drop-down */
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 19.6px */
+    }
+
+    #menu-glowne-student .menu_button {
+        cursor: pointer;
+        user-select: none;
+
+        display: flex;
+        width: 100%;
+        /* height: 58px; */
+        /*change later*/
+        padding: 21px 20px;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+
+        transition: 0.3s;
+        border-radius: 10px;
+    }
+
+    #menu-glowne-student .button_label {
+        transition: 0.3s;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    #menu-glowne-student .button_arrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 13px;
+        width: 14px;
+        /* background: url(./icons/arrow_white.svg); */
+        position: relative;
+    }
+
+    #menu-glowne-student #menu_button_red {
+        background: var(--WIT-GWNY, #900000);
+    }
+
+    #menu-glowne-student #menu_button_red>.button_label {
+        color: var(--to, #FFF);
+    }
+
+    #menu-glowne-student #menu_button_red .button_arrow {
+        background: url(./icons/arrow_white.svg);
+    }
+
+    #menu-glowne-student #menu_button_red:hover {
+        background: var(--szary-90, #1A1A1A);
+    }
+
+    #menu-glowne-student .menu-glowne-content-right {
+        display: flex;
+        min-width: 400px;
+        align-items: flex-start;
+        gap: 10px;
+        flex: 1 0 0;
+    }
+
+    #menu-glowne-student .menu-glowne-content-right-panel {
+        display: flex;
+        min-width: 200px;
+        max-width: 300px;
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        border-radius: 10px;
+        background: #FFF;
+    }
+
+    #menu-glowne-student .menu-glowne-content-right h6 {
+        color: var(--szary-90, #1A1A1A);
+        margin: 0;
+        padding: 0;
+
+        /* main-menu/drop-down/h6-drop-down */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%;
+        /* 17.6px */
+    }
+
+    #menu-glowne-student .menu-glowne-content-right-panel hr {
+        width: 100%;
+        height: 1px;
+        background: #E6E6E6;
+        margin: 0;
+        border: 0;
+    }
+
+    #menu-glowne-student .menu-glowne-panel-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+
+        color: var(--szary-85-tekst, #262626);
+
+        /* main-menu/drop-down/a-drop-down */
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #menu-glowne-student .menu-glowne-panel-content a {
+        color: var(--szary-85-tekst, #262626);
+        transition: 0.3s;
+    }
+
+    #menu-glowne-student .menu-glowne-panel-content a:hover {
+        color: var(--WIT-GWNY, #900000);
+        transition: 0.3s;
+    }
+
+    #menu-glowne-student .menu-glowne-content-right-panel-special {
+        display: flex;
+        width: 280px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        align-self: stretch;
+    }
+
+    #menu-glowne-student .menu-glowne-content-right-panel-button {
+        display: flex;
+        min-width: 200px;
+        max-width: 300px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+    }
+
+    #menu-glowne-student .menu-glowne-content-right-panel-button h4 {
+        color: var(--biay, #FFF);
+        margin: 0;
+        border-radius: 10px;
+        /* H4-naglowek-srodtytul */
+        font-family: Roboto;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 140%;
+        /* 30.8px */
+    }
+
+    #menu-glowne-student #button_ubi {
+        border-radius: 10px;
+        background: var(--UBI, #05B);
+    }
+
+    #menu-glowne-student #button_poczta {
+        border-radius: 10px;
+        background: var(--szary-90, #1A1A1A);
+    }
+
+    #menu-glowne-student #button_pomoc {
+        border-radius: 10px;
+        background: var(--szary-50, #808080);
+    }
+
+    #menu-glowne-student .menu-glowne-socials {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    #menu-glowne-student .menu-glowne-socials h6 {
+        margin-top: 8.7px;
+        margin-bottom: 8.7px;
+    }
+
+    #menu-glowne-student .menu-glowne-socials-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #menu-glowne-student .menu-glowne-socials-container a {
+        transition: 0.3s ease;
+        display: flex;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        border-radius: 10px;
+        background: var(--biay, #FFF);
+    }
+
+    #menu-glowne-student .menu-glowne-socials-container a:hover {
+        border-radius: 10px;
+        background: var(--szary-80, #333);
+
+        /* cien btn */
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    #menu-glowne-student .social-icon {
+        transition: 0.3s ease;
+        display: flex;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #menu-glowne-student .menu-glowne-socials-container a:hover>.social-icon {
+        filter: invert(1);
+    }
+
+    #menu-glowne-student #instagram-icon {
+        background: url(./icons/instagram.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 14px;
+        width: 14px;
+    }
+
+    #menu-glowne-student #discord-icon {
+        background: url(./icons/discord.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 14px;
+        width: 19px;
+    }
+
+    #menu-glowne-student #tiktok-icon {
+        background: url(./icons/tiktok.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 17px;
+        width: 15px;
+    }
+
+    #menu-glowne-student #linkedin-icon {
+        background: url(./icons/linkedin.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 18px;
+        width: 18px;
+    }
+
+    #menu-glowne-student #facebook-icon {
+        background: url(./icons/facebook.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 8px;
+    }
+</style>
+
+
+<div class="container" id="menu-glowne-student">
+    <div class="menu-glowne-content" id="student">
+        <div class="menu-glowne-content-left">
+            <h5>Strefa studenta</h5>
+            <hr>
+            <p>Dostęp dla Studentów i Kandydatów do narzędzi i udogodnień w obrębie Akademii WIT.</p>
+            <hr>
+            <div class="menu_button" id="menu_button_red">
+                <div class="button_label">
+                    Rekrutacja
+                </div>
+                <div class="button_arrow"></div>
+            </div>
+        </div>
+        <div class="menu-glowne-content-right">
+            <div class="menu-glowne-content-right-panel" id="untitled1">
+                <div class="menu-glowne-panel-content">
+                    <a href="">Samorząd studencki</a>
+                    <a href="">Akademicki Związek Sportowy</a>
+                    <a href="">Akademiki</a>
+                    <a href="">Adobe Creative Cloud</a>
+                    <a href="">Biuro Karier</a>
+                    <a href="">Konsultacje</a>
+                </div>
+            </div>
+            <div class="menu-glowne-content-right-panel" id="untitled2">
+                <div class="menu-glowne-panel-content">
+                    <a href="">Kwestura</a>
+                    <a href="">Kredyty studenckie</a>
+                    <a href="">Stypendia</a>
+                    <a href="">Ubezpieczenie zdrowodne studentów</a>
+                    <a href="">Wsparcie psychologiczne</a>
+                    <a href="">Informacje dla niepełnosprawnych kandydatów/studentów</a>
+                    <a href="">Centrum IT</a>
+                    <a href="">Innowacyjne rozwiązania</a>
+                </div>
+            </div>
+            <div class="menu-glowne-content-right-panel" id="kola-naukowe">
+                <h6>
+                    Studenckie koła naukowe
+                </h6>
+                <hr>
+                <div class="menu-glowne-panel-content">
+                    <a href="">Koło Naukowe Kwadrat</a>
+                    <a href="">Koło Naukowe Super Poster</a>
+                    <a href="">Koło Naukowe Bezpieczniki</a>
+                    <a href="">Koło Naukowe FOKS</a>
+                    <a href="">Koło programistyczne</a>
+                    <a href="">Koło Naukowe Leader's Vision</a>
+                </div>
+            </div>
+            <div class="menu-glowne-content-right-panel" id="absolwenci">
+                <h6>
+                    Absolwenci
+                </h6>
+                <hr>
+                <div class="menu-glowne-panel-content">
+                    <a href="">Odbiór dyplomu</a>
+                    <a href="">Księga absolwentów</a>
+                    <a href="">Ścieżki kariery</a>
+                    <a href="">Opinie absolwentów o WIT</a>
+                    <a href="">Zniżki</a>
+                    <hr>
+                    <a href="">Najlepsze prace dyplomowe</a>
+                    <a href="">Najlepsze dyplomy UpGrowth</a>
+                </div>
+            </div>
+            <div class="menu-glowne-content-right-panel-special" id="links">
+                <div class="menu-glowne-content-right-panel-button" id="button_ubi">
+                    <svg width="45" height="30" viewBox="0 0 45 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21.0241 0.0760989C21.3282 -0.0254355 21.6584 -0.0251435 21.9626 0.0760989L40.7325 6.97182L42.523 7.61913C43.353 7.91919 43.3476 9.09489 42.5149 9.38729V23.7945C43.4113 24.3659 44.0165 25.4082 44.0165 26.6266C44.0165 27.5 43.7001 28.3376 43.1368 28.9552C42.5736 29.5727 41.8098 29.9197 41.0133 29.9197C40.2168 29.9197 39.4529 29.5727 38.8897 28.9552C38.3265 28.3376 38.0101 27.5 38.0101 26.6266C38.0101 25.4082 38.6152 24.3659 39.5117 23.7945V10.5234L36.5085 11.6019V20.0404C36.5085 21.3906 35.7577 22.5102 34.8658 23.2841C33.9738 24.053 32.8657 24.5964 31.5353 25.0838C28.8714 26.0552 25.3607 26.6266 21.4926 26.6266C17.6245 26.6266 14.1138 26.0569 11.45 25.0821C10.1196 24.5964 9.01142 24.053 8.11947 23.2825C7.22753 22.5102 6.47673 21.3906 6.47673 20.0404V11.6019L2.25277 10.0574L0.856205 9.55255C0.388271 9.38338 0 9.0122 0 8.51463C0 8.01636 0.389244 7.6449 0.857792 7.47539L2.25426 6.97017L21.0241 0.0760989ZM21.4926 3.36918L7.41523 8.51463L21.4926 13.6601L35.57 8.51463L21.4926 3.36918ZM33.5053 12.7347L21.9611 16.9532C21.6569 17.0536 21.3266 17.0527 21.0226 16.9515L9.47991 12.7331V20.0404C9.47991 20.0569 9.4739 20.2479 9.94991 20.6579C10.4244 21.0695 11.2758 21.5882 12.39 21.9965C14.6153 22.8083 17.8963 23.3335 21.4926 23.3335C25.0889 23.3335 28.3699 22.8099 30.5968 21.9949C31.7079 21.5882 32.5608 21.0679 33.0353 20.6579C33.5128 20.2462 33.5053 20.0569 33.5053 20.0404V12.7347Z"
+                            fill="white" />
+                    </svg>
+                    <h4>UBI</h4>
+                </div>
+                <div class="menu-glowne-content-right-panel-button" id="button_poczta">
+                    <svg width="37" height="30" viewBox="0 0 37 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.78125 0C4.24797 0 2.77748 0.617325 1.69329 1.71617C0.609094 2.81502 0 4.30537 0 5.85938V24.1406C0 25.6946 0.609094 27.185 1.69329 28.2838C2.77748 29.3827 4.24797 30 5.78125 30H31.2188C32.752 30 34.2225 29.3827 35.3067 28.2838C36.3909 27.185 37 25.6946 37 24.1406V5.85938C37 4.30537 36.3909 2.81502 35.3067 1.71617C34.2225 0.617325 32.752 0 31.2188 0H5.78125ZM2.3125 5.85938C2.3125 4.92697 2.67796 4.03276 3.32847 3.37345C3.97899 2.71415 4.86128 2.34375 5.78125 2.34375H31.2188C32.1387 2.34375 33.021 2.71415 33.6715 3.37345C34.322 4.03276 34.6875 4.92697 34.6875 5.85938V6.69375L18.5019 15.3281L2.3125 6.62156V5.85938ZM2.3125 9.27562L17.958 17.6887C18.1243 17.7782 18.3096 17.8251 18.4979 17.8254C18.6862 17.8258 18.8717 17.7795 19.0384 17.6906L34.6875 9.34219V24.1406C34.6875 25.073 34.322 25.9672 33.6715 26.6265C33.021 27.2859 32.1387 27.6562 31.2188 27.6562H5.78125C4.86128 27.6562 3.97899 27.2859 3.32847 26.6265C2.67796 25.9672 2.3125 25.073 2.3125 24.1406V9.27562Z"
+                            fill="white" />
+                    </svg>
+                    <h4>Poczta</h4>
+                </div>
+                <div class="menu-glowne-content-right-panel-button" id="button_pomoc">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_117_2902)">
+                            <path
+                                d="M14.9214 15.17V14.09C14.9214 13.01 14.9214 12.47 15.9176 11.93C16.9151 11.39 17.9114 10.85 17.9114 9.23003C17.9114 8.14878 16.9151 6.53003 14.9214 6.53003C12.9276 6.53003 11.9326 7.89503 11.9326 9.77003"
+                                stroke="white" stroke-width="2.5" />
+                            <path d="M14.9224 16.25V18.41V16.25Z" fill="white" />
+                            <path d="M14.9224 16.25V18.41" stroke="white" stroke-width="2.5" />
+                            <path
+                                d="M6.875 22.5C6.0462 22.5 5.25134 22.8292 4.66529 23.4153C4.07924 24.0013 3.75 24.7962 3.75 25.625M3.75 25.625C3.75 26.4538 4.07924 27.2487 4.66529 27.8347C5.25134 28.4208 6.0462 28.75 6.875 28.75H27.5C26.6712 28.75 25.8763 28.4208 25.2903 27.8347C24.7042 27.2487 24.375 26.4538 24.375 25.625C24.375 24.7962 24.7042 24.0013 25.2903 23.4153C25.8763 22.8292 26.6712 22.5 27.5 22.5M3.75 25.625V4.375C3.75 3.5462 4.07924 2.75134 4.66529 2.16529C5.25134 1.57924 6.0462 1.25 6.875 1.25H26.25V22.5087H6.865"
+                                stroke="white" stroke-width="2.5" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_117_2902">
+                                <rect width="30" height="30" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <h4>Pomoc</h4>
+                </div>
+                <div class="menu-glowne-socials">
+                    <h6>
+                        Social Media
+                    </h6>
+                    <div class="menu-glowne-socials-container">
+                        <a href="" alt="Instagram" id="instagram">
+                            <div class="social-icon" id="instagram-icon">
+
+                            </div>
+                        </a>
+                        <a href="" alt="Discord" id="discord">
+                            <div class="social-icon" id="discord-icon"></div>
+                        </a>
+                        <a href="" alt="TikTok" id="tiktok">
+                            <div class="social-icon" id="tiktok-icon"></div>
+                        </a>
+                        <a href="" alt="LinkedIn" id="linkedin">
+                            <div class="social-icon" id="linkedin-icon"></div>
+                        </a>
+                        <a href="" alt="Facebook" id="facebook">
+                            <div class="social-icon" id="facebook-icon"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

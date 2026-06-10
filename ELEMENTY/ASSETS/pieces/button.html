@@ -1,0 +1,81 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    .button {
+        cursor: pointer;
+        user-select: none;
+
+        display: flex;
+        width: fit-content;
+        padding: 12px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        transition: 0.3s;
+        border-radius: 10px;
+        background: var(--szary-3, #F7F7F7);
+    }
+
+    .button_label {
+        transition: 0.3s;
+        color: var(--szary-85-tekst, #262626);
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .arrow_black {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 13px;
+        width: 14px;
+        background: url(./arrow_dark.svg);
+        position: relative;
+    }
+
+    .arrow_white {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 13px;
+        width: 14px;
+        background: url(./arrow_white.svg);
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .button:hover {
+        transition: 0.3s;
+        background: var(--WIT-GWNY, #900000);
+    }
+
+    .button:hover>.button_label{
+        transition: 0.3s;
+        color: var(--to, #FFF);
+    }
+
+    .button:hover>.arrow_black>.arrow_white{
+        transition: 0.3s;
+        opacity: 1;
+    }
+
+    .button:active {
+        background: var(--szary-90, #1A1A1A);
+    }
+</style>
+
+<div class="button">
+    <div class="button_label">
+        button label
+    </div>
+    <div class="arrow_black">
+        <div class="arrow_white"></div>
+    </div>
+</div>

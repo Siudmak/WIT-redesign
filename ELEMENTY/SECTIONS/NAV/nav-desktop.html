@@ -1,0 +1,594 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    @charset "utf-8";
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .top_bar {
+        display: flex;
+        width: 100%;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        background: var(--WIT, #910000);
+    }
+
+    .kontener-top {
+        display: flex;
+        height: 44px;
+        width: 1420px;
+        padding: 7px 0;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 10px;
+        align-self: stretch;
+    }
+
+    .top-menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .pasek-top-link {
+        display: flex;
+        padding: 5px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        border-radius: 5px;
+        color: var(--szary-3, #F7F7F7);
+        text-align: center;
+        transition: 0.3s ease;
+
+        /* top-pasek-narzedzi/btn-top-pasek-narzedzi */
+        color: rgba(255, 255, 255, 0.50);
+        text-align: center;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .pasek-top-link:hover {
+        cursor: pointer;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    #UBI:hover {
+        background: var(--UBI, #05B);
+        color: var(--szary-3, #F7F7F7);
+    }
+
+    #UBIA:hover {
+        background: var(--szary-50, #808080);
+        color: var(--szary-3, #F7F7F7);
+    }
+
+    #Poczta:hover {
+        background: var(--szary-90, #1a1a1a);
+        color: var(--szary-3, #F7F7F7);
+    }
+
+    #Pomoc:hover {
+        background: var(--szary-10, #e6e6e6);
+        color: var(--szary-90, #1a1a1a);
+    }
+
+    .pasek-top-divider {
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        color: rgba(255, 255, 255, 0.50);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .pasek-top-controler {
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        transition: 0.3s ease;
+        color: rgba(255, 255, 255, 0.50);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .pasek-top-controler:hover {
+        cursor: pointer;
+        color: var(--szary-3, #F7F7F7);
+    }
+
+    #dark-mode {
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 17px;
+        width: 17px;
+        background: url(./icons/dark_mode.svg);
+        opacity: 0.5;
+        transition: 0.3s ease;
+    }
+
+    #dark-mode:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .menu-glowne {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+
+        user-select: none;
+        background: var(--WIT-main, #910000);
+        box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .kontener-menu-glowne {
+        display: flex;
+        width: 1420px;
+        height: 60px;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .wit-logo {
+        display: flex;
+        background: url(./icons/wit_logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .wit-logo>img {
+        display: flex;
+        width: 339.224px;
+        height: 59.96px;
+        padding: 0.04px 0.224px 1.921px 0;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        aspect-ratio: 339.22/59.96;
+    }
+
+    .menu-lista {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .menu-lista-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        color: var(--biay, #FFF);
+        text-align: center;
+        cursor: pointer;
+        opacity: 0.7;
+
+        /* main menu */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .menu-lista-item:hover{
+        opacity: 1;
+    }
+
+    .menu-lista-item-arrow{
+        transition: 1s ease;
+    }
+
+    .menu-lista-item:hover .menu-lista-item-arrow {
+        transform: rotate(180deg);
+        fill: var(--biay, #FFF);
+    }
+
+
+    .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 45px;
+        /* Initial circle size */
+        height: 45px;
+        /* Initial circle size */
+        background-color: transparent;
+        border-radius: 10px;
+        /* Pill shape when expanded */
+        transition: width 0.4s ease, background-color 0.4s ease;
+        overflow: hidden;
+        /* Hides the input text when collapsed */
+    }
+
+    /* The magic: Expand on hover OR when typing (focused) */
+    .search-container:hover,
+    .search-container:focus-within {
+        width: 250px;
+        /* Expanded width */
+        background-color: #ffffff;
+    }
+
+    .search-container form {
+        display: flex;
+        flex-direction: row;
+        height: 45px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .search-container button {
+        transition: 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        border-radius: 0px 10px 10px 0px;
+        background: var(--WIT-ciemny, #640000);
+        border: none;
+        outline: none;
+        width: 45px;
+    }
+
+    /* 2. The Input Field */
+    .search-input {
+
+        height: 45px;
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 0 0 0 20px;
+        /* Right padding ensures text doesn't hide behind the icon */
+        font-size: 16px;
+        color: #333;
+        opacity: 0;
+        /* Hide text completely when collapsed */
+        transition: opacity 0.3s ease;
+    }
+
+    /* Make placeholder match your screenshot (italic and gray) */
+    .search-input::placeholder {
+        color: var(--szary-30, #B3B3B3);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    /* Fade in the text/placeholder when expanded */
+    .search-container:hover .search-input,
+    .search-container:focus-within .search-input {
+        opacity: 1;
+        /* Slight delay so text appears after expansion starts */
+        transition-delay: 0.1s;
+    }
+
+    /* 3. The Icon */
+    .search-icon {
+        position: absolute;
+        right: 12px;
+        /* Pin to the right side */
+        width: 20px;
+        height: 20px;
+        color: #ffffff;
+        /* Initial icon color (white) */
+        pointer-events: none;
+        /* Allows user to click "through" the icon to focus the input */
+        transition: color 0.4s ease;
+    }
+
+    /* Change icon color to red when expanded */
+    .search-container:hover .search-icon,
+    .search-container:focus-within .search-icon {
+        color: var(--WIT-main, #910000);
+    }
+
+    .search-container:hover button {
+        background-color: #ffffff;
+    }
+
+    .search-container:focus-within button {
+        background-color: #ffffff;
+    }
+
+    .menu-kierunki {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        /* padding: 0 290px; */
+        justify-content: center;
+        align-items: center;
+
+        transition: 0.3s ease;
+        background: var(--pasek-transparen-dark, rgba(26, 26, 26, 0.30));
+
+        /* pasek kierunki menu */
+        box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.25) inset;
+        backdrop-filter: blur(10px);
+    }
+
+    .kontener-menu-kierunki {
+        cursor: pointer;
+        transition: 0.3s ease;
+        display: flex;
+        width: 1420px;
+        /* padding-left: 30px; */
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        align-self: stretch;
+    }
+
+    .menu-kierunki-tekst {
+        transition: 0.3s ease;
+        color: var(--biay, #FFF);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        opacity: 0.5;
+    }
+
+    .menu-kierunki-lista {
+        transition: 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .menu-kierunki-lista-item {
+        transition: 0.3s ease;
+        display: flex;
+        width: 200px;
+        padding: 10px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+
+        color: var(--biay, #FFF);
+        opacity: 0.5;
+
+        text-align: center;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    #kierunek-grafika {
+        border-top: 6px solid var(--kierunek-GRAFIKA, #FE8F07);
+    }
+
+    #kierunek-informatyka {
+        border-top: 6px solid var(--kierunek-INFORMATYKA, #00A23D);
+    }
+
+    #kierunek-itz {
+        border-top: 6px solid var(--kierunek-ITZ, #0255DE);
+    }
+
+    #kierunek-zarzadzanie {
+        border-top: 6px solid var(--kierunek-ZARZDZ, #8A42D4);
+    }
+
+
+    .menu-kierunki:hover {
+        height: 70px;
+        color: var(--biay, #FFF);
+    }
+
+    .menu-kierunki:hover>.kontener-menu-kierunki>.menu-kierunki-tekst {
+        opacity: 1;
+    }
+
+    .menu-kierunki:hover>.kontener-menu-kierunki>.menu-kierunki-lista>.menu-kierunki-lista-item {
+        opacity: 1;
+    }
+
+
+    #kierunek-grafika:hover {
+        background: var(--kierunek-GRAFIKA, #FE8F07);
+    }
+
+    #kierunek-informatyka:hover {
+        background: var(--kierunek-INFORMATYKA, #00A23D);
+    }
+
+
+    #kierunek-itz:hover {
+        background: var(--kierunek-ITZ, #0255DE);
+    }
+
+    #kierunek-zarzadzanie:hover {
+        background: var(--kierunek-ZARZDZ, #8A42D4);
+    }
+</style>
+<div class="top_bar">
+    <div class="kontener-top">
+        <div class="top-menu">
+            <a href="http://ubi2.wit.edu.pl/?table=1" target="_blank">
+                <div class="pasek-top-link" id="UBI">
+                    UBI
+                </div>
+            </a>
+            <a href="http://ubi2.wit.edu.pl/?table=0" target="_blank">
+                <div class="pasek-top-link" id="UBIA">
+                    UBIA
+                </div>
+            </a>
+            <a href="https://poczta.wit.edu.pl/" target="_blank">
+                <div class="pasek-top-link" id="Poczta">
+                    Poczta
+                </div>
+            </a>
+            <a href="https://pomoc.wit.edu.pl/" target="_blank">
+                <div class="pasek-top-link" id="Pomoc">
+                    Pomoc
+                </div>
+            </a>
+            <div class="pasek-top-divider">
+                |
+            </div>
+            <div class="pasek-top-controler" id="text-minus">
+                A-
+            </div>
+            <div class="pasek-top-controler" id="text-plus">
+                A+
+            </div>
+            <div class="pasek-top-controler" id="dark-mode">
+
+            </div>
+            <div class="pasek-top-divider">
+                |
+            </div>
+            <div class="pasek-top-controler" id="lang-PL">
+                PL
+            </div>
+            <div class="pasek-top-controler" id="lang-EN">
+                EN
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menu-glowne">
+    <div class="kontener-menu-glowne">
+        <div class="wit-logo">
+            <img src="./icons/witlogo_pl.png" alt="WIT Logo">
+        </div>
+        <div class="menu-lista">
+            <div class="menu-lista-item">
+                O uczelni
+                <svg class="menu-lista-item-arrow" width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.46564 6C4.08074 6.66667 3.11848 6.66667 2.73358 6L0.135508 1.5C-0.249392 0.833333 0.231733 -7.31543e-07 1.00153 -6.64245e-07L6.19769 -2.09983e-07C6.96749 -1.42685e-07 7.44861 0.833333 7.06371 1.5L4.46564 6Z"
+                        fill="#F7F7F7" fill-opacity="0.95" />
+                </svg>
+                <!-- kiedy menu jest rozwininiete, 
+                 elementy w menu-lista-item powinny 
+                 wygladac tak jak okreslone przez hover, 
+                 w tym pliku to jest w okolicy 220 linii -->
+            </div>
+            <div class="menu-lista-item">
+                Dzień otwarty
+            </div>
+            <div class="menu-lista-item">
+                Rekrutacja
+            </div>
+            <div class="menu-lista-item">
+                Studia
+                <svg class="menu-lista-item-arrow" width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.46564 6C4.08074 6.66667 3.11848 6.66667 2.73358 6L0.135508 1.5C-0.249392 0.833333 0.231733 -7.31543e-07 1.00153 -6.64245e-07L6.19769 -2.09983e-07C6.96749 -1.42685e-07 7.44861 0.833333 7.06371 1.5L4.46564 6Z"
+                        fill="#F7F7F7" fill-opacity="0.95" />
+                </svg>
+            </div>
+            <div class="menu-lista-item">
+                Student
+                <svg class="menu-lista-item-arrow" width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.46564 6C4.08074 6.66667 3.11848 6.66667 2.73358 6L0.135508 1.5C-0.249392 0.833333 0.231733 -7.31543e-07 1.00153 -6.64245e-07L6.19769 -2.09983e-07C6.96749 -1.42685e-07 7.44861 0.833333 7.06371 1.5L4.46564 6Z"
+                        fill="#F7F7F7" fill-opacity="0.95" />
+                </svg>
+            </div>
+            <div class="menu-lista-item">
+                Wykładowca
+            </div>
+            <div class="menu-lista-item">
+                Kontakt
+            </div>
+        </div>
+        <div class="wyszukiwarka">
+            <div class="search-container">
+                <form action="">
+                    <input type="text" class="search-input" placeholder="Wyszukaj...">
+                    <button type="submit">
+                        <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 15L4.54367 11.4563M4.54367 11.4563C3.97489 10.8876 3.52372 10.2123 3.2159 9.46918C2.90808 8.72604 2.74965 7.92955 2.74965 7.12518C2.74965 6.32081 2.90808 5.52431 3.2159 4.78117C3.52372 4.03803 3.97489 3.3628 4.54367 2.79402C5.11245 2.22525 5.78768 1.77407 6.53082 1.46625C7.27396 1.15843 8.07045 1 8.87482 1C9.67919 1 10.4757 1.15843 11.2188 1.46625C11.962 1.77407 12.6372 2.22525 13.206 2.79402C14.3547 3.94272 15 5.50068 15 7.12518C15 8.74967 14.3547 10.3076 13.206 11.4563C12.0573 12.605 10.4993 13.2504 8.87482 13.2504C7.25033 13.2504 5.69236 12.605 4.54367 11.4563Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menu-kierunki">
+    <div class="kontener-menu-kierunki">
+        <div class="menu-kierunki-tekst">
+            Jaki kierunek studiów Cię interesuje?
+        </div>
+        <div class="menu-kierunki-lista">
+            <div class="menu-kierunki-lista-item" id="kierunek-grafika">
+                GRAFIKA
+            </div>
+            <div class="menu-kierunki-lista-item" id="kierunek-informatyka">
+                INFORMATYKA
+            </div>
+            <div class="menu-kierunki-lista-item" id="kierunek-itz">
+                INFORMATYCZNE TECHNIKI&nbspZARZĄDZANIA
+            </div>
+            <div class="menu-kierunki-lista-item" id="kierunek-zarzadzanie">
+                ZARZĄDZANIE
+            </div>
+        </div>
+    </div>
+</div>

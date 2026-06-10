@@ -1,0 +1,58 @@
+<div class="accordion-body instrukcja-tresc">
+    Usługa LDAP pozwala wyszukiwać adresy e-mail użytkowników w sieci WIT podczas adresowania wiadomości.
+    <br>
+    <br>
+    <ol>
+        <li>
+            Kliknij prawym przyciskiem myszy na swoje konto i wybierz <strong>Ustawienia</strong>
+            <br>
+            <img alt="ustawienia konta" src="./konto_ustawienia.png">
+        </li>
+        <li>Wybierz <strong>Tworzenie i adresowanie</strong><br>
+            <img alt="Tworzenie i adresowanie" src="./tworzenie_i_adresowanie.png">
+        </li>
+        <li>
+            Zjedź do sekcji <strong>Adresowanie</strong> i zaznacz <strong>Użyj innego serwera LDAP</strong><br>
+            Następnie kliknij <strong>Edytuj katalogi...</strong> <br>
+            <img alt="Adresowanie wybor" src="./adresowanie_wybor.png">
+        </li>
+        <li>
+            Otworzy się okno z listą dostępnych usług LDAP. Kliknij <strong>Dodaj</strong> <br>
+            <img alt="edytuj katalogi" src="./lista_ldap.png">
+        </li>
+        <li>
+            Podaj:
+            <ul>
+                <li>
+                    <strong>Nazwa:</strong> WIT
+                </li>
+                <li>
+                    <strong>Nazwa hosta:</strong> <code>ldap.wsisiz.edu.pl</code>
+                </li>
+                <li>
+                    <strong>Numer portu:</strong> 636 (zaznacz opcję <strong>Użyj szyfrowanego połączenia
+                        (SSL)</strong>)
+                </li>
+                <li>
+                    <strong>Bazowy DN:</strong> <code>dc=wsisiz,dc=edu,dc=pl</code>
+                </li>
+                <li>
+                    <strong>Server Bind DN - pozostaw pusty</strong>
+                </li>
+            </ul>
+            <br>
+            Kliknij <strong>OK</strong> dwa razy
+            <br>
+            <img alt="ldap wit" src="./ldap_wit.png">
+        </li>
+        <li>
+            Z rozwijanej listy wybierz <strong>WIT</strong>
+            <br>
+            <img alt="wybór ldap" src="./wybor_ldap.png">
+        </li>
+        <li>
+            Gotowe. Teraz podczas adresowania wiadomości, możesz odnaleźć adres użytkownika wg Imienia/Nazwiska <br>
+            <img alt="przykład ldap" src="./ldap_przyklad.png">
+        </li>
+    </ol>
+</div>

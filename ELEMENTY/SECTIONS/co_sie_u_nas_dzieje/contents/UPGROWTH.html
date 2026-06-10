@@ -1,0 +1,501 @@
+<style>
+    @charset "utf-8";
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&display=swap');
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        display: flex;
+        padding: 40px 10vw 60px 10vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        background: var(--WIT-GWNY, #900000);
+    }
+
+    body {
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        color: var(--szary-85-tekst, #262626);
+    }
+
+    h2 {
+        color: var(--biay, #FFF);
+        font-family: Roboto;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+        line-height: 140%;
+    }
+
+    .content {
+        display: flex;
+        max-width: 1420px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .naglowek_sekcji {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .tab {
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+        display: flex;
+        /* width: 100%; */
+        justify-content: space-between;
+        align-items: stretch;
+        /* flex-shrink: 0; */
+
+        align-items: flex-start;
+
+    }
+
+    .menu_boczne {
+        border-radius: 20px 0 0 20px;
+        background: var(--biay, #FFF);
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .list-item {
+        transition: 0.3s ease;
+        border-radius: 10px 10px 10px 10px;
+        display: flex;
+        padding: 10px;
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+
+    }
+
+    .list-item:hover {
+        background-color: var(--szary-85-tekst, #262626);
+        border-radius: 10px 10px 10px 10px;
+        display: flex;
+        padding: 10px;
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+        color: var(--biay, #FFF);
+    }
+
+    .list-item-icon {
+        border-radius: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .list-item strong {
+        font-size: 18px;
+        font-weight: 900;
+    }
+
+    .divider {
+        background: #E6E6E6;
+        width: 100%;
+        height: 1px;
+    }
+
+    .content_wrapper {
+        display: flex;
+        padding: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        border-radius: 0 20px 20px 0;
+        background: var(--biay, #FFF);
+    }
+
+    .kolumny {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .kolumny h3 {
+        color: var(--szary-85-tekst, #262626);
+        font-family: Roboto;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        margin: 0px
+    }
+
+    .link {
+        transition: 0.3s ease;
+        color: var(--WIT-GWNY, #900000);
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        line-height: 140%;
+    }
+
+    .link a {
+        transition: 0.3s ease;
+        color: var(--WIT-GWNY, #900000);
+        text-decoration: none;
+        cursor: default;
+    }
+
+    .link:hover {
+        font-weight: 600;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        align-self: stretch;
+
+        color: #000;
+
+        /* p-tresc-glowna */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 22.4px */
+    }
+
+    .content>h3 {
+        color: var(--szary-85-tekst, #262626);
+
+        /* H3-naglowek-tabu */
+        font-family: Roboto;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin: 0;
+    }
+
+    .content>strong {
+        color: #000;
+
+        /* p-tresc-glowna */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+    }
+
+    .baner {
+        background: #FE0;
+        padding: 30px;
+        display: flex;
+        align-self: stretch;
+        height: 150px;
+    }
+
+    .linki {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .content_wrapper-mobile {
+        display: none;
+    }
+
+    @media all and (max-width: 800px) {
+        html {
+            padding: 20px;
+            gap: 20px;
+        }
+
+        h2 {
+            color: var(--biay, #FFF);
+            font-family: Roboto;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: normal;
+        }
+
+        h3 {
+            color: var(--szary-85-tekst, #262626);
+            font-family: Roboto;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            padding: 20px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .content_wrapper {
+            display: none;
+        }
+
+        .menu_boczne {
+            border-radius: 20px;
+            width: 100%;
+            padding: 10px;
+            gap: 5px;
+        }
+
+        .list-item {
+            padding: 5px;
+            position: relative;
+        }
+
+        .list-item:hover {
+            padding: 5px;
+        }
+
+        .content_wrapper-mobile {
+            display: flex;
+            /* width: 330px; */
+            width: 100%;
+            padding: 10px;
+            flex-direction: column;
+            /* align-items: center; */
+            gap: 20px;
+        }
+
+        .list-item::after {
+            content: " +";
+            font-size: 24px;
+            position: absolute;
+            right: 20px;
+        }
+
+        .button {
+            background-color: #E7E7E780;
+            align-self: center;
+            margin-bottom: 10px;
+        }
+
+    }
+</style>
+
+<div class="content">
+    <div class="naglowek_sekcji">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25 12.5L6.25 23.3253L6.25 1.67468L25 12.5Z" fill="white" />
+        </svg>
+        <h2>Co się u nas dzieje</h2>
+    </div>
+    <!-- <div class="taby"> -->
+    <div class="tab">
+        <div class="menu_boczne">
+            <div class="list-item">
+                <img src="./icons/icon_czlek.svg" alt="" class="list-item-icon">
+                <div>Kadra <strong>wykładowców</strong></div>
+            </div>
+            <div class="divider"></div>
+            <div class="list-item">
+                <img src="./icons/upgrowth.svg" alt="" class="list-item-icon">
+                <div class="list-item-text">Najlepsze dyplomy <strong>Upgrowth</strong></div>
+            </div>
+            <div class="divider"></div>
+            <div class="list-item">
+                <img src="./icons/dsignn.svg" alt="" class="list-item-icon">
+                <div class="list-item-text">Magazyn Naukowy <strong>dsignn</strong></div>
+                <div class="list_item-indicator"></div>
+            </div>
+            <div class="content_wrapper-mobile">
+                <div class="baner">
+                    <img src="./LOGO_dsignn.svg" alt="">
+                </div>
+                <h3>Magazyn naukowy o projektowaniu graficznym i nowych mediach</h3>
+                <p>
+                    Magazyn naukowy o projektowaniu graficznym i nowych mediach wydawany przez Akademię WIT z siedzibą w
+                    Warszawie.
+                </p>
+                <p>
+                    Czasopismo jest polem do wymiany doświadczeń, publikacji badań, czy prezentowania nowych koncepcji
+                    projektowych.
+                </p>
+                <p>
+                    Twórcami magazynu i członkami redakcji są:
+                </p>
+                <p>
+                <div class="link">
+                    <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg"
+                        style="vertical-align: middle;">
+                        <circle cx="3.5" cy="3.5" r="3.5" fill="#900000" />
+                    </svg>
+                    <a href="">dr inż. Grzegorz Grodner</a>
+                </div>
+                <div class="link">
+                    <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg"
+                        style="vertical-align: middle;">
+                        <circle cx="3.5" cy="3.5" r="3.5" fill="#900000" />
+                    </svg>
+                    <a href="">dr inż. Magdalena Mirkowicz</a>
+                </div>
+                <div class="link">
+                    <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg"
+                        style="vertical-align: middle;">
+                        <circle cx="3.5" cy="3.5" r="3.5" fill="#900000" />
+                    </svg>
+                    <a href="">dr Małgorzata Sobocińska-Kiss</a>
+                </div>
+                <div class="link">
+                    <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg"
+                        style="vertical-align: middle;">
+                        <circle cx="3.5" cy="3.5" r="3.5" fill="#900000" />
+                    </svg>
+                    <a href="">mgr Kamil Mirkowicz</a>
+                </div>
+                </p>
+                <p>
+                    Publikowane w nim artykuły i badania realizowane są przez projektantów graficznych, teoretyków
+                    dizajnu, fotografów, projektantów produktów interaktywnych i interfejsów użytkownika, grafików 3D
+                    oraz twórców filmów, animacji oraz innych form multimedialnych.
+                </p>
+                <p>
+                    Magazyn wydawany jest w dwóch językach: polskim i angielskim.
+                </p>
+                <p>
+                    Czasopismo jest indeksowane w międzynarodowej bazie indeksacyjnej EBSCO oraz IndexCopernicus, co
+                    zapewnia szerszy dostęp do publikowanych w nim artykułów i większa cytowalność treści.
+                </p>
+                <div class="button">
+                    <div class="arrow"></div>
+                    <div>strona czasopisma</div>
+                </div>
+
+            </div>
+            <div class="divider"></div>
+            <div class="list-item">
+                <img src="./icons/Fenomen.svg" alt="" class="list-item-icon">
+                <div class="list-item-text">Magazyn Studencki <strong>Fenomen</strong></div>
+            </div>
+            <div class="divider"></div>
+            <div class="list-item">
+                <img src="./icons/wystawy_wit.svg" alt="" class="list-item-icon">
+                <div class="list-item-text">Wystawy <strong>WIT</strong></div>
+            </div>
+            <div class="divider"></div>
+            <div class="list-item">
+                <img src="./icons/galeria_wit.svg" alt="" class="list-item-icon">
+                <div class="list-item-text">Galeria <strong>WIT</strong></div>
+            </div>
+            <div class="divider"></div>
+            <div class="list-item">
+                <img src="./icons/galeria_grafiki_internetowej.svg" alt="" class="list-item-icon">
+                <div class="list-item-text">Galeria <strong>Grafiki Internetowej</strong></div>
+            </div>
+            <div class="divider"></div>
+            <div class="list-item">
+                <img src="./icons/kn_kwadrat.svg" alt="" class="list-item-icon">
+                <div class="list-item-text">Koło Naukowe <strong>Kwadrat</strong></div>
+            </div>
+            <div class="divider"></div>
+            <div class="list-item">
+                <img src="./icons/kn_bezpieczniki.jpg" alt="" class="list-item-icon">
+                <div class="list-item-text">Koło Naukowe <strong>Bezpieczniki</strong></div>
+            </div>
+            <div class="divider"></div>
+            <div class="list-item">
+                <img src="./icons/kn_foks.svg" alt="" class="list-item-icon">
+                <div class="list-item-text">Koło Naukowe <strong>FOKS</strong></div>
+            </div>
+            <div class="divider"></div>
+            <div class="list-item">
+                <img src="./icons/CDK.svg" alt="" class="list-item-icon">
+                <div class="list-item-text">Centrum Doskonalenia Kompetencji</div>
+            </div>
+        </div>
+        <div class="content_wrapper">
+            <div class="content">
+                <div class="baner">
+                    <img src="./LOGO_dsignn.svg">
+                </div>
+                <h3>Magazyn naukowy o projektowaniu graficznym&nbsp;i&nbsp;nowych&nbsp;mediach</h3>
+                <p>Magazyn naukowy założony i wydawany od 2023 roku przez Akademię WIT.
+                </p>
+                <p>
+                    Publikowane w nim artykuły i badania realizowane są przez projektantów graficznych, teoretyków
+                    dizajnu, fotografów, projektantów produktów interaktywnych i interfejsów użytkownika, grafików 3D
+                    oraz twórców filmów, animacji oraz innych form multimedialnych.
+                </p>
+                <p>
+                    Magazyn wydawany jest w dwóch językach: <strong>polskim</strong> i <strong>angielskim</strong>.
+                </p>
+                <p>
+                    Czasopismo jest indeksowane w międzynarodowych bazach indeksacyjnych <strong>EBSCO</strong> i
+                    <strong>Index Copernicus</strong>.
+                </p>
+                <div class="linki">
+                    <strong>Zespół redakcyjny:</strong>
+                    <div class="link">
+                        <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg"
+                            style="vertical-align: middle;">
+                            <circle cx="3.5" cy="3.5" r="3.5" fill="#900000" />
+                        </svg>
+                        <a href="">dr inż. Grzegorz Grodner</a>
+                    </div>
+                    <div class="link">
+                        <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg"
+                            style="vertical-align: middle;">
+                            <circle cx="3.5" cy="3.5" r="3.5" fill="#900000" />
+                        </svg>
+                        <a href="">dr inż. Magdalena Mirkowicz</a>
+                    </div>
+                    <div class="link">
+                        <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg"
+                            style="vertical-align: middle;">
+                            <circle cx="3.5" cy="3.5" r="3.5" fill="#900000" />
+                        </svg>
+                        <a href="">dr Małgorzata Sobocińska-Kiss</a>
+                    </div>
+                    <div class="link">
+                        <svg width="7" height="7" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg"
+                            style="vertical-align: middle;">
+                            <circle cx="3.5" cy="3.5" r="3.5" fill="#900000" />
+                        </svg>
+                        <a href="">mgr Kamil Mirkowicz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

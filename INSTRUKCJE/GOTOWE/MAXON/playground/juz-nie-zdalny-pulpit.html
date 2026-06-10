@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta name="description"
+        content="Instrukcje podłączenia do pulpitu zdalnego w sieci WIT dla systemów Windows, macOS, Linux i Android">
+    <title>Zdalny pulpit – WIT</title>
+    <link rel="dns-prefetch" href="https://static.wit.edu.pl/">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+    <link rel="dns-prefetch" href="https://translate.google.pl/">
+    <link rel="dns-prefetch" href="https://www.gstatic.com/">
+    <link rel="dns-prefetch" href="https://www.google.com/">
+    <link rel="dns-prefetch" href="https://translate.googleapis.com/">
+    <link rel="icon" href="https://instrukcje.wit.edu.pl/favicon.ico" sizes="48x48">
+    <link rel="icon" href="https://instrukcje.wit.edu.pl/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://instrukcje.wit.edu.pl/apple-touch-icon.png">
+    <link rel="manifest" href="https://instrukcje.wit.edu.pl/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="tsWzvBe6XpQJJtFpKhX76AiThqb1rGKgvrS7WLzop6A">
+    <link rel="shortcut icon" type="image/ico" href="https://instrukcje.wit.edu.pl/favicon.ico">
+    <link rel="apple-touch-icon" href="https://instrukcje.wit.edu.pl/ficons/apple-icon.png">
+    <link rel="manifest" href="https://instrukcje.wit.edu.pl/site.webmanifest">
+    <meta name="theme-color" content="#283c86">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Akademia WIT w Warszawie">
+    <meta property="og:title" content="Zdalny pulpit – WIT">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://instrukcje.wit.edu.pl/zasoby/zdalny-pulpit">
+    <meta property="fb:page_id" content="112499528787744">
+    <meta property="og:image" content="https://static.wit.edu.pl/logo/Akademia-WIT.png">
+    <meta property="og:image:secure_url" content="https://static.wit.edu.pl/logo/Akademia-WIT.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description"
+        content="Instrukcje podłączenia do pulpitu zdalnego w sieci WIT dla systemów Windows, macOS, Linux i Android">
+    <meta name="twitter:title" content="Zdalny pulpit – WIT">
+    <meta name="twitter:image" content="https://static.wit.edu.pl/logo/Akademia-WIT.png">
+    <link rel="stylesheet" href="Zdalny%20pulpit%20%E2%80%93%20WIT_files/bootstrap.css">
+    <link rel="stylesheet" href="Zdalny%20pulpit%20%E2%80%93%20WIT_files/wit.css">
+    <link rel="stylesheet" href="Zdalny%20pulpit%20%E2%80%93%20WIT_files/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="Zdalny%20pulpit%20%E2%80%93%20WIT_files/style.css">
+    <style>
+        .sticky-top {
+            z-index: 300;
+            top: 80px
+        }
+
+        @media only screen and (max-width:768px) {
+            .sticky-top {
+                top: 50px
+            }
+        }
+
+        div.scroll-offset {
+            scroll-padding-top: 90px
+        }
+
+        .glass-card {
+            background: hsla(0, 0%, 100%, .1);
+            border: 1px solid hsla(0, 0%, 100%, .2);
+            box-shadow: 0 8px 32px 0 hsla(236, 63%, 33%, .25);
+            transition: all .3s ease
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 hsla(236, 63%, 33%, .35);
+            background: hsla(0, 0%, 100%, .15)
+        }
+
+        @media (max-width:767px) {
+            .glass-card .card-body {
+                padding: 1.5rem !important
+            }
+        }
+
+        .rekrutacja-video {
+            background: transparent url(/video/rekrutacja/rekrutacja.jpg) 50% 50% / cover no-repeat
+        }
+
+        .header-container {
+            position: relative;
+            overflow: hidden
+        }
+
+        video {
+            -o-object-fit: cover;
+            object-fit: cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0
+        }
+
+        .header-container h1.content-title {
+            text-transform: uppercase;
+            font-weight: 900;
+            padding: .3em 0
+        }
+
+        .header-container h1.content-title::after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            left: 0;
+            margin: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #fff
+        }
+
+        .header-container h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-top: .5rem;
+            position: relative;
+            z-index: 3
+        }
+
+        .header-container .callout .content-container a {
+            font-weight: 900;
+            color: #f88
+        }
+
+        .header-container .callout .content-container a.btn {
+            font-weight: 900;
+            color: #FFF;
+            min-width: auto;
+            padding: 15px 20px
+        }
+
+        .header-container .callout .content-container a:hover {
+            color: #FFF
+        }
+
+        .header-container .callout .content-container a.btn:hover {
+            background-color: #FFF;
+            border-color: #FFF;
+            color: #999
+        }
+
+        @media (min-width:1200px) {
+            .header-container h1.content-title {
+                font-size: 50px
+            }
+
+            .header-container h2 {
+                font-size: 30px
+            }
+        }
+
+        @media (max-width:400px) {
+            .header-container h1.content-title {
+                font-size: 22px
+            }
+
+            .header-container h2 {
+                font-size: 18px
+            }
+
+            .header-container ul {
+                font-size: 13px
+            }
+        }
+
+        @media (max-width:767px) {
+            svg.auto {
+                width: 60px;
+                height: 60px
+            }
+        }
+
+        .clear-ab.acc-title {
+            padding: 12px 10px 12px 18px !important
+        }
+
+        .clear-ab.acc-title::before {
+            content: none !important
+        }
+
+        .acc-clear-ab .acc-title {
+            padding: 12px 10px 12px 18px !important
+        }
+
+        .acc-clear-ab .acc-title::before {
+            content: none !important
+        }
+
+        .ikona {
+            fill: #C22C22
+        }
+
+        .center a:hover {
+            border-bottom: none
+        }
+
+        .card-text {
+            color: inherit
+        }
+
+        .row {
+            border: 0 red solid
+        }
+
+        .svg80 {
+            width: 80px;
+            height: 80px
+        }
+
+        .svg60 {
+            width: 60px;
+            height: 60px
+        }
+
+        .nav-link.active a {
+            color: #000;
+            font-weight: 600
+        }
+
+        .menu-is-open .title {
+            color: #FFF
+        }
+
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            background-color: #d82315
+        }
+
+        .dark-link {
+            color: #555;
+            border-bottom: unset
+        }
+
+        .dark-link:hover {
+            border-bottom: unset
+        }
+
+        .ico:before {
+            white-space: nowrap;
+            display: inline-block;
+            content: "";
+            font-family: bootstrap-icons !important;
+            font-style: normal;
+            font-weight: normal !important;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            vertical-align: -.15em;
+            -webkit-font-smoothing: antialiased;
+            padding-right: .4rem
+        }
+
+        .ico-end:after {
+            display: inline-block;
+            content: "";
+            font-family: bootstrap-icons !important;
+            font-style: normal;
+            font-weight: normal !important;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            vertical-align: -.15em;
+            -webkit-font-smoothing: antialiased;
+            padding-left: .4rem
+        }
+
+        .ico.ico-pdf:before,
+        .ico-end.ico-pdf:after {
+            content: "\F63E"
+        }
+
+        .ico.ico-external:before,
+        .ico-end.ico-external:after {
+            content: "\F1C5"
+        }
+
+        .ico.ico-link:before,
+        .ico-end.ico-link:after {
+            content: "\F135"
+        }
+
+        .ico.ico-mail:before,
+        .ico-end.ico-mail:after {
+            content: "\F84C"
+        }
+
+        .ico.ico-map:before,
+        .ico-end.ico-map:after {
+            content: "\F3E8"
+        }
+
+        .ico.ico-date:before,
+        .ico-end.ico-date:after {
+            content: "\F1E8"
+        }
+
+        .ico.ico-star:before,
+        .ico-end.ico-star:after {
+            content: "\F588"
+        }
+
+        .ico.ico-ticket:before,
+        .ico-end.ico-ticket:after {
+            content: "\F6CA"
+        }
+
+        .ico.ico-person:before,
+        .ico-end.ico-person:after {
+            content: "\F4E1"
+        }
+
+        .ico.ico-godziny:before,
+        .ico-end.ico-godziny:after {
+            content: "\F292"
+        }
+
+        .ico.ico-bookmark:before,
+        .ico-end.ico-bookmark:after {
+            content: "\F1A2"
+        }
+
+        .ico.ico-edu:before,
+        .ico-end.ico-edu:after {
+            content: "\F6FE"
+        }
+
+        .ico.ico-folder:before,
+        .ico-end.ico-folder:after {
+            content: "\F3D8"
+        }
+
+        .ico.ico-plus:before,
+        .ico-end.ico-plus:after {
+            content: "\F4FE"
+        }
+
+        .ico.ico-location:before,
+        .ico-end.ico-location:after {
+            content: "\F3E8"
+        }
+
+        .link-box {
+            border: 1px solid #EEE;
+            height: 100%;
+            background: #FFF;
+            overflow: hidden;
+            display: block;
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 0;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 25px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, .1);
+            transition: box-shadow .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out
+        }
+
+        .link-box .bi {
+            color: #c22c22;
+            transition: color .3s ease-in-out
+        }
+
+        .link-box a {
+            border: 0
+        }
+
+        .link-box:hover {
+            color: #a52d22;
+            background-color: #FEFEFE;
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, .2);
+            transition: box-shadow .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out
+        }
+
+        .link-box:hover .bi {
+            color: #a52d22;
+            transition: color .3s ease-in-out
+        }
+
+        .link-box:hover a {
+            border: 0
+        }
+    </style>
+    <style>
+        :root {
+            --color-main-light: hsl(227.23, 54.02%, 34.12%);
+            --color-main-lighter: hsl(216.25, 100%, 95%);
+            --color-main-dark: hsl(173.06, 100%, 23.73%);
+            --color-link: hsl(227.23, 54.02%, 38.12%);
+            --color-link-hover: hsl(227.23, 54.02%, 50%);
+            --color-main-white: hsl(0, 0%, 100%);
+            --color-main-black: hsl(0, 0%, 10%);
+            --color-text-dark: hsl(0, 0%, 20%);
+            --color-transparent: hsla(0, 0%, 0%, 0);
+            --color-orange: hsl(29, 100%, 47%);
+            --color-orange-light: hsl(29, 100%, 60%);
+            --color-orange-dark: hsl(29, 100%, 30%);
+            --bs-breadcrumb-divider: "\\"
+        }
+
+        html {
+            scrollbar-width: thin
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-wrap-style: balance
+        }
+
+        h1 {
+            line-height: 1.3 !important
+        }
+
+        .pojedyncza-strona h3 {
+            line-height: 1.5 !important;
+            font-size: 1.25rem;
+            margin-bottom: .5rem !important
+        }
+
+        .pojedyncza-strona h3.accordion-header {
+            margin-bottom: 0 !important
+        }
+
+        .lead {
+            margin-block: 1rem 1.5rem !important
+        }
+
+        .header-container {
+            background-color: var(--color-main-lighter);
+            background-image: none !important
+        }
+
+        ol.instrukcje-wykaz {
+            list-style-type: "\2726";
+            padding-inline-start: 1.25em;
+            color: var(--color-link)
+        }
+
+        .list-unstyled,
+        .instrukcje-wykaz {
+            margin-block-end: 0
+        }
+
+        .list-unstyled li,
+        .instrukcje-wykaz li {
+            margin-bottom: .5rem;
+            padding-inline-start: .5rem
+        }
+
+        #kategorie-instrukcji .instrukcje-wykaz {
+            padding-inline-start: .25rem;
+            color: var(--color-main-lighter)
+        }
+
+        .title-container {
+            background: var(--color-main-light);
+            background: linear-gradient(135deg, var(--color-main-light), var(--color-main-dark));
+            color: var(--color-main-white);
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important
+        }
+
+        .header-container::before,
+        .menu-link-en-pl,
+        a[href='https://pomoc.wit.edu.pl'] {
+            display: none !important
+        }
+
+        .cd-logo svg {
+            fill: var(--color-main-light) !important
+        }
+
+        .menu-is-open .cd-logo svg {
+            fill: var(--color-main-white) !important
+        }
+
+        .cd-header.menu-is-open,
+        .red-bg {
+            background-color: var(--color-main-light) !important
+        }
+
+        .cd-primary-nav::-webkit-scrollbar-thumb {
+            background-color: var(--color-main-light) !important
+        }
+
+        .cd-primary-nav::-webkit-scrollbar-track {
+            background-color: var(--color-text-white) !important
+        }
+
+        #instrukcje .pojedyncza-strona img {
+            max-width: 710px;
+            height: auto;
+            border-radius: .375rem;
+            margin-bottom: 1.25rem;
+            margin-top: .5rem;
+            border: 1px solid hsl(210, 13.79%, 88.63%)
+        }
+
+        @media (max-width:768px) {
+            #instrukcje .pojedyncza-strona img {
+                max-width: 100%
+            }
+        }
+
+        #instrukcje a,
+        .accordion-button {
+            transition: .15s ease-out
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+
+            #instrukcje a,
+            .accordion-button {
+                transition: none
+            }
+        }
+
+        #instrukcje .breadcrumb li,
+        #instrukcje .breadcrumb a {
+            line-height: 1.8
+        }
+
+        #instrukcje .breadcrumb a {
+            color: var(--color-main-lighter) !important
+        }
+
+        #instrukcje .breadcrumb a:hover,
+        #instrukcje .breadcrumb a:active,
+        #instrukcje .breadcrumb a:focus,
+        #instrukcje .breadcrumb a:focus-visible {
+            color: var(--color-main-white) !important;
+            text-decoration: none;
+            border-bottom-color: var(--color-transparent) !important
+        }
+
+        #instrukcje a {
+            color: var(--color-link);
+            line-height: 1.8
+        }
+
+        #instrukcje a:hover,
+        #instrukcje a:active,
+        #instrukcje a:focus,
+        #instrukcje a:focus-visible {
+            color: var(--color-link-hover);
+            border-bottom-color: currentColor;
+            border-bottom-style: dashed
+        }
+
+        #instrukcje a.btn {
+            --bs-btn-border-color: var(--color-main-lighter);
+            --bs-btn-hover-border-color: var(--color-link-hover);
+            --bs-btn-hover-bg: hsl(208, 100%, 98%);
+            border-bottom-style: solid !important
+        }
+
+        #instrukcje a.btn:focus {
+            border-color: var(--bs-btn-hover-border-color) !important
+        }
+
+        .accordion-button.collapsed:hover,
+        .accordion-button:focus {
+            box-shadow: inset 0 0 0 1px var(--color-main-lighter);
+            border-color: var(--color-main-lighter);
+            color: var(--color-main-black)
+        }
+
+        .accordion-button:not(.collapsed),
+        .accordion-button.collapsed:hover {
+            color: var(--color-text-dark);
+            background-color: var(--color-main-lighter)
+        }
+
+        ::selection {
+            color: var(--color-main-white) !important;
+            background-color: var(--color-main-dark) !important
+        }
+
+        .dot {
+            color: var(--color-orange)
+        }
+
+        h2 .bi {
+            vertical-align: text-bottom
+        }
+
+        #podstawowe-informacje a:hover .podstawowa-title,
+        #podstawowe-informacje a:active .podstawowa-title,
+        #podstawowe-informacje a:focus .podstawowa-title,
+        #podstawowe-informacje a:focus-visible .podstawowa-title {
+            text-decoration: underline !important
+        }
+
+        .instrukcje-btns {
+            display: flex;
+            flex-wrap: wrap;
+            margin-block: 3.5em 3em;
+            gap: 2em 4em;
+            justify-content: center
+        }
+
+        #instrukcje:has(#header-szukaj) .title-container {
+            padding-top: 2rem !important
+        }
+
+        #instrukcje:has(#header-szukaj) ol.breadcrumb {
+            padding-block-start: 0 !important
+        }
+
+        #header-szukaj a {
+            font-size: .9em;
+            line-height: normal;
+            color: var(--color-main-lighter)
+        }
+
+        #header-szukaj a .bi {
+            color: var(--color-orange)
+        }
+
+        #header-szukaj a:hover .bi,
+        #header-szukaj a:active .bi,
+        #header-szukaj a:focus .bi,
+        #header-szukaj a:focus-visible .bi {
+            color: var(--color-orange-light)
+        }
+
+        #header-szukaj a:hover,
+        #header-szukaj a:active,
+        #header-szukaj a:focus,
+        #header-szukaj a:focus-visible {
+            color: var(--color-main-white);
+            text-decoration: none;
+            border-bottom-color: var(--color-transparent) !important
+        }
+
+        #wyszukiwarka {
+            position: relative;
+            min-height: 28vh
+        }
+
+        .gsc-control-cse,
+        .gsc-completion-container {
+            font-family: inherit !important
+        }
+
+        .gsc-control-wrapper-cse {
+            max-width: 960px;
+            margin-inline: auto
+        }
+
+        .gsst_b {
+            font-size: 1em !important
+        }
+
+        .gsst_a,
+        .gscb_a {
+            line-height: normal !important
+        }
+
+        .gsst_a:hover {
+            border-bottom-color: var(--color-transparent) !important
+        }
+
+        .gs-web-image-box {
+            margin-inline-end: .6em
+        }
+
+        .gcsc-more-maybe-branding-root,
+        .gcsc-find-more-on-google-root,
+        .gs-per-result-labels,
+        .gsc-webResult .gsc-url-top {
+            display: none
+        }
+
+        .gsc-cursor {
+            display: flex !important;
+            column-gap: 2em;
+            row-gap: 1.4em;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+
+        .gsc-cursor>div {
+            margin-right: 0 !important
+        }
+
+        .gsc-input-box {
+            border-radius: 5px
+        }
+
+        .gsc-input {
+            border-radius: 5px;
+            font-size: 1rem
+        }
+
+        .gsc-input {
+            padding-inline-end: 1em !important
+        }
+
+        .gsc-search-button button {
+            border-radius: 5px;
+            margin-top: 0 !important
+        }
+
+        .gsc-search-button svg {
+            width: 18px;
+            height: 18px
+        }
+
+        .gsc-control-cse,
+        .gsc-table-result,
+        .gsc-completion-container {
+            font-family: inherit !important;
+            font-size: .9rem !important
+        }
+
+        .spinner-grow {
+            width: 3rem;
+            height: 3rem
+        }
+
+        table.gsc-search-box {
+            max-width: 620px;
+            margin-inline: auto;
+            margin-block-end: 2em
+        }
+
+        .gsc-input-box:focus-within {
+            box-shadow: 0 0 3px var(--color-link-hover)
+        }
+
+        .gsc-search-button button:hover,
+        .gsc-search-button button:focus {
+            opacity: .9
+        }
+
+        .gs-no-results-result .gs-snippet,
+        .gs-error-result .gs-snippet {
+            padding: 1em !important;
+            border-radius: 5px;
+            text-wrap-style: balance;
+            line-height: 1.8em
+        }
+    </style>
+    <link rel="stylesheet" href="Zdalny%20pulpit%20%E2%80%93%20WIT_files/blueimp-gallery.min.css">
+</head>
+
+<body class="instrukcje pojedyncza-strona loaded">
+    <div id="wittop"></div>
+    <header class="cd-header is-fixed is-visible" id="header-menu">
+        <div class="container h-100"><svg display="none">
+                <symbol id="logowit2" width="100%" height="100%" viewBox="0 0 1831 1689">
+                    <path
+                        d="M8026 566l-129 604c-12,53 -59,91 -113,91l-111 0 -164 -838 24 0c57,0 105,40 115,96l115 637 34 0 161 -726 137 0 161 726 33 0 113 -633c10,-58 61,-100 120,-100l20 0 -164 838 -111 0c-54,0 -101,-38 -113,-91l-128 -604zm648 695l0 -838 118 0 0 720c0,65 -53,118 -118,118l0 0zm483 0l0 -735 -251 0 0 -103 618 0c0,27 -10,53 -30,73 -19,19 -46,30 -73,30l-145 0 0 735 -119 0zm-7157 0l235 -778c13,-41 51,-70 95,-70l15 0c41,0 76,26 88,65l236 783 -8 0c-32,0 -60,-20 -69,-50l-59 -195 -397 0 -56 186c-11,35 -43,59 -80,59zm152 -301l365 0 -148 -492 -68 0 -149 492zm1285 301l235 -778c12,-41 51,-70 94,-70l16 0c40,0 76,26 88,65l236 783 -9 0c-31,0 -59,-20 -68,-50l-59 -195 -397 0 -56 186c-11,35 -43,59 -80,59zm152 -301l365 0 -149 -492 -68 0 -148 492zm3229 304l235 -778c12,-42 51,-70 95,-70l15 0c40,0 76,26 88,65l236 783 -9 0c-31,0 -59,-20 -68,-51l-59 -195 -397 0 -56 187c-11,35 -43,59 -80,59zm152 -302l365 0 -148 -492 -68 0 -149 492zm-4175 299l0 -848 0 0c17,0 33,6 44,18 12,12 18,27 18,44l0 341 154 -1 228 -360c16,-26 45,-42 76,-42l22 0 -271 426 290 422 -29 0c-30,0 -58,-15 -75,-40l-239 -350 -156 1 0 328c0,16 -6,32 -18,43 -11,12 -27,18 -44,18zm1408 0l0 -848 316 0c58,0 106,11 145,33 38,22 68,52 91,90 23,38 39,82 49,132 10,50 15,103 15,159 0,55 -5,109 -15,161 -10,52 -26,98 -49,140 -23,41 -53,74 -91,98 -39,24 -87,35 -145,35l-316 0zm62 -56l254 0c47,0 85,-10 115,-32 30,-22 54,-52 72,-88 17,-37 30,-77 37,-122 8,-45 11,-91 11,-136 0,-46 -3,-90 -11,-133 -7,-43 -20,-81 -37,-115 -18,-35 -42,-61 -72,-81 -30,-19 -68,-29 -115,-29l-254 0 0 736zm700 56l0 -848 512 0 0 0c0,31 -25,56 -56,56l-394 0 0 332 376 0 0 55 -376 0 0 349 394 0c31,0 56,26 56,56l0 0 -512 0zm651 0l0 -848 58 0c38,0 72,24 85,59l261 701 260 -697c14,-38 51,-63 91,-63l54 0 0 848 0 0c-17,0 -32,-6 -44,-18 -12,-11 -18,-27 -18,-43l0 -726 -19 0 -284 761 -79 0 -285 -761 -18 0 0 726c0,16 -7,32 -18,43 -12,12 -28,18 -44,18zm1002 -848l62 0 0 787c0,16 -7,32 -18,43 -12,12 -28,18 -44,18l0 0 0 -848zm-5268 1154l65 0 0 92 -1016 0 0 -50c-39,-1 -86,-3 -97,-18 -7,-12 0,-16 6,-21 15,-9 84,-39 100,-46 11,-5 61,-43 77,-69 24,-41 81,-132 88,-178 9,-57 -1,-193 14,-293 6,-24 25,-38 29,-43 -5,-1 -11,-1 -16,-4 -3,-7 1,-14 0,-16 -1,-4 -12,-1 -14,-5 -4,-9 5,-14 -7,-18 -2,-3 0,-8 2,-10 -5,-4 -8,-4 -9,-11 -3,-7 11,-16 16,-20l3 -2c-2,0 -5,0 -7,0 -39,-2 -76,-21 -101,-51 -1,0 -1,-1 -2,-2 0,0 0,-1 -1,-1 -1,-1 -2,-3 -3,-4 -1,-1 -1,-2 -2,-3 -9,-13 -16,-27 -20,-43 -20,-72 20,-148 90,-172l-5 -22c-2,-5 1,-10 6,-11 5,-1 10,2 11,7l6 21c72,-15 145,29 165,102 10,36 5,74 -12,103 -9,17 -18,29 -29,39 1,0 1,0 2,1 15,3 39,27 53,31 44,16 116,15 209,-44 30,-20 67,-85 77,-107 16,-36 18,-99 53,-158 1,-1 -5,-14 -7,-18 -6,-6 -13,-9 -17,-17 -4,-7 0,-23 -8,-28 -16,-3 -30,3 -49,0 -7,-2 -13,-8 -13,-15 0,-8 7,-20 4,-25 -2,0 -4,1 -6,-1 -1,-4 1,-7 2,-11 -3,-4 -6,-2 -5,-8 0,-2 1,-5 2,-7 -7,-3 -15,-1 -18,-9 -2,-5 20,-45 25,-49 0,-16 -8,-18 -5,-31 1,-3 0,-3 4,-4 4,-15 -1,-29 10,-48 60,-58 184,-47 217,32 16,38 2,70 0,109 7,11 22,17 29,29 3,13 -1,22 -9,28 -1,1 68,80 93,154 2,6 6,24 0,34 -3,4 -8,6 -9,12 -4,14 10,375 -2,448 -2,13 -8,27 -26,40l-497 0 12 386 0 -374 542 0 0 399zm-656 -922c-18,-25 -65,-24 -112,-1l8 30c41,-10 83,-15 110,-10 -1,-7 -3,-14 -6,-19zm-203 92c-3,7 -5,14 -5,21 15,4 52,5 106,-9l-5 -16c-7,-2 -13,-7 -15,-14 -2,-8 0,-15 6,-21l-1 -1c-42,13 -71,28 -86,40zm421 355c-159,-27 -259,-120 -261,-117 -2,4 87,108 233,128 141,20 250,-16 249,-20 0,-2 -96,29 -221,9zm-298 -385c2,9 -1,18 -8,23l4 14c29,-8 56,-19 75,-31 1,-1 1,-1 2,-1 6,-10 10,-20 12,-30 -18,-3 -53,-3 -103,10 8,1 16,7 18,15zm10 90l8 27 7 -5 18 -4c17,-11 25,-19 29,-24 3,-3 4,-5 4,-5 15,-21 24,-45 24,-71 -4,3 -8,7 -13,10 -14,22 -34,43 -59,61 -6,4 -12,8 -18,11zm-133 -13c1,2 2,4 4,5 19,22 63,20 107,-1l-5 -21c-40,11 -82,16 -109,10 1,3 1,5 3,7zm-16 -58c12,-28 36,-57 69,-81 5,-3 11,-7 16,-10l-10 -38c-55,20 -88,76 -80,134 1,-2 3,-3 5,-5zm648 213c-66,81 -141,123 -139,125 2,3 86,-37 153,-116 110,-131 111,-296 107,-296 -4,-1 -10,150 -121,287zm-586 -115c23,11 51,16 78,10l-8 -28c-24,12 -49,18 -70,18zm164 605c0,0 14,-23 1,-132 -13,-108 -65,-309 -65,-309l64 441zm-86 -667l4 17c4,-3 8,-5 12,-8 11,-8 21,-16 29,-25 -14,6 -29,12 -45,16zm40 -154c-25,-15 -56,-22 -87,-16l9 34c28,-13 55,-19 78,-18zm-90 46c-3,2 -7,4 -10,7 -19,12 -34,27 -45,43 18,-10 40,-18 62,-25l-7 -25zm975 869c-4,4 -11,7 -17,7 -7,0 -13,-2 -18,-7 0,0 0,0 0,0 -8,-8 -8,-21 0,-30 155,-160 240,-370 240,-594 0,-470 -381,-853 -850,-853 -468,0 -849,383 -849,853 0,199 69,391 194,543 8,10 7,25 -3,33 0,0 0,0 0,0 -4,4 -10,6 -16,5 -6,0 -12,-3 -16,-8 -132,-160 -205,-363 -205,-573 0,-496 402,-899 895,-899 494,0 895,403 895,899 0,235 -88,455 -250,624zm5844 -100l-55 236 -43 0 -55 -264 19 0 51 247 14 0 57 -244 23 0 57 244 14 0 51 -247 20 0 -56 264 -43 0 -54 -236zm172 236l80 -264 49 0 79 264 -19 0 -23 -76 -124 0 -23 76 -19 0zm47 -94l114 0 -46 -152 -21 0 -47 152zm213 94l0 -264 97 0c18,0 33,3 46,8 12,6 21,14 27,25 6,12 9,26 9,44 0,20 -4,37 -13,51 -8,13 -22,22 -41,27l58 109 -22 0 -56 -106 -86 0 0 106 -19 0zm19 -124l78 0c16,0 28,-2 37,-8 9,-5 15,-12 19,-22 4,-9 6,-20 6,-33 0,-20 -5,-36 -15,-45 -10,-10 -26,-14 -47,-14l-78 0 0 122zm295 127c-7,0 -16,0 -26,-1 -10,-1 -20,-2 -30,-3 -10,-1 -19,-2 -27,-3l2 -17c8,1 17,2 26,3 10,1 20,2 30,3 10,0 18,1 24,1 14,0 26,-2 35,-6 10,-5 17,-11 22,-20 4,-9 7,-21 7,-35 0,-12 -2,-21 -7,-28 -4,-7 -11,-12 -20,-15 -10,-3 -22,-6 -37,-9 -14,-2 -26,-5 -36,-8 -10,-3 -19,-7 -26,-12 -7,-5 -13,-12 -16,-20 -4,-9 -6,-20 -6,-33 0,-17 4,-30 11,-40 6,-10 16,-17 29,-21 12,-4 27,-7 44,-7 8,0 16,1 26,1 9,1 19,2 28,3 9,1 17,2 24,3l-2 17c-7,-1 -16,-2 -26,-3 -9,-1 -19,-2 -27,-3 -9,0 -16,-1 -22,-1 -14,0 -26,2 -35,5 -10,4 -17,9 -22,17 -5,7 -8,16 -8,28 0,14 3,25 8,32 5,6 12,12 23,15 10,3 23,6 39,9 13,3 24,5 34,8 10,3 18,7 24,12 7,5 11,11 15,19 3,8 5,18 5,29 0,20 -3,35 -10,47 -6,12 -16,20 -28,25 -12,6 -27,8 -45,8zm127 -2l0 -29 152 -210 0 -8 -152 0 0 -18 173 0 0 30 -152 209 0 8 152 0 0 18 -173 0zm207 -1l80 -264 49 0 79 264 -19 0 -23 -76 -123 0 -24 76 -19 0zm48 -94l113 0 -46 -152 -21 0 -46 152zm333 -142l-55 236 -42 0 -56 -264 19 0 52 247 13 0 57 -244 23 0 58 244 13 0 51 -247 20 0 -56 264 -43 0 -54 -236zm208 236l19 0 0 -264 -19 0 0 264zm95 0l0 -264 159 0 0 18 -140 0 0 103 117 0 0 17 -117 0 0 109 140 0 0 17 -159 0zm-2298 0l-50 -188 19 0 46 172 5 0 53 -168 20 0 52 168 5 0 46 -172 19 0 -50 188 -33 0 -49 -161 -50 161 -33 0z">
+                    </path>
+                </symbol>
+            </svg>
+            <div class="cd-logo"><a href="https://instrukcje.wit.edu.pl/" title="Akademia WIT w Warszawie"><svg
+                        aria-labelledby="catTitle" role="img">
+                        <title id="catTitle">Logo Akademii WIT</title>
+                        <use xlink:href="#logowit2"></use>
+                    </svg></a></div>
+            <nav class="d-none d-lg-block" id="menu-full">
+                <ul class="cd-secondary-nav navbar-nav" style="right:4em;font-size:.9em">
+                    <li><a href="https://www.wit.edu.pl/rekrutacja">Rekrutacja</a></li>
+                    <li><a href="https://www.wit.edu.pl/studia">Studia</a></li>
+                    <li class="dzien-otwarty-menu"><a href="https://www.wit.edu.pl/dzien-otwarty">Dzień Otwarty</a></li>
+                    <li><a href="https://www.wit.edu.pl/kontakt">Kontakt</a></li>
+                    <li class="nav-item p-0 border-0 ps-2"><a class="font-button minus nav-link"><i class="fa fa-font"
+                                style="font-size:10px"></i></a></li>
+                    <li class="nav-item p-0 border-0"><a class="font-button reset nav-link"><i class="fa fa-font"
+                                style="font-size:13px"></i></a></li>
+                    <li class="nav-item p-0 pe-2"><a class="font-button plus nav-link"><i class="fa fa-font"
+                                style="font-size:16px"></i></a></li>
+                    <li class="nav-item p-0 border-0 ps-2 menu-link-en-pl"><a href="https://www.wit.edu.pl/en"
+                            hreflang="en" class="nav-link font-weight-normal">EN</a></li>
+                    <li class="nav-item p-0 border-0 pe-2 menu-link-en-pl"><a href="https://instrukcje.wit.edu.pl/"
+                            class="nav-link disabled font-weight-normal" style="opacity:.5">PL</a></li>
+                </ul>
+            </nav>
+            <nav class="d-block d-lg-none" id="menu-short">
+                <ul class="cd-secondary-nav navbar-nav" style="right:4em;font-size:.9em">
+                    <li><a href="https://www.wit.edu.pl/rekrutacja">Rekrutacja</a></li>
+                    <li><a href="https://www.wit.edu.pl/studia">Studia</a></li>
+                    <li class="dzien-otwarty-menu"><a href="https://www.wit.edu.pl/dzien-otwarty">Dzień Otwarty</a></li>
+                    <li><a href="https://www.wit.edu.pl/kontakt">Kontakt</a></li>
+                </ul>
+            </nav><a class="cd-primary-nav-trigger" href="#0" style="width:50px" aria-label="menuwit"
+                id="menu-burger"><span class="cd-menu-text"></span><span class="cd-menu-icon"></span><span
+                    class="d-none">Menu</span></a>
+        </div>
+    </header>
+    <nav class="d-print-none" id="menu-burger-fs">
+        <div class="cd-primary-nav">
+            <div class="header-padding-wrapper"></div>
+            <div class="menu-fs">
+                <div class="container">
+                    <div class="row mt-3">
+                        <div class="col-md-12 order-md-1 mt-3 mt-md-0">
+                            <div class="lvl-1"><a class="collapsed d-md-none" data-bs-target="#acc-rekrutacja_menu"
+                                    data-bs-toggle="collapse" href="#rekrutacja_menu">Rekrutacja</a><a
+                                    href="https://www.wit.edu.pl/rekrutacja" class="link float-right d-md-none"><i
+                                        class="fa fa-arrow-right"></i></a>
+                                <div class="collapse d-md-none" id="acc-rekrutacja_menu"> <a class="d-none d-md-block"
+                                        href="https://www.wit.edu.pl/rekrutacja">Rekrutacja</a>
+                                    <ul class="lvl-4">
+                                        <li><a href="https://www.wit.edu.pl/dzienotwarty">Dzień otwarty</a></li>
+                                        <li><a href="https://www.wit.edu.pl/rekrutacja/info-kandydaci">Ważne
+                                                informacje</a></li>
+                                        <li><a href="https://www.wit.edu.pl/rekrutacja/dlaczego-warto">Dlaczego
+                                                warto</a></li>
+                                        <li><a href="https://www.wit.edu.pl/rekrutacja/krok-po-kroku">Krok po kroku</a>
+                                        </li>
+                                        <li><a href="https://www.wit.edu.pl/rekrutacja/obcokrajowcy">Obcokrajowcy</a>
+                                        </li>
+                                        <li><a href="https://www.wit.edu.pl/rekrutacja/dokumenty">Dokumenty
+                                                rekrutacyjne</a></li>
+                                        <li><a href="https://www.wit.edu.pl/rekrutacja/oplaty-znizki">Opłaty i
+                                                zniżki</a></li>
+                                        <li><a rel="nofollow" href="https://ubi.wit.edu.pl/nowe-konto">Załóż konto w
+                                                UBI&nbsp;&nbsp;<i class="fa fa-mouse-pointer"></i></a></li>
+                                        <li><a rel="nofollow" href="https://www.wit.edu.pl/kontakt">Kontakt</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-md-2">
+                            <div class="lvl-1"> <a class="collapsed d-md-none" data-bs-target="#acc-oferta_menu"
+                                    data-bs-toggle="collapse" href="#oferta_menu">Studia</a><a
+                                    href="https://www.wit.edu.pl/studia" class="link float-right d-md-none"><i
+                                        class="fa fa-arrow-right"></i></a>
+                                <div class="collapse d-md-block" id="acc-oferta_menu"> <a class="d-none d-md-block"
+                                        href="https://www.wit.edu.pl/studia">Studia</a>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="lvl-2"><a class="collapsed d-md-none"
+                                                    data-bs-target="#acc-studia1l_menu" data-bs-toggle="collapse"
+                                                    href="#studia1l_menu">Studia licencjackie</a><a
+                                                    href="https://www.wit.edu.pl/studia-licencjackie"
+                                                    class="link float-right d-md-none"><i
+                                                        class="fa fa-arrow-right"></i></a>
+                                                <div class="collapse d-md-block" id="acc-studia1l_menu"> <a
+                                                        href="https://www.wit.edu.pl/studia-licencjackie"
+                                                        class="d-none d-md-block">Studia licencjackie</a>
+                                                    <ul class="lvl-3">
+                                                        <li><a href="https://www.wit.edu.pl/studia-licencjackie/grafika"
+                                                                class="lvl-kierunek">Grafika</a>
+                                                            <ul class="lvl-4">
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-licencjackie/grafika/grafika-uzytkowa">Grafika
+                                                                        użytkowa</a></li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-licencjackie/grafika/projektowanie-graficzne-w-internecie">Projektowanie
+                                                                        graficzne w internecie</a></li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-licencjackie/grafika/techniki-multimedialne">Techniki
+                                                                        multimedialne</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="https://www.wit.edu.pl/studia-licencjackie/zarzadzanie"
+                                                                class="lvl-kierunek">Zarządzanie</a>
+                                                            <ul class="lvl-4">
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-licencjackie/zarzadzanie/cyberbezpieczenstwo">Cyberbezpieczeństwo</a>
+                                                                </li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-licencjackie/zarzadzanie/digital-marketing">Digital
+                                                                        marketing</a></li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-licencjackie/zarzadzanie/rachunkowosc-finanse-w-zarzadzaniu">Rachunkowość
+                                                                        i finanse w zarządzaniu</a></li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-licencjackie/zarzadzanie/zarzadzanie-projektami">Zarządzanie
+                                                                        projektami</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="w-100"></div>
+                                            <div class="lvl-2"><a class="collapsed d-md-none"
+                                                    data-bs-target="#acc-studia1i_menu" data-bs-toggle="collapse"
+                                                    href="#studia1i_menu">Studia inżynierskie</a><a
+                                                    href="https://www.wit.edu.pl/studia-inzynierskie"
+                                                    class="link float-right d-md-none"><i
+                                                        class="fa fa-arrow-right"></i></a>
+                                                <div class="collapse d-md-block" id="acc-studia1i_menu"> <a
+                                                        href="https://www.wit.edu.pl/studia-inzynierskie"
+                                                        class="d-none d-md-block">Studia inżynierskie</a>
+                                                    <ul class="lvl-3">
+                                                        <li><a href="https://www.wit.edu.pl/studia-inzynierskie/informatyka"
+                                                                class="lvl-kierunek">Informatyka</a>
+                                                            <ul class="lvl-4">
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-inzynierskie/informatyka/inzynieria-danych-i-sztuczna-inteligencja">Inżynieria
+                                                                        danych i sztuczna inteligencja</a></li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-inzynierskie/informatyka/inzynieria-oprogramowania">Inżynieria
+                                                                        oprogramowania</a></li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-inzynierskie/informatyka/technologia-chmury-obliczeniowej">Technologia
+                                                                        chmury obliczeniowej</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="https://www.wit.edu.pl/studia-inzynierskie/informatyczne-techniki-zarzadzania"
+                                                                class="lvl-kierunek">Informatyczne techniki
+                                                                zarządzania</a>
+                                                            <ul class="lvl-4">
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-inzynierskie/informatyczne-techniki-zarzadzania/inzynieria-systemow-informatycznych">Inżynieria
+                                                                        systemów informatycznych</a></li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-inzynierskie/informatyczne-techniki-zarzadzania/oracle-cloud-w-biznesie">Oracle
+                                                                        Cloud w biznesie</a></li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-inzynierskie/systemy-informatyczne-z-elementami-sztucznej-inteligencji">Systemy
+                                                                        informatyczne z elementami sztucznej
+                                                                        inteligencji</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="lvl-2"><a class="collapsed d-md-none"
+                                                    data-bs-target="#acc-studia2_menu" data-bs-toggle="collapse"
+                                                    href="#studia2_menu">Studia magisterskie</a><a
+                                                    href="https://www.wit.edu.pl/studia-magisterskie"
+                                                    class="link float-right d-md-none"><i
+                                                        class="fa fa-arrow-right"></i></a>
+                                                <div class="collapse d-md-block" id="acc-studia2_menu"> <a
+                                                        href="https://www.wit.edu.pl/studia-magisterskie"
+                                                        class="d-none d-md-block">Studia magisterskie</a>
+                                                    <ul class="lvl-3">
+                                                        <li><a href="https://www.wit.edu.pl/studia-magisterskie/grafika"
+                                                                class="lvl-kierunek">Grafika</a>
+                                                            <ul class="lvl-4">
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-magisterskie/grafika/grafika-cyfrowa">Grafika
+                                                                        cyfrowa</a></li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-magisterskie/grafika/zaawansowane-multimedia">Zaawansowane
+                                                                        multimedia</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="https://www.wit.edu.pl/studia-magisterskie/informatyka"
+                                                                class="lvl-kierunek">Informatyka</a>
+                                                            <ul class="lvl-4">
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-magisterskie/informatyka/architektura-i-bezpieczenstwo-chmury-obliczeniowej">Architektura
+                                                                        i&nbsp;bezpieczeństwo chmury obliczeniowej</a>
+                                                                </li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-magisterskie/informatyka/inzynieria-programowo-sprzetowa">Inżynieria
+                                                                        programowo-sprzętowa</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="https://www.wit.edu.pl/studia-magisterskie/informatyczne-techniki-zarzadzania"
+                                                                class="lvl-kierunek">Informatyczne techniki
+                                                                zarządzania</a>
+                                                            <ul class="lvl-4">
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-magisterskie/informatyczne-techniki-zarzadzania/sztuczna-inteligencja-w-systemach-zarzadzania">AI
+                                                                        w systemach zarządzania</a></li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-magisterskie/informatyczne-techniki-zarzadzania/robotyzacja-procesow-biznesowych-z-elementami-ai">Robotyzacja
+                                                                        procesów biznesowych z elementami AI</a></li>
+                                                                <li><a
+                                                                        href="https://www.wit.edu.pl/studia-magisterskie/informatyczne-techniki-zarzadzania/systemy-iot-w-zarzadzaniu">Systemy
+                                                                        IoT w zarządzaniu</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="w-100"></div>
+                                            <div class="lvl-2"><a class="collapsed d-md-none"
+                                                    data-bs-target="#acc-studiapodyplomowe_menu"
+                                                    data-bs-toggle="collapse" href="#studiapodyplomowe_menu">Studia
+                                                    podyplomowe</a><a href="https://www.wit.edu.pl/studia-podyplomowe"
+                                                    class="link float-right d-md-none"><i
+                                                        class="fa fa-arrow-right"></i></a>
+                                                <div class="collapse d-md-block" id="acc-studiapodyplomowe_menu"> <a
+                                                        href="https://www.wit.edu.pl/studia-podyplomowe"
+                                                        class="d-none d-md-block">Studia podyplomowe</a>
+                                                    <ul class="lvl-4">
+                                                        <li><a
+                                                                href="https://www.wit.edu.pl/studia-podyplomowe/analityk-systemow-it">Analityk
+                                                                systemów IT</a></li>
+                                                        <li><a
+                                                                href="https://www.wit.edu.pl/studia-podyplomowe/analiza-danych-w-biznesie-z-wykorzystaniem-ms-power-automation">Analiza
+                                                                danych w biznesie z wykorzystaniem MS Power
+                                                                Automation</a></li>
+                                                        <li><a
+                                                                href="https://www.wit.edu.pl/studia-podyplomowe/bezpieczenstwo-infrastruktury-it-wedlug-standardow-comptia">Bezpieczeństwo
+                                                                infrastruktury IT według standardów CompTIA</a></li>
+                                                        <li><a
+                                                                href="https://www.wit.edu.pl/studia-podyplomowe/grafika-komputerowa">Grafika
+                                                                komputerowa</a></li>
+                                                        <li><a
+                                                                href="https://www.wit.edu.pl/studia-podyplomowe/koordynator-i-audytor-dostepnosci">Koordynator
+                                                                i audytor dostępności</a></li>
+                                                        <li><a
+                                                                href="https://www.wit.edu.pl/studia-podyplomowe/zarzadzanie-cyberbezpieczenstwem">Zarządzanie
+                                                                cyberbezpieczeństwem</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 order-md-3">
+                            <div class="lvl-1"><a class="collapsed d-md-none" data-bs-target="#acc-uczelnia_menu"
+                                    data-bs-toggle="collapse" href="#uczelnia_menu">Uczelnia</a><a
+                                    href="https://www.wit.edu.pl/uczelnia" class="link float-right d-md-none"><i
+                                        class="fa fa-arrow-right"></i></a>
+                                <div class="collapse d-md-block" id="acc-uczelnia_menu"> <a
+                                        href="https://www.wit.edu.pl/uczelnia" class="d-none d-md-block">Uczelnia</a>
+                                    <ul class="lvl-4">
+                                        <li><a href="https://www.wit.edu.pl/uczelnia/od-rektora">Od Rektora</a></li>
+                                        <li><a href="https://www.wit.edu.pl/aktualnosci">Aktualności</a></li>
+                                        <li><a href="https://www.wit.edu.pl/uczelnia/wladze-struktura">Założyciel,
+                                                władze i struktura</a></li>
+                                        <li><a
+                                                href="https://www.wit.edu.pl/uczelnia/uczelniany-system-jakosci-ksztalcenia">Jakość
+                                                kształcenia</a></li>
+                                        <li><a href="https://www.wit.edu.pl/katalog-ects">Katalog ECTS</a></li>
+                                        <li><a href="https://www.wit.edu.pl/uczelnia/partnerzy">Partnerzy</a></li>
+                                        <li><a href="https://www.wit.edu.pl/uczelnia/adobe-creative-cloud">Adobe
+                                                Creative Cloud</a></li>
+                                        <li><a href="https://www.wit.edu.pl/uczelnia/osiagniecia-wyroznienia">Osiągnięcia
+                                                i wyróżnienia</a></li>
+                                        <li><a href="https://www.wit.edu.pl/uczelnia/projekty">Innowacyjne projekty /
+                                                Projekty UE</a></li>
+                                        <li><a href="https://www.wit.edu.pl/uczelnia/wspolpraca-zagraniczna">Współpraca
+                                                zagraniczna</a></li>
+                                        <li><a href="https://www.wit.edu.pl/uczelnia/nauka-i-badania">Nauka i
+                                                badania</a></li>
+                                        <li><a
+                                                href="https://www.wit.edu.pl/2023/na-akademii-wit-wystartowal-nowy-projekt-naukowy">Magazyn
+                                                naukowy dsignn</a></li>
+                                        <li><a href="https://www.wit.edu.pl/logo">Logo</a></li>
+                                        <li><a href="https://www.dsignn.online/" class="ico-end ico-external"
+                                                target="_blank">Wydawnictwo</a></li>
+                                        <li><a href="https://www.wit.edu.pl/uczelnia/wykladowcy">Wykładowcy Akademii
+                                                WIT</a></li>
+                                        <li><a href="https://www.wit.edu.pl/wystawy">Wystawy</a></li>
+                                        <li><a href="https://www.wit.edu.pl/wystawy/miejsca/galeria-wit">Galeria WIT</a>
+                                        </li>
+                                        <li><a href="https://www.wit.edu.pl/wystawy/miejsca/galeria-jaracza-8">Galeria
+                                                Jaracza 8</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lvl-1"><a class="collapsed d-md-none" data-bs-target="#acc-absolwenci_menu"
+                                    data-bs-toggle="collapse" href="#absolwenci_menu">Absolwenci</a><a
+                                    href="https://www.wit.edu.pl/absolwenci" class="link float-right d-md-none"><i
+                                        class="fa fa-arrow-right"></i></a>
+                                <div class="collapse d-md-block" id="acc-absolwenci_menu"> <a
+                                        href="https://www.wit.edu.pl/absolwenci"
+                                        class="d-none d-md-block">Absolwenci</a>
+                                    <ul class="lvl-4">
+                                        <li><a href="https://www.wit.edu.pl/absolwenci/dyplom">Dyplom WIT</a></li>
+                                        <li><a href="https://www.wit.edu.pl/absolwenci/e-ksiega">Księga Absolwentów</a>
+                                        </li>
+                                        <li><a href="https://www.wit.edu.pl/absolwenci/opinie-o-wit">Opinie o WIT</a>
+                                        </li>
+                                        <li><a href="https://www.wit.edu.pl/absolwenci/zostan-partnerem">Ścieżki
+                                                kariery</a></li>
+                                        <li><a href="https://www.wit.edu.pl/absolwenci/znizki">Zniżki</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 order-md-4">
+                            <div class="lvl-1"><a class="collapsed d-md-none" data-bs-target="#acc-studenci_menu"
+                                    data-bs-toggle="collapse" href="#studenci_menu">Studenci</a><a
+                                    href="https://www.wit.edu.pl/studenci" class="link float-right d-md-none"><i
+                                        class="fa fa-arrow-right"></i></a>
+                                <div class="collapse d-md-block" id="acc-studenci_menu"> <a
+                                        href="https://www.wit.edu.pl/studenci" class="d-none d-md-block">Studenci</a>
+                                    <ul class="lvl-4">
+                                        <li><a href="https://www.wit.edu.pl/akademia-cisco">Akademia CISCO</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/akademicki-zwiazek-sportowy">Akademicki
+                                                Związek Sportowy</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/akademiki">Akademiki</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/biblioteka">Biblioteka</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/biuro-karier">Biuro karier</a></li>
+                                        <li><a href="https://www.wit.edu.pl/uczelnia/centrum-it">Centrum IT</a></li>
+                                        <li><a href="https://dyplomy.wit.edu.pl/" class="ico-end ico-external"
+                                                target="_blank">Najlepsze dyplomy WIT</a></li>
+                                        <li><a
+                                                href="https://www.wit.edu.pl/studenci/informacje-dla-niepelnosprawnych-kandydatow-studentow">Informacje
+                                                dla niepełnosprawnych kandydatów/studentów</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/innowacyjne-rozwiazania">Innowacyjne
+                                                rozwiązania</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/kola-naukowe">Koła naukowe</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/konsultacje">Konsultacje</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/kredyty-studenckie">Kredyty
+                                                studenckie</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/kwestura">Kwestura</a></li>
+                                        <li><a
+                                                href="https://www.wit.edu.pl/studenci/miedzywydzialowe-studium-jezykow-obcych">Międzywydziałowe
+                                                Studium Języków Obcych</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/najlepsze-prace-dyplomowe">Najlepsze
+                                                prace dyplomowe</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/samorzad-studencki">Samorząd
+                                                studentów</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/stypendia">Stypendia</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/ubezpieczenia-zdrowotne">Ubezpieczenia
+                                                zdrowotne studentów</a></li>
+                                        <li><a href="https://www.wit.edu.pl/uczelnia/wit-w-obiektywie">WIT w
+                                                obiektywie</a></li>
+                                        <li><a href="https://www.wit.edu.pl/studenci/wsparcie-psychologiczne">Wsparcie
+                                                psychologiczne</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 d-md-none order-md-5">
+                            <div class="lvl-1"><a href="https://www.wit.edu.pl/wirtualna-uczelnia">Wirtualna
+                                    uczelnia</a></div>
+                        </div>
+                        <div class="col-md-12 d-md-none order-md-6">
+                            <div class="lvl-1"><a href="https://www.wit.edu.pl/kontakt">Kontakt</a></div>
+                        </div>
+                        <div class="col-md-12 order-md-7 mt-3 mt-md-0">
+                            <div class="text-md-end text-center lvl-social">
+                                <p class="mt-3 mb-0"> <a rel="nofollow" href="https://ubi.wit.edu.pl/" target="_blank"
+                                        title="Uczelniany Bank Informacji WIT"><i class="bi bi-mortarboard"></i> <span
+                                            class="notranslate">UBI</span></a> <a rel="nofollow"
+                                        href="https://ubia.wit.edu.pl/" target="_blank"
+                                        title="Uczelniany Bank Informacji \ Administracja"><i class="bi bi-gear"></i>
+                                        <span class="notranslate">UBIA</span></a> <a rel="nofollow"
+                                        href="https://poczta.wit.edu.pl/" target="_blank" title="Poczta WIT"><i
+                                            class="bi bi-envelope-open"></i> Poczta</a> <a
+                                        href="https://pomoc.wit.edu.pl/" target="_blank" title="Pomoc WIT"><i
+                                            class="bi bi-life-preserver"></i> Pomoc</a> <a
+                                        href="https://cdk.wit.edu.pl/" title="Centrum Doskonalenia Kompetencji WIT"><i
+                                            class="bi bi-hexagon bi-rotate90"></i> <span class="notranslate">CDK
+                                            WIT</span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 mt-3"></div>
+                <div class="row red-bg">
+                    <div class="col-md-12">
+                        <div class="container">
+                            <div class="text-md-end text-center">
+                                <p class="pt-3"> <a rel="nofollow" href="https://www.wit.edu.pl/facebook" class="p-1"
+                                        title="WIT na Facebooku"><i class="bi bi-facebook"></i></a> <a rel="nofollow"
+                                        href="https://www.wit.edu.pl/linkedin" class="p-1" title="WIT na Linkedinie"><i
+                                            class="bi bi-linkedin"></i></a> <a rel="nofollow"
+                                        href="https://www.wit.edu.pl/instagram" class="p-1"
+                                        title="WIT na Instagramie"><i class="bi bi-instagram"></i></a> <a rel="nofollow"
+                                        href="https://www.wit.edu.pl/youtube" class="p-1" title="WIT na YouTube"><i
+                                            class="bi bi-youtube"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main id="instrukcje">
+        <div class="instrukcje pojedyncza-strona">
+            <div class="header-container">
+                <div class="header-padding-wrapper"></div>
+                <div class="title-container">
+                    <div id="header-szukaj" class="container text-end"><a href="https://instrukcje.wit.edu.pl/szukaj"
+                            title="Wyszukiwarka instrukcji">Wyszukaj<i class="ms-2 bi bi-search"></i></a></div>
+                    <div class="container">
+                        <nav aria-label="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item" itemprop="itemListElement" itemscope=""
+                                    itemtype="http://schema.org/ListItem"><a href="https://instrukcje.wit.edu.pl/"
+                                        itemprop="item"><span itemprop="name">Instrukcje</span></a>
+                                    <meta itemprop="position" content="1">
+                                </li>
+                                <li class="breadcrumb-item" itemprop="itemListElement" itemscope=""
+                                    itemtype="http://schema.org/ListItem"><a href="https://instrukcje.wit.edu.pl/zasoby"
+                                        itemprop="item"><span itemprop="name">Zasoby</span></a>
+                                    <meta itemprop="position" content="2">
+                                </li>
+                            </ol>
+                        </nav>
+                        <h1>Zdalny pulpit</h1>
+                    </div>
+                </div>
+            </div>
+            <section class="container">
+                <h2>Dostęp do programów i usług Maxon</h2>
+                <p class="lead">
+                    Studenci Akademii WIT mają dostęp do programów
+                    Maxon używanych w realizacji programu.
+                    Poniższa instrukcja pokazuje tworzenia konta i dostępu do programów.</p>
+                <div class="accordion" id="accordionRDP">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingWin10"><button aria-controls="collapseWin10"
+                                aria-expanded="true" class="accordion-button" data-bs-target="#collapseWin10"
+                                data-bs-toggle="collapse" type="button">Windows/MacOS</button></h3>
+                        <div aria-labelledby="headingWin10" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionRDP" id="collapseWin10" style="">
+                            <div class="accordion-body instrukcja-tresc">
+                                <ol>
+                                    <li>
+                                        Wyszukaj w skrzynce uczelnianej poczty zaproszenie
+                                        -
+                                        Na przykład wpisując <strong>Maxon</strong> w wyszukiwanie
+                                        <br>
+                                        Następnie kliknij <strong>VIEW YOUR INVITATIONS</strong>
+                                        <br>
+                                        <img alt="Zaproszenie na poczcie" src="./mail_web.png">
+                                        <img alt="Zaproszenie na poczcie" src="./mail_thunderbird.png">
+
+                                    <li>
+                                        Link z wiadomości otworzy stronę tworzenia konta.<br>
+                                        Podaj:
+                                        <ul>
+                                            <li><strong>Imie i Nazwisko</strong> - Twoje Imie i Nazwisko</li>
+                                            <li><strong>Adres E-mail</strong> - jeżeli nie jest automatycznie wstawiony, podaj adres, na który przyszło zaproszenie</li>
+                                            <li><strong>Hasło</strong> - ustaw swoje hasło; <strong>UWAGA</strong> - hasło do konta Maxon jest niezależne od UBI</li>
+                                        </ul>
+                                    <img alt="Formularz konta Maxon" src="./zalkadanie_konta.png">
+                                    </li>
+
+                                    <li>
+                                        Twoje konto powinno być gotowe. Jeżeli tak jest, naciśnij zakładkę <strong>LICENSES</strong><br>
+                                        <img alt="Gotowe konto" src="./gotowe_konto.png">
+                                    </li>
+
+                                    <li>
+                                        Zjedź na dół strony licencji i kliknij <strong>Downloads</strong> <br>
+                                        <img alt="Licencje -> downloads" src="./licencje-downloads.png">
+                                    </li>
+
+                                    <li>
+                                        Pobierz aplikację Maxon w wersji dla systemu operacyjnego, którego używasz<br>
+                                        <img alt="Pobieranie aplikacji Maxon" src="./download_maxon_app.png">
+                                    </li>
+                                    <li>
+                                        Gdy pobierze się instalator, uruchom go<br>
+                                        <img alt="Zarządzaj kontem" src="./maxon_installer_downloaded.png">
+                                    </li>
+                                    <li>
+                                        Podczas instalacji, pojawi się pytanie, o podwyższone uprawnienia.
+                                        <ul>
+                                            <li>
+                                                Jeżeli instalujesz program na własnym komputerze, warto zaznaczyć tę opcję
+                                            </li>
+                                        </ul>
+                                        <br>
+                                        <img alt="Podwyższone uprawnienia" src="./uprawnienia.png">
+                                    </li>
+                                    <li>
+                                        Po zainstalowaniu aplikacja uruchomi automatycznie, w przeciwnym przypadku, zrób to ręcznie.<br>
+                                        Zaloguj się do swojego konta Maxon
+                                        <img src="./maxon_app_logowanie.png" alt="Logowanie w aplikacji Maxon">
+                                    </li>
+                                    <li>
+                                        Po zalogowaniu masz dostęp do aplikacji Maxon.<br>
+                                        Tutaj możesz instalować najnowsze i starsze wersje programów oraz zarządzać ich aktualizacjami.
+                                        <img src="./maxon_app_ready.png"
+                                            alt="gotowa aplikacja Maxon">
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingLinux"><button aria-controls="collapseLinux"
+                                aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseLinux"
+                                data-bs-toggle="collapse" type="button">Linux</button></h3>
+                        <div aria-labelledby="headingLinux" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionRDP" id="collapseLinux" style="">
+                            <div class="accordion-body instrukcja-tresc">
+                                <strong>Adobe nie produkuje programów działających natywnie w systemie Linux.</strong>
+                                <br>
+                                Możliwe obejścia tego problemu to:
+                                <ol>
+                                    <li>
+                                    <strong>System Windows na dysku zewnętrznym</strong>
+                                        <ul>
+                                            <li>Najprostsze i najbezpieczniejsze rozwiązanie.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                    <strong>Dualboot</strong>
+                                        <ul>
+                                            <li>Wydzielenie partycji na dysku komputera i zainstalowanie na niej systemu Windows</li>
+                                            <li>Najbardziej wydajne, ale wymaga ostrożności</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                    <strong>Emulacja/Wirtualizacja</strong>
+                                        <ul>
+                                            <li>Maszyna wirtualna, emulator lub warstwa kompatybilności np. Wine</li>
+                                            <li>Mogą występować problemy z wydajnością</li>
+                                            <li>Implementacja może być skomplikowana i różnić się w zależności od dystrybucji</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingAndroid"><button aria-controls="collapseAndroid"
+                                aria-expanded="false" class="accordion-button collapsed"
+                                data-bs-target="#collapseAndroid" data-bs-toggle="collapse" type="button">Android (RD
+                                Client)</button></h3>
+                        <div aria-labelledby="headingAndroid" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionRDP" id="collapseAndroid">
+                            <div class="accordion-body instrukcja-tresc">
+                                <ol>
+                                    <li>Uruchom aplikację <strong>RD Client</strong> (Microsoft Remote Desktop) —
+                                        dostępna w&nbsp;Google Play<br> <a
+                                            href="https://static.wit.edu.pl/images/pomoc/zdalny_pulpit/android-rd-01.jpg"><img
+                                                alt="Ekran startowy aplikacji RD Client na&nbsp;Androidzie"
+                                                src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/android-rd-01.jpg"
+                                                loading="lazy"></a></li>
+                                    <li>Dodaj nowe połączenie (ikona „+” / Dodaj)<br> <a
+                                            href="https://static.wit.edu.pl/images/pomoc/zdalny_pulpit/android-rd-02.jpg"><img
+                                                alt="Dodawanie nowego połączenia w&nbsp;RD Client"
+                                                src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/android-rd-02.jpg"
+                                                loading="lazy"></a></li>
+                                    <li>Wprowadź dane: <ul>
+                                            <li><strong>PC name:</strong> <code>alexander.wsisiz.edu.pl</code></li>
+                                            <li><strong>User name:</strong> Twój uczelniany login</li>
+                                            <li><strong>Password:</strong> hasło systemowe</li>
+                                        </ul><a
+                                            href="https://static.wit.edu.pl/images/pomoc/zdalny_pulpit/android-rd-03.jpg"><img
+                                                alt="Formularz połączenia RDP na&nbsp;Androidzie"
+                                                src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/android-rd-03.jpg"
+                                                loading="lazy"></a></li>
+                                    <li>Zapisz ustawienia (Done)<br> <a
+                                            href="https://static.wit.edu.pl/images/pomoc/zdalny_pulpit/android-rd-04.jpg"><img
+                                                alt="Zapis konfiguracji połączenia RDP w&nbsp;RD Client"
+                                                src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/android-rd-04.jpg"
+                                                loading="lazy"></a></li>
+                                    <li>Wybierz połączenie z&nbsp;listy, aby&nbsp;połączyć
+                                        się&nbsp;z&nbsp;„alexandrem”<br> <a
+                                            href="https://static.wit.edu.pl/images/pomoc/zdalny_pulpit/android-rd-05.jpg"><img
+                                                alt="Lista zapisanych połączeń w&nbsp;RD Client"
+                                                src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/android-rd-05.jpg"
+                                                loading="lazy"></a></li>
+                                    <li>Połączenie zostanie nawiązane<br> <a
+                                            href="https://static.wit.edu.pl/images/pomoc/zdalny_pulpit/android-rd-06.jpg"><img
+                                                alt="Zdalny pulpit na&nbsp;Androidzie — udane połączenie"
+                                                src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/android-rd-06.jpg"
+                                                loading="lazy"></a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingSerwery"><button aria-controls="collapseSerwery"
+                                aria-expanded="false" class="accordion-button collapsed"
+                                data-bs-target="#collapseSerwery" data-bs-toggle="collapse" type="button">Dostęp
+                                do&nbsp;serwerów RDP (alexander i&nbsp;platinium)</button></h3>
+                        <div aria-labelledby="headingSerwery" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionRDP" id="collapseSerwery">
+                            <div class="accordion-body instrukcja-tresc">
+                                <h4>Alexander</h4>
+                                <p>Alexander to&nbsp;komputer z&nbsp;usługami terminalowymi Windows. Dostęp przez RDP
+                                    (Remote Desktop Protocol).</p>
+                                <ul>
+                                    <li><strong>Wniosek o&nbsp;konto RDP:</strong> wyślij prośbę na&nbsp;adres <a
+                                            href="mailto:konta@wit.edu.pl">konta@wit.edu.pl</a></li>
+                                    <li><strong>Komputer (host):</strong> <code>alexander.wsisiz.edu.pl</code></li>
+                                    <li><strong>Nazwa użytkownika:</strong> <em>twój_login</em></li>
+                                    <li><strong>Domena:</strong> <code>WSISIZ.EDU.PL</code></li>
+                                </ul>
+                                <h4>Platinium</h4>
+                                <p>Platinium to&nbsp;komputer z&nbsp;usługami terminalowymi Windows. Dostęp przez RDP
+                                    wyłącznie dla&nbsp;pracowników WIT.</p>
+                                <ul>
+                                    <li><strong>Komputer (host):</strong> <code>platinium.wsisiz.edu.pl</code></li>
+                                    <li><strong>Nazwa użytkownika:</strong> <em>twój_login</em></li>
+                                    <li><strong>Domena:</strong> <code>WSISIZ.EDU.PL</code></li>
+                                </ul>
+                                <p><strong>Uwaga:</strong> Podczas logowania używaj formatu
+                                    <strong>WSISIZ.EDU.PL\login</strong> tam, gdzie klient RDP prosi o&nbsp;nazwę
+                                    użytkownika z&nbsp;domeną.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="instrukcje-btns"><a href="https://instrukcje.wit.edu.pl/zasoby" class="btn btn-more px-3"><i
+                            class="bi bi-arrow-up-left me-1" aria-hidden="true"></i> Więcej z kategorii</a><a
+                        href="https://instrukcje.wit.edu.pl/" class="btn btn-more px-3"><i class="bi bi-send me-1"
+                            aria-hidden="true"></i> Wszystkie instrukcje</a></div>
+            </section>
+        </div>
+    </main>
+    <style>
+        footer a {
+            color: #E6E6E6
+        }
+
+        footer a:hover,
+        footer a:active {
+            color: #FFF !important
+        }
+
+        footer {
+            --bs-border-color: #808080
+        }
+
+        footer ul li {
+            list-style: none
+        }
+
+        .footer-social a:hover,
+        .footer-social a:active {
+            color: #FFF !important
+        }
+    </style>
+    <div id="fixed-totop" style="display:none"><a href="#wittop" title="Wróć na górę strony"
+            class="notouch py-2 text-center"><i class="fa fa-arrow-up"></i><span class="d-none">Wróć na górę
+                strony</span></a></div>
+    <footer id="footer" class="py-5 bg-dark text-white small" style="background-color:#1A1A1A!important">
+        <div class="container">
+            <div class="row g-4 text-center text-sm-start">
+                <div class="col-xl-7 d-flex justify-content-between flex-column flex-sm-row">
+                    <div class="flex-fill p-2"><a href="https://www.wit.edu.pl/" title="Akademia WIT"><img
+                                alt="Akademia WIT"
+                                src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/AkademiaWIT-LOGO-bia%C5%82e.png"
+                                class="img-fluid pe-4" style="max-height:100px"></a></div>
+                    <div class="flex-fill p-2">
+                        <p class="mb-1 text-nowrap"><a
+                                href="https://www.google.com/maps/d/viewer?mid=1NaxyloJ2Pr6I4AVwEetUm6F8cEeke_Kb&amp;ll=52.23647178988564%2C20.941055862426765&amp;z=14"
+                                target="_blank"><i class="bi bi-geo-alt me-3" aria-hidden="true"></i>Newelska 6 / 01-447
+                                Warszawa</a></p>
+                        <p class="mb-1 text-nowrap"><a href="mailto:wit@wit.edu.pl"><i class="bi bi-envelope me-3"
+                                    aria-hidden="true"></i>wit@wit.edu.pl</a></p>
+                        <p class="mb-1 text-nowrap"><a href="https://www.wit.edu.pl/kontakt"><i
+                                    class="bi bi-telephone me-3" aria-hidden="true"></i>Numery telefonów i godziny
+                                pracy</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-5 d-flex justify-content-between flex-column flex-sm-row">
+                    <div class="p-2">
+                        <p class="mb-1"><a href="https://www.wit.edu.pl/studia-licencjackie">Studia licencjackie</a></p>
+                        <p class="mb-1"><a href="https://www.wit.edu.pl/studia-inzynierskie">Studia inżynierskie</a></p>
+                        <p class="mb-1"><a href="https://www.wit.edu.pl/studia-magisterskie">Studia magisterskie</a></p>
+                        <p class="mb-1"><a href="https://www.wit.edu.pl/studia-podyplomowe">Studia podyplomowe</a></p>
+                    </div>
+                    <div class="p-2">
+                        <p class="mb-1"><a href="https://www.wit.edu.pl/kandydat">Dla kandydata</a></p>
+                        <p class="mb-1"><a href="https://www.wit.edu.pl/uczelnia">O uczelni</a></p>
+                        <p class="mb-1"><a href="https://www.wit.edu.pl/rekrutacja">Rekrutacja</a></p>
+                        <p class="mb-1"><a href="https://www.wit.edu.pl/kontakt">Kontakt</a></p>
+                    </div>
+                    <div class="p-2">
+                        <p class="mb-1"><a href="https://www.wit.edu.pl/wystawy">Wystawy</a></p>
+                        <p class="mb-1"><a href="https://www.dsignn.online/">Magazyn naukowy</a></p>
+                        <p class="mb-1"><a href="https://www.wit.edu.pl/wystawy/miejsca/galeria-wit">Galeria WIT</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center justify-content-lg-end mt-4 mb-4"
+                style="align-items:center;gap:20px;">
+                <div><a rel="nofollow" href="https://www.wit.edu.pl/facebook" title="WIT na Facebooku"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M12.5 0C5.60833 0 0 5.60833 0 12.5C0 19.3917 5.60833 25 12.5 25C19.3917 25 25 19.3917 25 12.5C25 5.60833 19.3917 0 12.5 0ZM12.5 2.08333C18.2656 2.08333 22.9167 6.73438 22.9167 12.5C22.9186 14.9935 22.0241 17.4047 20.3965 19.2937C18.7688 21.1828 16.5164 22.4238 14.05 22.7906V15.5375H17.0167L17.4823 12.524H14.05V10.8781C14.05 9.62812 14.4615 8.51667 15.6313 8.51667H17.5115V5.8875C17.1812 5.84271 16.4823 5.74583 15.1615 5.74583C12.4031 5.74583 10.7865 7.20208 10.7865 10.5208V12.524H7.95104V15.5375H10.7865V22.7646C8.35391 22.3642 6.14295 21.112 4.54864 19.2316C2.95432 17.3512 2.08051 14.9653 2.08333 12.5C2.08333 6.73438 6.73438 2.08333 12.5 2.08333Z"
+                                fill="#E6E6E6"></path>
+                        </svg></a></div>
+                <div><a rel="nofollow" href="https://www.wit.edu.pl/instagram" title="WIT na Instagramie"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M7.25 0H17.75C21.75 0 25 3.25 25 7.25V17.75C25 19.6728 24.2362 21.5169 22.8765 22.8765C21.5169 24.2362 19.6728 25 17.75 25H7.25C3.25 25 0 21.75 0 17.75V7.25C0 5.32718 0.763837 3.48311 2.12348 2.12348C3.48311 0.763837 5.32718 0 7.25 0ZM7 2.5C5.80653 2.5 4.66193 2.97411 3.81802 3.81802C2.97411 4.66193 2.5 5.80653 2.5 7V18C2.5 20.4875 4.5125 22.5 7 22.5H18C19.1935 22.5 20.3381 22.0259 21.182 21.182C22.0259 20.3381 22.5 19.1935 22.5 18V7C22.5 4.5125 20.4875 2.5 18 2.5H7ZM19.0625 4.375C19.4769 4.375 19.8743 4.53962 20.1674 4.83265C20.4604 5.12567 20.625 5.5231 20.625 5.9375C20.625 6.3519 20.4604 6.74933 20.1674 7.04235C19.8743 7.33538 19.4769 7.5 19.0625 7.5C18.6481 7.5 18.2507 7.33538 17.9576 7.04235C17.6646 6.74933 17.5 6.3519 17.5 5.9375C17.5 5.5231 17.6646 5.12567 17.9576 4.83265C18.2507 4.53962 18.6481 4.375 19.0625 4.375ZM12.5 6.25C14.1576 6.25 15.7473 6.90848 16.9194 8.08058C18.0915 9.25268 18.75 10.8424 18.75 12.5C18.75 14.1576 18.0915 15.7473 16.9194 16.9194C15.7473 18.0915 14.1576 18.75 12.5 18.75C10.8424 18.75 9.25268 18.0915 8.08058 16.9194C6.90848 15.7473 6.25 14.1576 6.25 12.5C6.25 10.8424 6.90848 9.25268 8.08058 8.08058C9.25268 6.90848 10.8424 6.25 12.5 6.25ZM12.5 8.75C11.5054 8.75 10.5516 9.14509 9.84835 9.84835C9.14509 10.5516 8.75 11.5054 8.75 12.5C8.75 13.4946 9.14509 14.4484 9.84835 15.1517C10.5516 15.8549 11.5054 16.25 12.5 16.25C13.4946 16.25 14.4484 15.8549 15.1517 15.1517C15.8549 14.4484 16.25 13.4946 16.25 12.5C16.25 11.5054 15.8549 10.5516 15.1517 9.84835C14.4484 9.14509 13.4946 8.75 12.5 8.75Z"
+                                fill="#E6E6E6"></path>
+                        </svg></a></div>
+                <div><a rel="nofollow" href="https://www.wit.edu.pl/linkedin" title="WIT na Linkedinie"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M22.2222 0C22.9589 0 23.6655 0.292658 24.1864 0.813592C24.7073 1.33453 25 2.04107 25 2.77778V22.2222C25 22.9589 24.7073 23.6655 24.1864 24.1864C23.6655 24.7073 22.9589 25 22.2222 25H2.77778C2.04107 25 1.33453 24.7073 0.813592 24.1864C0.292658 23.6655 0 22.9589 0 22.2222V2.77778C0 2.04107 0.292658 1.33453 0.813592 0.813592C1.33453 0.292658 2.04107 0 2.77778 0H22.2222ZM21.5278 21.5278V14.1667C21.5278 12.9658 21.0507 11.8142 20.2016 10.965C19.3525 10.1159 18.2008 9.63889 17 9.63889C15.8194 9.63889 14.4444 10.3611 13.7778 11.4444V9.90278H9.90278V21.5278H13.7778V14.6806C13.7778 13.6111 14.6389 12.7361 15.7083 12.7361C16.224 12.7361 16.7186 12.941 17.0833 13.3056C17.4479 13.6703 17.6528 14.1649 17.6528 14.6806V21.5278H21.5278ZM5.38889 7.72222C6.00773 7.72222 6.60122 7.47639 7.03881 7.03881C7.47639 6.60122 7.72222 6.00773 7.72222 5.38889C7.72222 4.09722 6.68056 3.04167 5.38889 3.04167C4.76637 3.04167 4.16934 3.28896 3.72915 3.72915C3.28896 4.16934 3.04167 4.76637 3.04167 5.38889C3.04167 6.68056 4.09722 7.72222 5.38889 7.72222ZM7.31944 21.5278V9.90278H3.47222V21.5278H7.31944Z"
+                                fill="#E6E6E6"></path>
+                        </svg></a></div>
+                <div><a rel="nofollow" href="https://www.wit.edu.pl/youtube" title="WIT na YouTube"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.9434 7.59867e-07C15.641 6.76666e-07 17.7967 -0.001585 19.4424 0.140626C21.04 0.278708 22.5756 0.574232 23.7471 1.48535C25.0252 2.47961 25.4938 3.89034 25.6963 5.30762C25.8922 6.6793 25.8867 8.44639 25.8867 10.5117C25.8867 12.5768 25.8922 14.3433 25.6963 15.7148C25.4938 17.1323 25.0255 18.5438 23.7471 19.5381C22.5756 20.4492 21.04 20.7447 19.4424 20.8828C17.7967 21.025 15.6409 21.0234 12.9434 21.0234C10.2458 21.0234 8.09002 21.025 6.44434 20.8828C4.84684 20.7447 3.31105 20.449 2.13966 19.5381C0.861468 18.5438 0.393921 17.1322 0.191415 15.7148C-0.00447444 14.3432 8.43389e-06 12.5768 8.82912e-06 10.5117C8.82912e-06 8.44636 -0.00451773 6.67931 0.191415 5.30762C0.393933 3.89037 0.861561 2.47959 2.13966 1.48535C3.31108 0.574262 4.84675 0.27871 6.44434 0.140626C8.09003 -0.00157926 10.2458 6.63475e-07 12.9434 7.59867e-07ZM12.9434 4C10.1696 4 8.22114 4.00223 6.78907 4.12598C5.30897 4.25389 4.79218 4.48978 4.59571 4.64258C4.5062 4.7122 4.29084 4.89776 4.15138 5.87402C4.00541 6.89618 4.00001 8.32165 4.00001 10.5117C4.00001 12.7018 4.00538 14.1273 4.15138 15.1494C4.29086 16.1256 4.50623 16.3113 4.59571 16.3809C4.79235 16.5337 5.30953 16.7696 6.78907 16.8975C8.22114 17.0212 10.1696 17.0234 12.9434 17.0234C15.717 17.0234 17.6656 17.0212 19.0977 16.8975C20.577 16.7696 21.0944 16.5337 21.291 16.3809C21.3805 16.3112 21.5969 16.1256 21.7363 15.1494C21.8823 14.1273 21.8867 12.7018 21.8867 10.5117C21.8867 8.32174 21.8823 6.89617 21.7363 5.87402C21.597 4.89849 21.3807 4.71232 21.291 4.64258C21.0944 4.48979 20.5771 4.25385 19.0977 4.12598C17.6656 4.00225 15.717 4 12.9434 4ZM17.8076 10.5117L10.5117 14.7676V6.25586L17.8076 10.5117Z"
+                                fill="#E6E6E6"></path>
+                        </svg></a></div>
+            </div>
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <p class="mb-0 text-center text-md-start opacity-50">© 1996-2026 WIT <i class="bi bi-people"></i>
+                        Twoja droga –&nbsp;nasze wsparcie</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p class="mb-0 text-center text-md-end opacity-75"><a class="me-3"
+                            href="https://www.wit.edu.pl/obowiazek-informacyjny">Obowiązek informacyjny</a><a class=""
+                            href="https://www.wit.edu.pl/polityka-prywatnosci">Polityka prywatności</a></p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-5 footer-copyright">
+                    <p class="pt-4"></p>
+                </div>
+                <div class="col-sm-2 text-center"><img class="img-fluid"
+                        src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/Herb_Polski.png" alt="Herb Polski"></div>
+                <div class="col-sm-5 text-end pt-3"><a class="text-nowrap me-3" rel="follow"
+                        href="https://www.wit.edu.pl/erasmus"><img class="img-fluid"
+                            src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/Erasmus.png"
+                            alt="WIT University Erasmus+"></a><a class="text-nowrap" rel="nofollow"
+                        href="https://wsisiz.bip.gov.pl/"><img src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/BIP.png"
+                            class="img-fluid ml-1" alt="Biuletyn Informacji Publicznej (BIP) WIT"></a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/jquery.js"></script>
+    <script src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/popper.js"></script>
+    <script src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/bootstrap.js"></script>
+    <script src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/wit.js"></script>
+    <link rel="stylesheet" href="Zdalny%20pulpit%20%E2%80%93%20WIT_files/fa.css">
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-display: fallback;
+            font-weight: 300;
+            src: url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300.eot);
+            src: local('Roboto Light'), local('Roboto-Light'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300.eot?#iefix) format('embedded-opentype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300.woff2) format('woff2'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300.woff) format('woff'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300.ttf) format('truetype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: italic;
+            font-display: swap;
+            font-weight: 300;
+            src: url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300italic.eot);
+            src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300italic.eot?#iefix) format('embedded-opentype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300italic.woff2) format('woff2'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300italic.woff) format('woff'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300italic.ttf) format('truetype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-300italic.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-display: fallback;
+            font-weight: 400;
+            src: url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-regular.eot);
+            src: local('Roboto'), local('Roboto-Regular'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-regular.eot?#iefix) format('embedded-opentype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-regular.woff2) format('woff2'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-regular.woff) format('woff'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-regular.ttf) format('truetype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: italic;
+            font-display: swap;
+            font-weight: 400;
+            src: url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-italic.eot);
+            src: local('Roboto Italic'), local('Roboto-Italic'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-italic.eot?#iefix) format('embedded-opentype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-italic.woff2) format('woff2'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-italic.woff) format('woff'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-italic.ttf) format('truetype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-italic.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-display: fallback;
+            font-weight: 700;
+            src: url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700.eot);
+            src: local('Roboto Bold'), local('Roboto-Bold'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700.eot?#iefix) format('embedded-opentype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700.woff2) format('woff2'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700.woff) format('woff'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700.ttf) format('truetype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: italic;
+            font-display: swap;
+            font-weight: 700;
+            src: url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700italic.eot);
+            src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700italic.eot?#iefix) format('embedded-opentype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700italic.woff2) format('woff2'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700italic.woff) format('woff'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700italic.ttf) format('truetype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-700italic.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-display: fallback;
+            font-weight: 900;
+            src: url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900.eot);
+            src: local('Roboto Black'), local('Roboto-Black'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900.eot?#iefix) format('embedded-opentype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900.woff2) format('woff2'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900.woff) format('woff'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900.ttf) format('truetype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: italic;
+            font-display: swap;
+            font-weight: 900;
+            src: url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900italic.eot);
+            src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900italic.eot?#iefix) format('embedded-opentype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900italic.woff2) format('woff2'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900italic.woff) format('woff'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900italic.ttf) format('truetype'), url(https://static.wit.edu.pl/fonts/roboto/roboto-v19-latin-ext_latin-900italic.svg#Roboto) format('svg')
+        }
+    </style>
+    <style>
+        @media(min-width:576px) {
+            .w-sm-25 {
+                width: 25% !important
+            }
+
+            .w-sm-50 {
+                width: 50% !important
+            }
+
+            .w-sm-75 {
+                width: 75% !important
+            }
+
+            .w-sm-100 {
+                width: 100% !important
+            }
+
+            .w-sm-auto {
+                width: auto !important
+            }
+
+            .h-sm-25 {
+                height: 25% !important
+            }
+
+            .h-sm-50 {
+                height: 50% !important
+            }
+
+            .h-sm-75 {
+                height: 75% !important
+            }
+
+            .h-sm-100 {
+                height: 100% !important
+            }
+
+            .h-sm-auto {
+                height: auto !important
+            }
+        }
+
+        @media(min-width:768px) {
+            .w-md-25 {
+                width: 25% !important
+            }
+
+            .w-md-50 {
+                width: 50% !important
+            }
+
+            .w-md-75 {
+                width: 75% !important
+            }
+
+            .w-md-100 {
+                width: 100% !important
+            }
+
+            .w-md-auto {
+                width: auto !important
+            }
+
+            .h-md-25 {
+                height: 25% !important
+            }
+
+            .h-md-50 {
+                height: 50% !important
+            }
+
+            .h-md-75 {
+                height: 75% !important
+            }
+
+            .h-md-100 {
+                height: 100% !important
+            }
+
+            .h-md-auto {
+                height: auto !important
+            }
+        }
+
+        @media(min-width:992px) {
+            .w-lg-25 {
+                width: 25% !important
+            }
+
+            .w-lg-50 {
+                width: 50% !important
+            }
+
+            .w-lg-75 {
+                width: 75% !important
+            }
+
+            .w-lg-100 {
+                width: 100% !important
+            }
+
+            .w-lg-auto {
+                width: auto !important
+            }
+
+            .h-lg-25 {
+                height: 25% !important
+            }
+
+            .h-lg-50 {
+                height: 50% !important
+            }
+
+            .h-lg-75 {
+                height: 75% !important
+            }
+
+            .h-lg-100 {
+                height: 100% !important
+            }
+
+            .h-lg-auto {
+                height: auto !important
+            }
+        }
+
+        @media(min-width:1200px) {
+            .w-xl-25 {
+                width: 25% !important
+            }
+
+            .w-xl-50 {
+                width: 50% !important
+            }
+
+            .w-xl-75 {
+                width: 75% !important
+            }
+
+            .w-xl-100 {
+                width: 100% !important
+            }
+
+            .w-xl-auto {
+                width: auto !important
+            }
+
+            .h-xl-25 {
+                height: 25% !important
+            }
+
+            .h-xl-50 {
+                height: 50% !important
+            }
+
+            .h-xl-75 {
+                height: 75% !important
+            }
+
+            .h-xl-100 {
+                height: 100% !important
+            }
+
+            .h-xl-auto {
+                height: auto !important
+            }
+        }
+    </style>
+    <script>function _0xe3cd() { var _0x3bc9a5 = ['179235kmIDhv', 'removeItem', '.minus', 'witFontSize', '882868DIulCL', '.font-button', 'css', '10ALSmiz', '532992OejrVm', 'setItem', '1553355nyzUDi', '8wsDtQD', 'style', 'hasClass', '.plus', '3rgkvrW', '1091904VqNnAd', 'plus', 'main', '400696aggnip', 'reset', 'getItem', 'removeAttr', 'font-size', 'active', '759796DtykcT', 'addClass', 'bind', '5HCoDSm']; _0xe3cd = function () { return _0x3bc9a5 }; return _0xe3cd() } function _0x3711(_0x454491, _0x5a40e0) { var _0xe3cd2a = _0xe3cd(); return _0x3711 = function (_0x3711cc, _0x23560e) { _0x3711cc = _0x3711cc - 0xad; var _0x1e392b = _0xe3cd2a[_0x3711cc]; return _0x1e392b }, _0x3711(_0x454491, _0x5a40e0) } (function (_0x56598b, _0x4c436f) { var _0x3b0012 = _0x3711, _0xc6011 = _0x56598b(); while (!![]) { try { var _0x24f245 = -parseInt(_0x3b0012(0xbf)) / 0x1 + parseInt(_0x3b0012(0xb5)) / 0x2 * (-parseInt(_0x3b0012(0xb1)) / 0x3) + parseInt(_0x3b0012(0xbb)) / 0x4 * (parseInt(_0x3b0012(0xbe)) / 0x5) + -parseInt(_0x3b0012(0xc7)) / 0x6 + -parseInt(_0x3b0012(0xc3)) / 0x7 * (-parseInt(_0x3b0012(0xad)) / 0x8) + parseInt(_0x3b0012(0xc9)) / 0x9 * (parseInt(_0x3b0012(0xc6)) / 0xa) + parseInt(_0x3b0012(0xb2)) / 0xb; if (_0x24f245 === _0x4c436f) break; else _0xc6011.push(_0xc6011.shift()) } catch (_0x295d21) { _0xc6011.push(_0xc6011.shift()) } } }(_0xe3cd, 0x1d2dd), $(function () { var _0x5909ce = _0x3711; sSmall = 0xe, sLarge = 0x12, sDefault = 0x10; if (localStorage[_0x5909ce(0xb7)](_0x5909ce(0xc2)) !== null) { size = parseInt(localStorage[_0x5909ce(0xb7)](_0x5909ce(0xc2))), $('main')[_0x5909ce(0xc5)](_0x5909ce(0xb9), size); if (size == sLarge) $(_0x5909ce(0xb0))[_0x5909ce(0xbc)](_0x5909ce(0xba)); else size == sSmall && $(_0x5909ce(0xc1))[_0x5909ce(0xbc)]('active') } $('.font-button')[_0x5909ce(0xbd)]('click', function () { var _0x5bb87f = _0x5909ce; $(_0x5bb87f(0xc4)).removeClass(_0x5bb87f(0xba)); var _0x35eab3 = parseInt($(_0x5bb87f(0xb4))[_0x5bb87f(0xc5)]('font-size')); if ($(this).hasClass(_0x5bb87f(0xb6))) localStorage[_0x5bb87f(0xc0)](_0x5bb87f(0xc2)), $(this)[_0x5bb87f(0xbc)](_0x5bb87f(0xba)), $('main')[_0x5bb87f(0xb8)](_0x5bb87f(0xae)); else { if ($(this)[_0x5bb87f(0xaf)](_0x5bb87f(0xb3))) _0x35eab3 = sLarge, localStorage[_0x5bb87f(0xc8)]('witFontSize', _0x35eab3), $(this).addClass('active'), $('main')[_0x5bb87f(0xc5)](_0x5bb87f(0xb9), _0x35eab3); else $(this).hasClass('minus') ? (_0x35eab3 = sSmall, localStorage.setItem(_0x5bb87f(0xc2), _0x35eab3), $(this)[_0x5bb87f(0xbc)](_0x5bb87f(0xba)), $('main')[_0x5bb87f(0xc5)](_0x5bb87f(0xb9), _0x35eab3)) : (_0x35eab3 = sDefault, localStorage[_0x5bb87f(0xc8)](_0x5bb87f(0xc2), _0x35eab3), $(_0x5bb87f(0xb4)).css(_0x5bb87f(0xb9), _0x35eab3)) } }) }));</script>
+    <script>function scrollFunction() { document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? $("#fixed-totop").show() : $("#fixed-totop").hide() } window.addEventListener("touchstart", function () { $(".notouch").removeClass("notouch") }), window.onscroll = function () { scrollFunction() };</script>
+    <div class="gdpr-notice" role="dialog" aria-live="polite" aria-label="Informacja o plikach cookies">
+        <div>Chcemy, żeby nasze strony działały dla&nbsp;Ciebie jak&nbsp;najlepiej. Używamy tylko niezbędnych plików
+            cookie&nbsp;WIT.
+            Dodatkową analizę Google włączysz po&nbsp;akceptacji. <span class="gdpr-details"><a
+                    href="https://static.wit.edu.pl/d/GDPR.pdf?v=2633" target="_blank" title="Polityka prywatności"
+                    rel="noopener noreferrer">Dowiedz się więcej</a>.</span></div>
+        <div class="gdpr-buttons"><button id="gdpr-accept" class="gdpr-button" aria-label="Akceptuję politykę cookies"
+                title="Akceptuję">Akceptuję</button><button id="gdpr-close" class="gdpr-button"
+                aria-label="Zamknij informację o cookies" title="Zamykam">✕</button></div>
+    </div>
+    <style>
+        .gdpr-notice {
+            position: fixed;
+            inset-inline: 0;
+            inset-block-end: 0;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            min-height: 1.3125rem;
+            z-index: 2147483647;
+            padding: 1rem 1.125rem;
+            background: hsla(207, 13%, 34%, .85);
+            backdrop-filter: blur(5px);
+            color: hsl(0, 0%, 100%);
+            font-size: .8125rem;
+            line-height: 1.625rem;
+            transition: opacity .3s ease
+        }
+
+        .gdpr-notice a {
+            color: hsl(0, 0%, 85%);
+            text-decoration: underline;
+            border-bottom: 0 !important
+        }
+
+        .gdpr-notice a:is(:hover, :focus) {
+            color: hsl(0, 0%, 100%);
+            outline: 0
+        }
+
+        .gdpr-button {
+            font-size: .8125rem;
+            padding: .3125rem .5rem;
+            border-radius: .3125rem;
+            cursor: pointer;
+            border: 0;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color .3s ease, color .3s ease
+        }
+
+        .gdpr-notice div {
+            flex-grow: 1
+        }
+
+        .gdpr-buttons {
+            flex-grow: 0 !important;
+            display: flex;
+            gap: .25rem 1rem
+        }
+
+        .gdpr-details {
+            display: inline-block
+        }
+
+        #gdpr-close {
+            background-color: hsla(0, 0%, 0%, 0);
+            color: hsl(0, 0%, 75%);
+            padding-inline: .8125rem
+        }
+
+        #gdpr-close:is(:hover, :focus) {
+            color: hsl(0, 0%, 100%);
+            outline: 0
+        }
+
+        #gdpr-accept {
+            padding-inline: 1rem;
+            background-color: hsl(123, 46%, 33%);
+            color: hsl(0, 0%, 100%)
+        }
+
+        #gdpr-accept:is(:hover, :focus) {
+            background-color: rgb(20, 138, 64);
+            color: rgb(255, 255, 255);
+            outline: 0
+        }
+
+        @media (max-width:576px) {
+            .gdpr-notice {
+                flex-direction: column;
+                padding-block: 1rem 1.5rem;
+                padding-inline: 1.5rem;
+                font-size: .75rem;
+                line-height: 1.25rem
+            }
+
+            .gdpr-buttons {
+                width: 100%
+            }
+
+            #gdpr-accept {
+                flex-grow: 1;
+                padding-block: .3125rem;
+                font-size: .75rem
+            }
+        }
+    </style>
+    <script>document.addEventListener('DOMContentLoaded', () => { const notice = document.querySelector('.gdpr-notice'); if (!notice) return; const gdprButtons = notice.querySelectorAll('.gdpr-buttons button'); for (const btn of gdprButtons) { btn.addEventListener('click', () => { document.cookie = 'gdprWIT=OK; Max-Age=31536000; Path=/; SameSite=Lax; Domain=.wit.edu.pl' + (location.protocol === 'https:' ? '; Secure' : ''); notice.style.opacity = '0'; setTimeout(() => notice.style.display = 'none', 310) }) } });</script>
+    <script>const MEASUREMENT_ID = 'UA-21561336-1'; const MEASUREMENT_DOMAIN = '.wit.edu.pl'; const CONSENT_KEY = 'gdprGA'; const CONSENT_VALUE = 'OK'; const loadGA = () => { if (window.__gaLoaded) return; window.__gaLoaded = true; window.dataLayer = window.dataLayer || []; window.gtag = window.gtag || function () { window.dataLayer.push(arguments) }; gtag('consent', 'update', { analytics_storage: 'granted', ad_user_data: 'denied', ad_personalization: 'denied' }); gtag('js', new Date()); gtag('config', MEASUREMENT_ID); const s = document.createElement('script'); s.async = true; s.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`; document.head.append(s) }; const hasConsent = () => document.cookie.split('; ').includes(`${CONSENT_KEY}=${CONSENT_VALUE}`); const rememberConsent = () => { const maxAge = 2592000; const secure = location.protocol === 'https:' ? '; Secure' : ''; document.cookie = `${CONSENT_KEY}=${CONSENT_VALUE};Max-Age=${maxAge};Path=/;SameSite=Lax;Domain=${MEASUREMENT_DOMAIN}${secure}` }; const onAccept = () => { rememberConsent(); loadGA() }; document.addEventListener('DOMContentLoaded', () => { if (hasConsent()) loadGA(); const accept = document.querySelector('#gdpr-accept'); if (!accept) return; accept.addEventListener('click', onAccept) });</script>
+    <div id="blueimp-gallery" class="blueimp-gallery" aria-label="image gallery" aria-modal="true" role="dialog">
+        <div class="slides" aria-live="polite"></div>
+        <h3 class="title"></h3><a class="prev" aria-controls="blueimp-gallery" aria-label="previous slide"
+            aria-keyshortcuts="ArrowLeft"></a><a class="next" aria-controls="blueimp-gallery" aria-label="next slide"
+            aria-keyshortcuts="ArrowRight"></a><a class="close" aria-controls="blueimp-gallery" aria-label="close"
+            aria-keyshortcuts="Escape"></a><a class="play-pause" aria-controls="blueimp-gallery"
+            aria-label="play slideshow" aria-keyshortcuts="Space" aria-pressed="false" role="button"></a>
+        <ol class="indicator desktop-big"></ol>
+    </div>
+    <script src="Zdalny%20pulpit%20%E2%80%93%20WIT_files/jquery.blueimp-gallery.min.js"></script>
+    <script>"undefined" != typeof blueimp && ["ontouchstart", "ontouchmove", "ontouchend", "ontouchcancel"].forEach(e => blueimp.Gallery.prototype[e] = () => { }), document.addEventListener("DOMContentLoaded", () => { let e = document.querySelectorAll(".instrukcja-tresc"); if (!e) return; let t = () => { if (window.visualViewport && window.visualViewport.scale <= 1) return; let e = 1 - .01 * Math.random(), t = document.querySelector('meta[name="viewport"]'); t && t.setAttribute("content", `width=device-width,initial-scale=${e}`) }; e.forEach(e => { e.addEventListener("click", n => { let o = n.target.closest("a"); o && [...o.children].some(e => "IMG" === e.tagName) && (new blueimp.Gallery([...e.querySelectorAll("a")], { index: o, event: n, onclosed: t }), n.preventDefault()) }) }) });</script>
+</body>
+
+</html>

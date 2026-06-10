@@ -1,0 +1,93 @@
+<div class="accordion-body instrukcja-tresc">
+    <ol>
+        <li>
+            Pobierz i zainstaluj program z oficjalnej strony <a href="https://www.thunderbird.net/pl/thunderbird/all/">
+                Thunderbird</a>
+            <br>
+            Thunderbird powinien także być dostępny w Microsoft Store, App Store i większości repozytoriów dla Linuxa.
+            <br>
+            <img alt="Pobrany instalator thunderbird" src="./instalator.png">
+        </li>
+        <li>Po uruchomieniu programu, otwórz menu i kliknij <strong>Nowe konto</strong><br>
+            <img alt="Menu programu Thunderbird" src="./nowe_konto.png">
+        </li>
+
+
+        <li>
+            Wybierz <strong>E-mail</strong><br>
+            <img alt="Opcja E-mail" src="./nowe_konto_email.png">
+        </li>
+        <li>
+            Podaj:
+            <ul>
+                <li>
+                    Twoje Imię i Nazwisko
+                </li>
+                <li>
+                    Twój uczelniany adres email - [login]<strong>@wit.edu.pl</strong>
+                </li>
+                <li>
+                    <strong>Uwaga</strong> - twój adres może różnić się od loginu, aby uniknąć komplikacji, sprawdź
+                    swoje dane poczty w UBI (Parametry → E-mail)
+                </li>
+            </ul>
+
+            <img alt="Imie, Nazwisko, Adres" src="./imie_nazwisko_adres.png">
+        </li>
+        <li>
+            Kliknij <strong>Kontynuuj</strong>. Thunderbird odpyta serwer i automatycznie wybierze ustawienia.<br>
+            Wybierz <strong>EDYTUJ KONFIGURACJĘ</strong> aby upewnić się, że wszystko się zgadza. <br>
+            <img alt="Automatyczna konfiguracja" src="./auto_konfiguracja.png">
+        </li>
+        <li>
+            Sprawdź, czy ustawienia serwera poczty przychodzącej zgadzają się z poniższymi.
+            <ul>
+                <li><strong>Protokół:</strong> IMAP</li>
+                <li><strong>Adres serwera:</strong> <code>imap.wit.edu.pl</code></li>
+                <li><strong>Port:</strong> 993</li>
+                <li><strong>Bezpieczeństwo połączenia:</strong> SSL/TLS</li>
+                <li><strong>Metoda Uwierzytelniania:</strong> Zwykłe hasło</li>
+                <li><strong>Nazwa użytkownika:</strong> Twój login (UBI Parametry → E-mail)</li>
+            </ul>
+            Wprowadź zmiany jeśli są konieczne i kliknij <strong>Kontynuuj</strong>
+            <br>
+            <img alt="Konfiguracja imap" src="./konfiguracja_imap.png">
+        </li>
+        <li>
+            Zrób to samo dla serwera poczty wychodzącej...
+            <ul>
+                <li><strong>Protokół:</strong> SMTP</li>
+                <li><strong>Adres serwera:</strong> <code>smtp.wit.edu.pl</code></li>
+                <li><strong>Port:</strong> 465</li>
+                <li><strong>Bezpieczeństwo połączenia:</strong> SSL/TLS</li>
+                <li><strong>Metoda Uwierzytelniania:</strong> Zwykłe hasło</li>
+                <li><strong>Nazwa użytkownika:</strong> Twój login (UBI Parametry → E-mail)</li>
+            </ul>
+
+            <img alt="Konfiguracja smtp" src="./konfiguracja_smtp.png">
+        </li>
+        <li>
+            Kliknij <strong>Testuj</strong>. Gdy Thunderbird potwierdzi konfigurację możesz nacisnąć
+            <strong>Kontynuuj</strong><br>
+            <img alt="test_konfiguracji" src="./test_konfiguracji.png">
+        </li>
+        <li>
+            Podaj swoje hasło systemowe (takie jak w UBI) i kliknij <strong>Kontynuuj</strong><br>
+            <img src="./podanie_hasla.png" alt="podanie hasła">
+        </li>
+        <li>
+            Jako ostatni krok, kliknij <strong>prawym</strong> przyciskiem myszy na nowo dodane konto i wybierz
+            <strong>Ustawienia</strong><br>
+            <img src="./konto_ustawienia.png" alt="ustawienia konta">
+        </li>
+        <li>
+            Wybierz <strong>Konfiguracja serwera</strong> i kliknij przycisk <strong>Zaawansowane...</strong> (może być
+            konieczne zescrollowanie) <br>
+            <img src="./konfiguracja_serwera_zaawansowane.png" alt="konfiguracja serwera zaawansowane">
+        </li>
+        <li>
+            Tutaj w linii <strong>Katalog serwera imap</strong> podaj <code>mail</code> <br>
+            <img src="./katalog_imap.png" alt="konfiguracja serwera zaawansowane">
+        </li>
+    </ol>
+</div>

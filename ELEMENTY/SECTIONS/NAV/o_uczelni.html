@@ -1,0 +1,459 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    @charset "utf-8";
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #menu-glowne-o-uczelni {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        background: var(--szary-90, #1A1A1A);
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-content {
+        display: flex;
+        flex-direction: row;
+        width: 1440px;
+        gap: 20px;
+        padding: 20px;
+
+        border-radius: 20px;
+        background: var(--szary-3, #F7F7F7);
+
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-content-left {
+        display: flex;
+        width: 230px;
+        min-width: 200px;
+        max-width: 300px;
+        padding-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        flex-shrink: 0;
+        align-self: stretch;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-content-left h5 {
+        color: var(--szary-90, #1A1A1A);
+        margin: 0;
+        /* main-menu/drop-down/h5-drop-down */
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-content-left hr {
+        width: 230px;
+        height: 1px;
+        background: #E6E6E6;
+        margin: 0;
+        border: 0;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-content-left p {
+        color: var(--szary-50, #808080);
+
+        margin: 0;
+        /* main-menu/drop-down/p-drop-down */
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 19.6px */
+    }
+
+    #menu-glowne-o-uczelni .menu_button {
+        cursor: pointer;
+        user-select: none;
+
+        display: flex;
+        width: 100%;
+        /* height: 58px; */
+        /*change later*/
+        padding: 21px 20px;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+
+        transition: 0.3s;
+        border-radius: 10px;
+    }
+
+    #menu-glowne-o-uczelni .button_label {
+        transition: 0.3s;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    #menu-glowne-o-uczelni .button_arrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 13px;
+        width: 14px;
+        /* background: url(./icons/arrow_white.svg); */
+        position: relative;
+    }
+
+    #menu-glowne-o-uczelni #menu_button_red {
+        background: var(--WIT-GWNY, #900000);
+    }
+
+    #menu-glowne-o-uczelni #menu_button_red>.button_label {
+        color: var(--to, #FFF);
+    }
+
+    #menu-glowne-o-uczelni #menu_button_red .button_arrow {
+        background: url(./icons/arrow_white.svg);
+    }
+
+    #menu-glowne-o-uczelni #menu_button_red:hover {
+        background: var(--szary-90, #1A1A1A);
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-content-right {
+        display: flex;
+        min-width: 400px;
+        align-items: flex-start;
+        gap: 10px;
+        flex: 1 0 0;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-content-right-panel {
+        display: flex;
+        min-width: 200px;
+        max-width: 300px;
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        border-radius: 10px;
+        background: #FFF;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-content-right h6 {
+        color: var(--szary-90, #1A1A1A);
+        margin: 0;
+        padding: 0;
+
+        /* main-menu/drop-down/h6-drop-down */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%;
+        /* 17.6px */
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-content-right-panel hr {
+        width: 100%;
+        height: 1px;
+        background: #E6E6E6;
+        margin: 0;
+        border: 0;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-panel-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+
+        color: var(--szary-85-tekst, #262626);
+
+        /* main-menu/drop-down/a-drop-down */
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-panel-content a {
+        color: var(--szary-85-tekst, #262626);
+        transition: 0.3s;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-panel-content a:hover {
+        color: var(--WIT-GWNY, #900000);
+        transition: 0.3s;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-panel-content #dzien-otwarty-link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        align-self: stretch;
+
+        color: var(--WIT, #910000);
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    #menu-glowne-o-uczelni #cdk_n_socials {
+        display: flex;
+        min-width: 200px;
+        max-width: 300px;
+        height: 100%;
+        /* padding: 10px; */
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    #menu-glowne-o-uczelni #panel-cdk {
+        height: fit-content;
+        flex-grow: 0;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-socials {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-socials h6 {
+        margin-top: 8.7px;
+        margin-bottom: 8.7px;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-socials-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-socials-container a {
+        transition: 0.3s ease;
+        display: flex;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        border-radius: 10px;
+        background: var(--biay, #FFF);
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-socials-container a:hover {
+        border-radius: 10px;
+        background: var(--szary-80, #333);
+
+        /* cien btn */
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    #menu-glowne-o-uczelni .social-icon {
+        transition: 0.3s ease;
+        display: flex;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #menu-glowne-o-uczelni .menu-glowne-socials-container a:hover>.social-icon {
+        filter: invert(1);
+    }
+
+    #menu-glowne-o-uczelni #instagram-icon {
+        background: url(./icons/instagram.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 14px;
+        width: 14px;
+    }
+
+    #menu-glowne-o-uczelni #discord-icon {
+        background: url(./icons/discord.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 14px;
+        width: 19px;
+    }
+
+    #menu-glowne-o-uczelni #tiktok-icon {
+        background: url(./icons/tiktok.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 17px;
+        width: 15px;
+    }
+
+    #menu-glowne-o-uczelni #linkedin-icon {
+        background: url(./icons/linkedin.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 18px;
+        width: 18px;
+    }
+
+    #menu-glowne-o-uczelni #facebook-icon {
+        background: url(./icons/facebook.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 8px;
+    }
+</style>
+
+
+<div class="container" id="menu-glowne-o-uczelni">
+    <div class="menu-glowne-content" id="o-uczelni">
+        <div class="menu-glowne-content-left">
+            <h5>O uczelni</h5>
+            <hr>
+            <p>Dowiedz się jak powstała Akademia WIT, jaką ma strukturę, z kim wspólpracuje, kto tworzy kadrę
+                wykładowców i jakie inicjatywy są realizowane w jej obrębie.</p>
+            <hr>
+            <div class="menu_button" id="menu_button_red">
+                <div class="button_label">
+                    Rekrutacja
+                </div>
+                <div class="button_arrow"></div>
+            </div>
+        </div>
+        <div class="menu-glowne-content-right">
+            <div class="menu-glowne-content-right-panel" id="o-akademii-wit">
+                <h6>
+                    O Akademii WIT
+                </h6>
+                <hr>
+                <div class="menu-glowne-panel-content">
+                    <a href="">Informacje o uczelni</a>
+                    <a href="">Od Rektora</a>
+                    <a href="">Założyciel, władze i struktura</a>
+                    <a href="">Jakość kształcenia</a>
+                    <a href="">Partnerzy</a>
+                    <a href="">Współpraca zagraniczna</a>
+                    <a href="">Logo</a>
+                    <a href="" id="dzien-otwarty-link">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.75 3.3251C4.75 3.19912 4.80004 3.0783 4.88912 2.98922C4.9782 2.90014 5.09902 2.8501 5.225 2.8501H13.775C13.901 2.8501 14.0218 2.90014 14.1109 2.98922C14.2 3.0783 14.25 3.19912 14.25 3.3251V16.1501H4.75V3.3251Z"
+                                fill="#910000" />
+                            <path d="M16.1501 16.1501H2.8501M11.4001 9.9751H12.3501" stroke="#CCCCCC"
+                                stroke-width="1.26667" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Dzień Otwarty
+                    </a>
+                </div>
+            </div>
+            <div class="menu-glowne-content-right-panel" id="Grafika">
+                <h6>
+                    Jak uczymy
+                </h6>
+                <hr>
+                <div class="menu-glowne-panel-content">
+                    <a href="">Wykładowcy</a>
+                    <a href="">Nauka i badania</a>
+                    <a href="">Osiągnięcia</a>
+                    <a href="">Innowacje</a>
+                    <a href="">Katalog ECTS</a>
+                    <a href="">Adobe Creative Cloud</a>
+                </div>
+            </div>
+            <div class="menu-glowne-content-right-panel" id="co-sie-u-nas-dzieje">
+                <h6>
+                    Co się u nas dzieje
+                </h6>
+                <hr>
+                <div class="menu-glowne-panel-content">
+                    <a href="">Magazyn naukowy DSIGNN</a>
+                    <a href="">Magazyn studencki FENOMEN</a>
+                    <a href="">Galeria Grafiki Internetowej</a>
+                    <a href="">Galeria WIT</a>
+                    <a href="">Galeria Jaracza 8</a>
+                    <a href="">Wystawy</a>
+                    <a href="">Wydawnictwo</a>
+                    <a href="">WIT w obiektywie</a>
+                </div>
+            </div>
+            <div class="menu-glowne-content-right-panel-special" id="cdk_n_socials">
+                <div class="menu-glowne-content-right-panel" id="panel-cdk">
+                    <h6>
+                        Centrum Doskonalenia Kompetencji
+                    </h6>
+                    <hr>
+                    <div class="menu-glowne-panel-content">
+                        <div style="display:flex; gap:5px;">
+                            <img src="./icons/cdk_icon.svg" alt="">
+                            <a href="">Wejdź na CDK WIT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-glowne-socials">
+                    <h6>
+                        Social Media
+                    </h6>
+                    <div class="menu-glowne-socials-container">
+                        <a href="" alt="Instagram" id="instagram">
+                            <div class="social-icon" id="instagram-icon">
+
+                            </div>
+                        </a>
+                        <a href="" alt="Discord" id="discord">
+                            <div class="social-icon" id="discord-icon"></div>
+                        </a>
+                        <a href="" alt="TikTok" id="tiktok">
+                            <div class="social-icon" id="tiktok-icon"></div>
+                        </a>
+                        <a href="" alt="LinkedIn" id="linkedin">
+                            <div class="social-icon" id="linkedin-icon"></div>
+                        </a>
+                        <a href="" alt="Facebook" id="facebook">
+                            <div class="social-icon" id="facebook-icon"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
