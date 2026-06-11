@@ -34,9 +34,11 @@
 
     .kontener-top {
         display: flex;
+        flex-shrink: 1;
+        /* padding: 20px 0px; */
         height: 44px;
-        width: 1420px;
-        padding: 7px 0;
+        width: 1460px;
+        padding: 7px 20px;
         justify-content: flex-end;
         align-items: flex-end;
         gap: 10px;
@@ -171,11 +173,13 @@
 
     .kontener-menu-glowne {
         display: flex;
-        width: 1420px;
+        flex-shrink: 1;
+        width: 100%;
+        max-width: 1460px;
+        padding: 0 20px;
         height: 60px;
         justify-content: space-between;
         align-items: center;
-        flex-shrink: 0;
     }
 
     .wit-logo {
@@ -346,8 +350,10 @@
         cursor: pointer;
         transition: 0.3s ease;
         display: flex;
-        width: 1420px;
-        /* padding-left: 30px; */
+        flex-shrink: 1;
+        width: 100%;
+        max-width: 1460px;
+        padding: 0 20px;
         justify-content: space-between;
         align-items: center;
         flex-shrink: 0;
@@ -446,27 +452,27 @@
 
     /* UKRYWANIE MOBILE */
 
-    .top_bar_mobile{
+    .top_bar_mobile {
         display: none;
     }
 
-    .menu_mobile{
+    .menu_mobile {
         display: none;
     }
 
-    @media all and (max-width: 800px) {
+    @media all and (max-width: 1000px) {
 
         /* UKRYCIE DESKTOP */
 
-        .top_bar{
+        .top_bar {
             display: none;
         }
 
-        .menu-glowne{
+        .menu-glowne {
             display: none;
         }
 
-        .menu-kierunki{
+        .menu-kierunki {
             display: none;
         }
 
@@ -493,14 +499,17 @@
 
         .top_bar_mobile {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             align-self: stretch;
+            gap: 15px;
 
             background: var(--WIT, #910000);
         }
 
         .top_bar_mobile img {
+            order: 1;
             width: 235px;
             height: 40px;
             aspect-ratio: 47/8;
@@ -508,17 +517,49 @@
 
         .burger_ico_mobile {
             display: flex;
+            order: 3;
             width: 60px;
             height: 60px;
             padding: 19px 15px;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
+            /* gap: 10px; */
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
+
+        .burger_ico_mobile span {
+            width: 100%;
+            height: 3px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            transition: all 0.3s ease-in-out;
+            transform-origin: left center;
+        }
+
+        .burger_ico_mobile.active span:nth-child(1) {
+            transform: rotate(45deg);
+            position: relative;
+            top: -1px;
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            position: relative;
+            top: 1px;
         }
 
         .wyszukiwarka_mobile {
+            order: 2;
             width: 100%;
+            max-width: 400px;
         }
 
         .search_container_mobile {
@@ -670,10 +711,15 @@
         }
 
         .menu_mobile_dropdown_info .dropdown_item_icon {
+            transition: 0.3s ease;
             width: 14px;
             height: 14px;
             background: url(./icons/arrow_dark.svg);
             background-repeat: no-repeat;
+        }
+
+        .menu_mobile_dropdown_item:active .dropdown_item_icon {
+            background: url(./icons/dash.svg);
         }
 
         .dropdown_item_content {
@@ -744,6 +790,14 @@
             justify-content: space-between;
             padding: 0 20px;
             align-self: stretch;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .menu_mobile_links_container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
         }
 
         .menu_mobile_links a {
@@ -816,14 +870,21 @@
         }
 
         .menu_mobile_socials {
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; */
             width: 100%;
             padding: 10px;
+            max-width: 350px;
+
         }
 
         .menu_mobile_socials_container {
             display: flex;
             flex-direction: row;
             width: 100%;
+            max-width: 350px;
             padding: 0 10px;
             justify-content: space-between;
             align-items: center;
@@ -895,169 +956,182 @@
             width: 8px;
         }
     }
+
+    @media all and (max-width: 800px) {
+        .wyszukiwarka_mobile {
+            order: 3;
+            width: 100%;
+            max-width: none;
+        }
+
+        .burger_ico_mobile {
+            order: 2;
+        }
+    }
 </style>
 
 <!-- DESKTOP -->
 
-    <div class="top_bar">
-        <div class="kontener-top">
-            <div class="top-menu">
-                <a href="http://ubi2.wit.edu.pl/?table=1" target="_blank">
-                    <div class="pasek-top-link" id="UBI">
-                        UBI
-                    </div>
-                </a>
-                <a href="http://ubi2.wit.edu.pl/?table=0" target="_blank">
-                    <div class="pasek-top-link" id="UBIA">
-                        UBIA
-                    </div>
-                </a>
-                <a href="https://poczta.wit.edu.pl/" target="_blank">
-                    <div class="pasek-top-link" id="Poczta">
-                        Poczta
-                    </div>
-                </a>
-                <a href="https://pomoc.wit.edu.pl/" target="_blank">
-                    <div class="pasek-top-link" id="Pomoc">
-                        Pomoc
-                    </div>
-                </a>
-                <div class="pasek-top-divider">
-                    |
+<div class="top_bar">
+    <div class="kontener-top">
+        <div class="top-menu">
+            <a href="http://ubi2.wit.edu.pl/?table=1" target="_blank">
+                <div class="pasek-top-link" id="UBI">
+                    UBI
                 </div>
-                <div class="pasek-top-controler" id="text-minus">
-                    A-
+            </a>
+            <a href="http://ubi2.wit.edu.pl/?table=0" target="_blank">
+                <div class="pasek-top-link" id="UBIA">
+                    UBIA
                 </div>
-                <div class="pasek-top-controler" id="text-plus">
-                    A+
+            </a>
+            <a href="https://poczta.wit.edu.pl/" target="_blank">
+                <div class="pasek-top-link" id="Poczta">
+                    Poczta
                 </div>
-                <div class="pasek-top-controler" id="dark-mode">
+            </a>
+            <a href="https://pomoc.wit.edu.pl/" target="_blank">
+                <div class="pasek-top-link" id="Pomoc">
+                    Pomoc
+                </div>
+            </a>
+            <div class="pasek-top-divider">
+                |
+            </div>
+            <div class="pasek-top-controler" id="text-minus">
+                A-
+            </div>
+            <div class="pasek-top-controler" id="text-plus">
+                A+
+            </div>
+            <div class="pasek-top-controler" id="dark-mode">
 
-                </div>
-                <div class="pasek-top-divider">
-                    |
-                </div>
-                <div class="pasek-top-controler" id="lang-PL">
-                    PL
-                </div>
-                <div class="pasek-top-controler" id="lang-EN">
-                    EN
-                </div>
+            </div>
+            <div class="pasek-top-divider">
+                |
+            </div>
+            <div class="pasek-top-controler" id="lang-PL">
+                PL
+            </div>
+            <div class="pasek-top-controler" id="lang-EN">
+                EN
             </div>
         </div>
     </div>
-    <div class="menu-glowne">
-        <div class="kontener-menu-glowne">
-            <div class="wit-logo">
-                <img src="./icons/witlogo_pl.png" alt="WIT Logo">
-            </div>
-            <div class="menu-lista">
-                <div class="menu-lista-item">
-                    O uczelni
-                    <svg class="menu-lista-item-arrow" width="8" height="7" viewBox="0 0 8 7" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M4.46564 6C4.08074 6.66667 3.11848 6.66667 2.73358 6L0.135508 1.5C-0.249392 0.833333 0.231733 -7.31543e-07 1.00153 -6.64245e-07L6.19769 -2.09983e-07C6.96749 -1.42685e-07 7.44861 0.833333 7.06371 1.5L4.46564 6Z"
-                            fill="#F7F7F7" fill-opacity="0.95" />
-                    </svg>
-                    <!-- kiedy menu jest rozwininiete, 
+</div>
+<div class="menu-glowne">
+    <div class="kontener-menu-glowne">
+        <div class="wit-logo">
+            <img src="./icons/witlogo_pl.png" alt="WIT Logo">
+        </div>
+        <div class="menu-lista">
+            <div class="menu-lista-item">
+                O uczelni
+                <svg class="menu-lista-item-arrow" width="8" height="7" viewBox="0 0 8 7" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.46564 6C4.08074 6.66667 3.11848 6.66667 2.73358 6L0.135508 1.5C-0.249392 0.833333 0.231733 -7.31543e-07 1.00153 -6.64245e-07L6.19769 -2.09983e-07C6.96749 -1.42685e-07 7.44861 0.833333 7.06371 1.5L4.46564 6Z"
+                        fill="#F7F7F7" fill-opacity="0.95" />
+                </svg>
+                <!-- kiedy menu jest rozwininiete, 
                  elementy w menu-lista-item powinny 
                  wygladac tak jak okreslone przez hover, 
                  w tym pliku to jest w okolicy 220 linii -->
-                </div>
-                <div class="menu-lista-item">
-                    Dzień otwarty
-                </div>
-                <div class="menu-lista-item">
-                    Rekrutacja
-                </div>
-                <div class="menu-lista-item">
-                    Studia
-                    <svg class="menu-lista-item-arrow" width="8" height="7" viewBox="0 0 8 7" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M4.46564 6C4.08074 6.66667 3.11848 6.66667 2.73358 6L0.135508 1.5C-0.249392 0.833333 0.231733 -7.31543e-07 1.00153 -6.64245e-07L6.19769 -2.09983e-07C6.96749 -1.42685e-07 7.44861 0.833333 7.06371 1.5L4.46564 6Z"
-                            fill="#F7F7F7" fill-opacity="0.95" />
-                    </svg>
-                </div>
-                <div class="menu-lista-item">
-                    Student
-                    <svg class="menu-lista-item-arrow" width="8" height="7" viewBox="0 0 8 7" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M4.46564 6C4.08074 6.66667 3.11848 6.66667 2.73358 6L0.135508 1.5C-0.249392 0.833333 0.231733 -7.31543e-07 1.00153 -6.64245e-07L6.19769 -2.09983e-07C6.96749 -1.42685e-07 7.44861 0.833333 7.06371 1.5L4.46564 6Z"
-                            fill="#F7F7F7" fill-opacity="0.95" />
-                    </svg>
-                </div>
-                <div class="menu-lista-item">
-                    Wykładowca
-                </div>
-                <div class="menu-lista-item">
-                    Kontakt
-                </div>
             </div>
-            <div class="wyszukiwarka">
-                <div class="search-container">
-                    <form action="">
-                        <input type="text" class="search-input" placeholder="Wyszukaj...">
-                        <button type="submit">
-                            <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M1 15L4.54367 11.4563M4.54367 11.4563C3.97489 10.8876 3.52372 10.2123 3.2159 9.46918C2.90808 8.72604 2.74965 7.92955 2.74965 7.12518C2.74965 6.32081 2.90808 5.52431 3.2159 4.78117C3.52372 4.03803 3.97489 3.3628 4.54367 2.79402C5.11245 2.22525 5.78768 1.77407 6.53082 1.46625C7.27396 1.15843 8.07045 1 8.87482 1C9.67919 1 10.4757 1.15843 11.2188 1.46625C11.962 1.77407 12.6372 2.22525 13.206 2.79402C14.3547 3.94272 15 5.50068 15 7.12518C15 8.74967 14.3547 10.3076 13.206 11.4563C12.0573 12.605 10.4993 13.2504 8.87482 13.2504C7.25033 13.2504 5.69236 12.605 4.54367 11.4563Z"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+            <div class="menu-lista-item">
+                Dzień otwarty
+            </div>
+            <div class="menu-lista-item">
+                Rekrutacja
+            </div>
+            <div class="menu-lista-item">
+                Studia
+                <svg class="menu-lista-item-arrow" width="8" height="7" viewBox="0 0 8 7" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.46564 6C4.08074 6.66667 3.11848 6.66667 2.73358 6L0.135508 1.5C-0.249392 0.833333 0.231733 -7.31543e-07 1.00153 -6.64245e-07L6.19769 -2.09983e-07C6.96749 -1.42685e-07 7.44861 0.833333 7.06371 1.5L4.46564 6Z"
+                        fill="#F7F7F7" fill-opacity="0.95" />
+                </svg>
+            </div>
+            <div class="menu-lista-item">
+                Student
+                <svg class="menu-lista-item-arrow" width="8" height="7" viewBox="0 0 8 7" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.46564 6C4.08074 6.66667 3.11848 6.66667 2.73358 6L0.135508 1.5C-0.249392 0.833333 0.231733 -7.31543e-07 1.00153 -6.64245e-07L6.19769 -2.09983e-07C6.96749 -1.42685e-07 7.44861 0.833333 7.06371 1.5L4.46564 6Z"
+                        fill="#F7F7F7" fill-opacity="0.95" />
+                </svg>
+            </div>
+            <div class="menu-lista-item">
+                Kontakt
+            </div>
+        </div>
+        <div class="wyszukiwarka">
+            <div class="search-container">
+                <form action="">
+                    <input type="text" class="search-input" placeholder="Wyszukaj...">
+                    <button type="submit">
+                        <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 15L4.54367 11.4563M4.54367 11.4563C3.97489 10.8876 3.52372 10.2123 3.2159 9.46918C2.90808 8.72604 2.74965 7.92955 2.74965 7.12518C2.74965 6.32081 2.90808 5.52431 3.2159 4.78117C3.52372 4.03803 3.97489 3.3628 4.54367 2.79402C5.11245 2.22525 5.78768 1.77407 6.53082 1.46625C7.27396 1.15843 8.07045 1 8.87482 1C9.67919 1 10.4757 1.15843 11.2188 1.46625C11.962 1.77407 12.6372 2.22525 13.206 2.79402C14.3547 3.94272 15 5.50068 15 7.12518C15 8.74967 14.3547 10.3076 13.206 11.4563C12.0573 12.605 10.4993 13.2504 8.87482 13.2504C7.25033 13.2504 5.69236 12.605 4.54367 11.4563Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
     </div>
-    <div class="menu-kierunki">
-        <div class="kontener-menu-kierunki">
-            <div class="menu-kierunki-tekst">
-                Jaki kierunek studiów Cię interesuje?
+</div>
+<div class="menu-kierunki">
+    <div class="kontener-menu-kierunki">
+        <div class="menu-kierunki-tekst">
+            Jaki kierunek studiów Cię interesuje?
+        </div>
+        <div class="menu-kierunki-lista">
+            <div class="menu-kierunki-lista-item" id="kierunek-grafika">
+                GRAFIKA
             </div>
-            <div class="menu-kierunki-lista">
-                <div class="menu-kierunki-lista-item" id="kierunek-grafika">
-                    GRAFIKA
-                </div>
-                <div class="menu-kierunki-lista-item" id="kierunek-informatyka">
-                    INFORMATYKA
-                </div>
-                <div class="menu-kierunki-lista-item" id="kierunek-itz">
-                    INFORMATYCZNE TECHNIKI&nbspZARZĄDZANIA
-                </div>
-                <div class="menu-kierunki-lista-item" id="kierunek-zarzadzanie">
-                    ZARZĄDZANIE
-                </div>
+            <div class="menu-kierunki-lista-item" id="kierunek-informatyka">
+                INFORMATYKA
+            </div>
+            <div class="menu-kierunki-lista-item" id="kierunek-itz">
+                INFORMATYCZNE TECHNIKI&nbspZARZĄDZANIA
+            </div>
+            <div class="menu-kierunki-lista-item" id="kierunek-zarzadzanie">
+                ZARZĄDZANIE
             </div>
         </div>
     </div>
+</div>
 
 <!-- MOBILE BELOW -->
 
 <div class="menu_mobile">
     <div class="top_bar_mobile">
         <img src="./icons/witlogo_pl.png" alt="WIT Logo">
-        <div class="burger_ico_mobile"></div> <!-- ten otwiera menu ponizej search bar -->
-    </div>
-    <div class="wyszukiwarka_mobile">
-        <div class="search_container_mobile">
-            <form action="">
-                <input type="text" class="search_input_mobile" placeholder="Szukaj">
-                <button type="submit">
-                    <div class="search_mobile_icon">
-                        <svg class="search-icon-mobile" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M1 15L4.54367 11.4563M4.54367 11.4563C3.97489 10.8876 3.52372 10.2123 3.2159 9.46918C2.90808 8.72604 2.74965 7.92955 2.74965 7.12518C2.74965 6.32081 2.90808 5.52431 3.2159 4.78117C3.52372 4.03803 3.97489 3.3628 4.54367 2.79402C5.11245 2.22525 5.78768 1.77407 6.53082 1.46625C7.27396 1.15843 8.07045 1 8.87482 1C9.67919 1 10.4757 1.15843 11.2188 1.46625C11.962 1.77407 12.6372 2.22525 13.206 2.79402C14.3547 3.94272 15 5.50068 15 7.12518C15 8.74967 14.3547 10.3076 13.206 11.4563C12.0573 12.605 10.4993 13.2504 8.87482 13.2504C7.25033 13.2504 5.69236 12.605 4.54367 11.4563Z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </button>
-            </form>
+        <button class="burger_ico_mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button> <!-- ten otwiera menu ponizej search bar -->
+        <div class="wyszukiwarka_mobile">
+            <div class="search_container_mobile">
+                <form action="">
+                    <input type="text" class="search_input_mobile" placeholder="Szukaj">
+                    <button type="submit">
+                        <div class="search_mobile_icon">
+                            <svg class="search-icon-mobile" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 15L4.54367 11.4563M4.54367 11.4563C3.97489 10.8876 3.52372 10.2123 3.2159 9.46918C2.90808 8.72604 2.74965 7.92955 2.74965 7.12518C2.74965 6.32081 2.90808 5.52431 3.2159 4.78117C3.52372 4.03803 3.97489 3.3628 4.54367 2.79402C5.11245 2.22525 5.78768 1.77407 6.53082 1.46625C7.27396 1.15843 8.07045 1 8.87482 1C9.67919 1 10.4757 1.15843 11.2188 1.46625C11.962 1.77407 12.6372 2.22525 13.206 2.79402C14.3547 3.94272 15 5.50068 15 7.12518C15 8.74967 14.3547 10.3076 13.206 11.4563C12.0573 12.605 10.4993 13.2504 8.87482 13.2504C7.25033 13.2504 5.69236 12.605 4.54367 11.4563Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
     <div class="menu_mobile_dropdown_info">
@@ -1138,7 +1212,7 @@
         <hr id="blue">
         <div class="dropdown_item">
             <div class="dropdown_item_label">
-                <div class="dropdown_item_text">Studen</div>
+                <div class="dropdown_item_text">Student</div>
                 <div class="dropdown_item_icon"></div>
             </div>
         </div>
@@ -1158,19 +1232,21 @@
         </div>
 
     </div>
-    <div class="menu_mobile_links">
-        <a href="http://ubi2.wit.edu.pl/?table=1" target="_blank">
-            UBI
-        </a>
-        <a href="http://ubi2.wit.edu.pl/?table=0" target="_blank">
-            UBIA
-        </a>
-        <a href="https://poczta.wit.edu.pl/" target="_blank">
-            Poczta
-        </a>
-        <a href="https://pomoc.wit.edu.pl/" target="_blank">
-            Pomoc
-        </a>
+    <div class="menu_mobile_links_container">
+        <div class="menu_mobile_links">
+            <a href="http://ubi2.wit.edu.pl/?table=1" target="_blank">
+                UBI
+            </a>
+            <a href="http://ubi2.wit.edu.pl/?table=0" target="_blank">
+                UBIA
+            </a>
+            <a href="https://poczta.wit.edu.pl/" target="_blank">
+                Poczta
+            </a>
+            <a href="https://pomoc.wit.edu.pl/" target="_blank">
+                Pomoc
+            </a>
+        </div>
     </div>
     <hr>
     <div class="menu_mobile_controls">

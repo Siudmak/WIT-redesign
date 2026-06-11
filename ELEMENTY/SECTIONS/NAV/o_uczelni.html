@@ -144,16 +144,19 @@
 
     #menu-glowne-o-uczelni .menu-glowne-content-right {
         display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
         min-width: 400px;
         align-items: flex-start;
+        justify-content: flex-start;
         gap: 10px;
-        flex: 1 0 0;
+
     }
 
     #menu-glowne-o-uczelni .menu-glowne-content-right-panel {
         display: flex;
         min-width: 200px;
-        max-width: 300px;
+        width: 300px;
         padding: 10px;
         flex-direction: column;
         align-items: flex-start;
@@ -237,6 +240,14 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+    }
+
+    @media all and (max-width: 1275px){
+        #menu-glowne-o-uczelni #cdk_n_socials{
+            flex-direction: row;
+            align-items: space-between;
+            height: fit-content;
+        }
     }
 
     #menu-glowne-o-uczelni #panel-cdk {
