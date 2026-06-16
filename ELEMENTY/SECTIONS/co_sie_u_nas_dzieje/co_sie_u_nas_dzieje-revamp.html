@@ -188,6 +188,36 @@
         background: var(--dsignn, #FFEE00);
     }
 
+    #co-u-nas #baner-galeria-wit {
+        background: url(./galeria-wit-baner.png);
+    }
+
+    #co-u-nas #baner-galeria-grafiki-internetowej {
+        background: url(./grafika-internetowa.png);
+    }
+
+    #co-u-nas #baner-grafika-warsztatowa {
+        background: #000;
+    }
+
+    #co-u-nas #baner-samorzad-studencki {
+        background: var(--WIT-GWNY, #900000);
+    }
+
+    #co-u-nas #baner-kola-naukowe {
+        background: #0255DE;
+    }
+
+    #co-u-nas #baner-CDK {
+        background: url(./CDK.png);
+    }
+
+    #co-u-nas #baner-fenomen {
+        background: var(--szary-90, #1A1A1A);
+    }
+
+
+
     #co-u-nas .content-wrapper h3 {
         margin: 0;
 
@@ -215,6 +245,42 @@
         /* 22.4px */
     }
 
+    #co-u-nas .content-wrapper .underline {
+        margin: 0;
+
+        color: #000;
+
+        /* p-tresc-glowna */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+    }
+
+    #co-u-nas .content-wrapper underline {
+        color: #000;
+
+        /* p-tresc-glowna */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+    }
+
     #co-u-nas .content-wrapper strong {
         color: #000;
         font-family: Roboto;
@@ -225,7 +291,22 @@
         /* 22.4px */
     }
 
-    #kadra-content .logo {
+    #co-u-nas .content-wrapper ul {
+        margin: 0;
+
+        padding-left: 25px;
+
+        color: #000;
+
+        /* p-tresc-glowna */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    #co-u-nas .logo {
         color: var(--biay, #FFF);
         font-family: Roboto;
         font-size: 30px;
@@ -257,6 +338,7 @@
 
 
     /* FLIP CARD */
+
 
 
 
@@ -328,6 +410,27 @@
     }
 
     .button:active {
+        background: var(--szary-90, #1A1A1A);
+    }
+
+    #button-internetowa {
+        background: url(./BTN\ CTA\ jasny.png);
+        padding: 0px 0px;
+    }
+
+    #button-red {
+        background: var(--WIT-GWNY, #900000);
+    }
+
+    #button-red .button_label {
+        color: var(--to, #FFF);
+    }
+
+    #button-red .arrow_black {
+        background: url(./icons/arrow_white.svg);
+    }
+
+    #button-red:hover {
         background: var(--szary-90, #1A1A1A);
     }
 </style>
@@ -537,7 +640,7 @@
                 <p>Czasopismo jest indeksowane w międzynarodowych bazach indeksacyjnych EBSCO i Index Copernicus.</p>
 
                 <div class="content-links">
-                    <strong>Zespół redakcyjn:</strong>
+                    <strong>Zespół redakcyjny:</strong>
                     <div class="link">
                         <div class="pointer"></div>
                         <a href="">dr inż. Grzegorz Grodner</a>
@@ -565,6 +668,318 @@
                     </div>
                 </div>
             </div>
+
+            <div class="content-wrapper" id="galeria-wit">
+                <div class="baner" id="baner-galeria-wit">
+                    <!-- <div class="logo"> -->
+                    <!-- <img src="./galeria-wit.svg" alt=""> -->
+                    <!-- </div> -->
+                </div>
+                <h3>Galeria WIT</h3>
+                <p>Galeria sztuki promująca twórczość młodych artystów poprzez prezentację różnych pracowni Grafiki WIT
+                    oraz wystawy międzynarodowe.</p>
+
+                <p id="p-underline">Pobierz plan Galerii WIT</p>
+
+                <p><strong>Adres:</strong>
+                    <br>
+                    <br style="line-height: 10px;">
+                    ul. Gizów 6 <br> 01-248, Warszawa, Polska
+                </p>
+
+                <div class="content-links">
+                    <strong>Kurator galerii:</strong>
+                    <div class="link">
+                        <div class="pointer"></div>
+                        <a href="">dr Anna Kłos</a>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <div class="button_label">
+                        Strona Galerii WIT
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <div class="button_label">
+                        Galeria WIT na Facebooku
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper" id="nasze-wystawy">
+                <p>tu będą wystawy</p>
+                <div class="button">
+                    <div class="button_label">
+                        Wszystkie wystawy
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper" id="galeria-grafiki-internetowej">
+                <div class="baner" id="baner-galeria-grafiki-internetowej">
+                </div>
+                <h3>internetowa.wit.edu.pl</h3>
+                <p>Galeria zawiera prace semestralne studentów, m.in. interfejsy aplikacji mobilnych i stron
+                    internetowych, a także funkcjonalne projekty stron internetowych zakodowanych w językach HTML/CSS/JS
+                    oraz prototypy aplikacji mobilnych. </p>
+                <p>Projekty zawarte w galerii realizowane są na przedmiotach ze specjalności 
+                    <underline>Projektowanie graficzne w internecie</underline> oraz
+                    <underline>Grafika Użytkowa</underline>.
+                </p>
+
+                <div class="content-links">
+                    <strong>Kuratorzy galerii:</strong>
+                    <div class="link">
+                        <div class="pointer"></div>
+                        <a href="">dr inż. Grzegorz Grodner</a>
+                    </div>
+                    <div class="link">
+                        <div class="pointer"></div>
+                        <a href="">dr inż. Magdalena Mirkowicz</a>
+                    </div>
+                </div>
+
+                <div class="button" id="button-internetowa">
+                    <img src="./BTN CTA jasny.png" alt="">
+                </div>
+
+                <div class="button">
+                    <div class="button_label">
+                        Profil na Instagramie
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content-wrapper" id="grafika-warsztatowa">
+                <div class="baner" id="baner-grafika-warsztatowa">
+                    <div class="logo">
+                        GRAFIKA WARSZTATOWA
+                    </div>
+
+                </div>
+                <h3>warsztatowa.wit.edu.pl</h3>
+
+                <p>Na zajęciach z grafiki warsztatowej powstają wyjątkowe prace, w których tradycyjne techniki spotykają
+                    się z indywidualnym stylem i kreatywnością studentów. To przestrzeń eksperymentu, pracy z materią,
+                    fakturą, śladem i kompozycją.</p>
+
+                <p>Efekty tych działań możesz zobaczyć na stronie internetowej oraz w mediach społecznościowych, gdzie
+                    regularnie prezentujemy wybrane realizacje studentów kierunku Grafika.</p>
+
+                <div class="button" id="button-red">
+                    <div class="button_label">
+                        warsztatowa.wit.edu.pl
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+
+                <strong>Social media</strong>
+
+                <div class="button">
+                    <div class="button_label">
+                        @sala229
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+
+
+                <div class="button">
+                    <div class="button_label">
+                        warsztatowa.z.domu
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="content-wrapper" id="samorzad-studencki">
+                <div class="baner" id="baner-samorzad-studencki">
+                    <div class="logo">
+                        Samorząd Studencki Akademii WIT
+                    </div>
+
+                </div>
+                <h3>[TUTAJ FLIP-CARDS]</h3>
+
+                <p>Wszyscy studenci tworzą samorząd. Jego przedstawicielem jest Zarząd Studentów, który zaprasza do
+                    współpracy wszystkich chcących mieć wpływ na to, co się dzieje na uczelni. Zarząd Studentów
+                    organizuje imprezy, informuje o wydarzeniach z życia szkoły oraz reprezentuje studentów na
+                    spotkaniach z władzami uczelni.</p>
+
+                <div class="content-links">
+                    <strong>Zarząd Studentów:</strong>
+                    <div class="link">
+                        <div class="pointer"></div>
+                        <a href="">Przewodniczący: Witek Akademicki</a>
+                    </div>
+                    <div class="link">
+                        <div class="pointer"></div>
+                        <a href="">Wiceprzewodnicząca: Witosława Studentson</a>
+                    </div>
+                </div>
+
+                <p>Samorząd Studentów WIT ma swoich delegatów m.in. w Parlamencie Studentów RP, Porozumieniu Uczelni
+                    Warszawskich oraz w Studenckim Forum BCC. Samorząd odgrywa ważną rolę w przydzielaniu stypendiów,
+                    starając się o jak najkorzystniejsze warunki dla studentów.</p>
+
+                <p>Więcej szczegółów znajdziesz na stronie Samorządu Studentów WIT:</p>
+
+                <div class="button">
+                    <div class="button_label">
+                        samorzad.wit.edu.pl
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+
+
+                <div class="button">
+                    <div class="button_label">
+                        Samorząd na DISCORD
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper" id="kola-naukowe">
+                <div class="baner" id="baner-kola-naukowe">
+                    <div class="logo">
+                        koła naukowe akademii wit
+                    </div>
+                </div>
+
+
+                <p>W Akademii WIT działają koła naukowe, które oferują studentom możliwość rozwijania swoich pasji i
+                    zainteresowań. Każde z nich ma swoją specyfikę i cel, a uczestnictwo w nich to doskonała okazja do
+                    zdobycia dodatkowej wiedzy i umiejętności, które mogą okazać się nieocenione w przyszłej karierze.
+                </p>
+
+                <p>[PANELE DLA KÓŁ]</p>
+
+                <div class="button">
+                    <div class="button_label">
+                        Koła Naukowe WIT
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper" id="fenomen">
+                <div class="baner" id="baner-fenomen">
+                    <div class="logo">
+                        <svg width="237" height="70" viewBox="0 0 237 70" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M30.6543 8.32422H18.1465C17.2819 8.38324 16.4291 8.60746 15.6475 9.00879C14.7946 9.46926 13.9297 10.2489 13.9297 12.4922V13.8857H22.292V22.2207H13.9297V56.9219C13.9415 57.2997 14.0833 58.4568 14.6162 59.4131C15.0782 60.2632 15.8608 61.125 18.1113 61.125C20.3616 61.1249 21.1435 60.2631 21.6055 59.4131C22.1384 58.4568 22.2801 57.2997 22.292 56.9219V29.1758C22.292 24.146 25.6325 16.6719 34.8359 16.6719H36.2334V12.5039C36.2334 3.33001 43.7433 7.03708e-05 48.7773 0C53.8114 0 61.3212 3.32992 61.3213 12.5039C61.3213 21.678 53.8233 25.0078 48.7773 25.0078L44.6084 24.9961V26.3535C44.6202 26.7313 44.762 27.8884 45.2949 28.8447C45.7569 29.6948 46.5387 30.5566 48.7891 30.5566C57.9926 30.5566 61.333 38.0308 61.333 43.0605V56.9688C61.333 61.9985 57.9926 69.4727 48.7891 69.4727C39.5858 69.4725 36.2451 61.9985 36.2451 56.9688C36.2453 51.939 39.586 44.466 48.7891 44.4658H52.9707V43.1074C52.9588 42.7292 52.8161 41.5723 52.2832 40.6162C51.8212 39.7662 51.0393 38.9043 48.7891 38.9043C39.5858 38.9041 36.2451 31.4301 36.2451 26.4004V25.0078H34.8477C32.5973 25.0079 31.8155 25.8696 31.3535 26.7197C30.8205 27.6761 30.6788 28.8331 30.667 29.2109V56.957C30.667 61.9868 27.3264 69.4608 18.123 69.4609C8.91952 69.4609 5.5791 61.9868 5.5791 56.957V22.2334H0V13.8975H5.5791V12.5039C5.57914 3.32992 13.0772 0 18.1113 0H30.6543V8.32422ZM218.776 0C227.98 0.000119624 231.32 7.47416 231.32 12.5039V47.2285H236.911V55.5645H231.332V56.957C231.332 66.131 223.834 69.4609 218.788 69.4609H206.244V61.125H218.753C219.132 61.1131 220.293 60.9715 221.252 60.4404C222.105 59.9799 222.97 59.2002 222.97 56.957V55.5645H214.606V47.2285H222.97V12.5508C222.91 11.689 222.685 10.8387 222.282 10.0596C221.82 9.20957 221.038 8.34768 218.788 8.34766C216.538 8.34766 215.756 9.20959 215.294 10.0596C214.761 11.0156 214.618 12.1725 214.606 12.5508V40.2979C214.606 45.3276 211.266 52.8018 202.062 52.8018H200.665V56.9688C200.665 66.1428 193.167 69.4727 188.121 69.4727C183.075 69.4725 175.577 66.1426 175.577 56.9688C175.577 47.7952 183.075 44.466 188.121 44.4658H192.303V43.1074C192.291 42.7292 192.148 41.5723 191.615 40.6162C191.153 39.7662 190.371 38.9043 188.121 38.9043C178.918 38.9041 175.577 31.4301 175.577 26.4004V12.5039C175.577 7.47418 178.918 0.000171925 188.121 0C197.325 0 200.653 7.4624 200.653 12.4922C200.653 17.522 197.313 24.9961 188.109 24.9961H183.929V26.3535C183.941 26.7313 184.082 27.8884 184.615 28.8447C185.077 29.6948 185.859 30.5566 188.109 30.5566C197.313 30.5566 200.653 38.0308 200.653 43.0605V44.4541H202.051C204.301 44.4541 205.083 43.5803 205.545 42.7422C206.078 41.7858 206.221 40.6278 206.232 40.25V12.5039C206.232 7.47412 209.573 0 218.776 0ZM126.812 36.1182C136.015 36.1182 139.355 43.5923 139.355 48.6221V56.958C139.355 61.9878 136.015 69.4609 126.812 69.4609C117.608 69.4608 114.269 61.9877 114.269 56.958V48.6221C114.269 43.5923 117.608 36.1183 126.812 36.1182ZM140.741 0C143.323 0 146.545 0.874153 149.08 2.95215C151.046 1.1929 153.783 0 157.467 0H161.647V8.33594H157.467C155.217 8.33594 154.435 9.19788 153.973 10.0479C153.57 10.8152 153.333 11.6655 153.285 12.5391V56.9219C153.297 57.2997 153.44 58.4567 153.973 59.4131C154.435 60.2632 155.216 61.125 157.467 61.125H161.647V8.33594H170.011V69.4609H157.467C148.263 69.4609 144.923 61.9868 144.923 56.957V12.5039C144.923 10.178 143.975 9.39894 143.051 8.93848C142.328 8.59613 141.547 8.39497 140.741 8.33594H136.561V30.5566H128.197V0H140.741ZM79.4316 0C88.6351 0 91.9756 7.47412 91.9756 12.5039V56.957C91.9756 59.2828 92.9228 60.063 93.8467 60.5234C94.5692 60.8658 95.3518 61.066 96.1572 61.125H100.338V38.8926H108.701V69.4492H96.1572C93.575 69.4492 90.3532 68.5751 87.8184 66.4971C85.8521 68.2563 83.1154 69.4492 79.4316 69.4492H75.251V61.125H66.8877V0H79.4316ZM126.812 44.4541C124.478 44.4542 123.696 45.3984 123.234 46.3193C122.891 47.0396 122.69 47.8192 122.631 48.6221V56.9219C122.643 57.2996 122.785 58.4568 123.317 59.4131C123.779 60.2631 124.561 61.1259 126.812 61.126C129.145 61.126 129.927 60.1807 130.389 59.2598C130.732 58.5397 130.934 57.7607 130.993 56.958V48.6572C130.934 47.7953 130.708 46.9453 130.306 46.166C129.844 45.316 129.062 44.4541 126.812 44.4541ZM48.7773 52.7891C46.5269 52.7891 45.7451 53.6519 45.2832 54.502C44.7742 55.4225 44.6204 56.5435 44.5967 56.957C44.6204 57.3703 44.7739 58.4804 45.2832 59.4131C45.7451 60.2632 46.5269 61.125 48.7773 61.125C51.0279 61.125 51.8095 60.2632 52.2715 59.4131C52.8045 58.4567 52.9471 57.2997 52.959 56.9219V52.7891H48.7773ZM188.157 52.7891C187.293 52.8481 186.439 53.0732 185.657 53.4746C184.805 53.9351 183.941 54.7144 183.94 56.957C183.94 59.2001 184.805 59.9799 185.657 60.4404C186.581 60.948 187.706 61.1013 188.121 61.125C188.536 61.1014 189.649 60.9481 190.585 60.4404C191.438 59.98 192.303 59.2004 192.303 56.957V52.7891H188.157ZM75.251 61.1133H79.4316C81.6821 61.1133 82.4638 60.2514 82.9258 59.4014C83.4588 58.445 83.6014 57.288 83.6133 56.9102V12.5391C83.554 11.6773 83.3285 10.827 82.9258 10.0479C82.4638 9.19786 81.6819 8.33594 79.4316 8.33594H75.251V61.1133ZM110.087 0C119.29 0 122.631 7.47412 122.631 12.5039V20.8398C122.631 25.8578 119.29 33.3438 110.087 33.3438C100.884 33.3437 97.543 25.8696 97.543 20.8398V12.5039C97.543 7.47414 100.884 5.9977e-05 110.087 0ZM110.087 8.33594C107.754 8.33597 106.972 9.28034 106.51 10.2012C106.166 10.9214 105.965 11.701 105.905 12.5039V20.8047C105.965 21.6665 106.19 22.5167 106.593 23.2959C107.055 24.1459 107.837 25.0078 110.087 25.0078C112.42 25.0078 113.202 24.0634 113.664 23.1426C114.008 22.4224 114.209 21.6427 114.269 20.8398V12.5391C114.257 12.1609 114.114 11.0039 113.581 10.0479C113.119 9.19785 112.337 8.33594 110.087 8.33594ZM48.7773 8.33594C48.3627 8.35958 47.2491 8.51287 46.3135 9.02051C45.4607 9.48098 44.5967 10.2607 44.5967 12.5039V16.6719H48.7422C49.1214 16.66 50.282 16.5185 51.2412 15.9873C52.094 15.5268 52.959 14.7472 52.959 12.5039C52.959 10.2606 52.0822 9.48098 51.2412 9.02051C50.3173 8.50109 49.1919 8.35955 48.7773 8.33594ZM188.121 8.33594C185.871 8.33602 185.089 9.19783 184.627 10.0479C184.094 11.0039 183.952 12.1609 183.94 12.5391V16.6719H188.121C190.371 16.6719 191.153 15.81 191.615 14.96C192.136 14.039 192.279 12.9172 192.303 12.5039C192.279 12.0906 192.125 10.9805 191.615 10.0479C191.153 9.19787 190.371 8.33594 188.121 8.33594Z"
+                                fill="#F5F5F5" />
+                        </svg>
+                    </div>
+                </div>
+                <h3>Magazyn studencki [ fenomen ????]</h3>
+
+                <p>Studencki Magazyn Fenomen to publikacja prowadzona przez Studenckie Koło Naukowe Kwadrat na Akademii
+                    WIT.</p>
+
+                <p>Misją magazynu jest łączenie społeczności studenckiej Grafiki Akademii WIT i ożywienie twórcze przez
+                    cykliczną aktywność tworzenia prac do opublikowania ich w magazynie. Projekt jest odpowiedzią na
+                    zauważoną przez Studenckie Koło Naukowe Kwadrat chęć studentów Grafiki Akademii WIT na dzielenie się
+                    swoją twórczością w środowisku uczelnianym.</p>
+
+                <strong>Twórcy magazynu i cżłonkowie redakcji:</strong>
+
+                <p>Markiz Kras, Mikołaj Żuraw, Zofia Gorbacz, Kseniya Kustouskaya, Paweł Matusik, Mikołaj Firych, Izaak
+                    Jeziorski, Jakub Adamiec</p>
+
+                <div class="button">
+                    <div class="button_label">
+                        Odwiedź stronę
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper" id="CDK">
+                <div class="baner" id="baner-CDK">
+                    <div class="logo"></div>
+                </div>
+                <h3>Centrum Doskonalenia Kompetencji</h3>
+
+
+                <p>
+                <ul>
+                    <li>Czy chcesz <strong>poszerzyć swoją wiedzę, zdobyć nowe umiejętności i zwiększyć swoje
+                            szanse</strong> na rynku
+                        pracy? 📈
+                    </li>
+                    <li>Czy szukasz inspiracji, wyzwań i możliwości <strong>rozwoju osobistego i zawodowego</strong>? 🚀
+                    </li>
+                    <li>Czy chcesz być częścią społeczności akademickiej, która
+                        łączy <strong>pasję, kreatywność i innowacyjność</strong>? 🎓
+                    </li>
+                </ul>
+                </p>
+
+                <p>
+                    Jeśli tak, to zapraszamy Cię do skorzystania z oferty szkoleń, kursów i warsztatów organizowanych
+                    przez
+                    <strong>Centrum Doskonalenia Kompetencji WIT!</strong>
+                </p>
+                <p>
+                    Nasza oferta jest skierowana do studentów, absolwentów i kandydatów na studia, pracowników
+                    administracji
+                    i wykładowców, dla wszystkich, którzy chcą podnieść swoje kwalifikacje, poszerzyć swoje horyzonty i
+                    odkryć nowe możliwości. Niezależnie od tego, czy interesuje Cię programowanie, bezpieczeństwo,
+                    zarządzanie projektami, czy sztuka i kultura – znajdziesz u nas coś dla siebie.
+                </p>
+
+                <div class="button">
+                    <div class="button_label">
+                        cdk.wit.edu.pl
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
         </div>
     </div>
 </div>
