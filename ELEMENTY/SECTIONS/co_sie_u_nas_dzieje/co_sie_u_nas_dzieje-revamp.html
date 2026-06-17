@@ -216,8 +216,6 @@
         background: var(--szary-90, #1A1A1A);
     }
 
-
-
     #co-u-nas .content-wrapper h3 {
         margin: 0;
 
@@ -321,6 +319,58 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
+    }
+
+    #co-u-nas .content-wrapper .content-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #co-u-nas .content-wrapper .link {
+        transition: 0.3s ease;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        color: var(--szary-90, #1A1A1A);
+
+        /* p-tresc-glowna */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 22.4px */
+    }
+
+    #co-u-nas .content-wrapper .link .pointer {
+        transition: 0.3s ease;
+        color: var(--szary-30, #B3B3B3);
+    }
+
+    #co-u-nas .content-wrapper .link a {
+        text-decoration: none;
+        color: var(--szary-90, #1A1A1A);
+    }
+
+    #co-u-nas .content-wrapper .link:hover {
+        font-weight: 700;
+    }
+
+    #co-u-nas .content-wrapper .link:hover .pointer {
+        color: var(--WIT-GWNY, #900000);
+    }
+
+
+    #co-u-nas #CDK ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    #co-u-nas #CDK li {
+        
     }
 
     #co-u-nas .content-wrapper .cards {
@@ -549,7 +599,7 @@
                 </div>
                 <div class="content">
                     <div class="cards">
-
+                        FLIP CARDS FLIP CARDS FLIP CARDS FLIP CARDS FLIP CARDS FLIP CARDS
                         <!-- tu zostawiam dla siebie reference - Łukasz -->
                         <!-- https://www.w3schools.com/howto/howto_css_flip_card.asp -->
 
@@ -601,7 +651,11 @@
                 <div class="content-links">
                     <strong>Kurator wystawy:</strong>
                     <div class="link">
-                        <div class="pointer"></div>
+                        <div class="pointer">
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
+                            </svg>
+                        </div>
                         <a href="">dr Małgorzata Sobocińska-Kiss</a>
                     </div>
                 </div>
@@ -642,19 +696,27 @@
                 <div class="content-links">
                     <strong>Zespół redakcyjny:</strong>
                     <div class="link">
-                        <div class="pointer"></div>
+                        <div class="pointer">                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
+                            </svg></div>
                         <a href="">dr inż. Grzegorz Grodner</a>
                     </div>
                     <div class="link">
-                        <div class="pointer"></div>
+                        <div class="pointer">                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
+                            </svg></div>
                         <a href="">dr Małgorzata Sobocińska-Kiss</a>
                     </div>
                     <div class="link">
-                        <div class="pointer"></div>
+                        <div class="pointer">                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
+                            </svg></div>
                         <a href="">mgr Kamil Mirkowicz</a>
                     </div>
                     <div class="link">
-                        <div class="pointer"></div>
+                        <div class="pointer">                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
+                            </svg></div>
                         <a href="">dr inż. Magdalena Mirkowicz</a>
                     </div>
                 </div>
@@ -690,7 +752,11 @@
                 <div class="content-links">
                     <strong>Kurator galerii:</strong>
                     <div class="link">
-                        <div class="pointer"></div>
+                        <div class="pointer">
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
+                            </svg>
+                        </div>
                         <a href="">dr Anna Kłos</a>
                     </div>
                 </div>
@@ -741,11 +807,19 @@
                 <div class="content-links">
                     <strong>Kuratorzy galerii:</strong>
                     <div class="link">
-                        <div class="pointer"></div>
+                        <div class="pointer">
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
+                            </svg>
+                        </div>
                         <a href="">dr inż. Grzegorz Grodner</a>
                     </div>
                     <div class="link">
-                        <div class="pointer"></div>
+                        <div class="pointer">
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
+                            </svg>
+                        </div>
                         <a href="">dr inż. Magdalena Mirkowicz</a>
                     </div>
                 </div>
@@ -777,10 +851,10 @@
                 <p>Na zajęciach z grafiki warsztatowej powstają wyjątkowe prace, w których tradycyjne techniki spotykają
                     się z indywidualnym stylem i kreatywnością studentów. To przestrzeń eksperymentu, pracy z materią,
                     fakturą, śladem i kompozycją.</p>
-
-                <p>Efekty tych działań możesz zobaczyć na stronie internetowej oraz w mediach społecznościowych, gdzie
-                    regularnie prezentujemy wybrane realizacje studentów kierunku Grafika.</p>
-
+                <p>
+                    Efekty tych działań możesz zobaczyć na stronie internetowej oraz w mediach społecznościowych, gdzie
+                    regularnie prezentujemy wybrane realizacje studentów kierunku Grafika.
+                </p>
                 <div class="button" id="button-red">
                     <div class="button_label">
                         warsztatowa.wit.edu.pl
@@ -789,9 +863,7 @@
                         <div class="arrow_white"></div>
                     </div>
                 </div>
-
                 <strong>Social media</strong>
-
                 <div class="button">
                     <div class="button_label">
                         @sala229
@@ -800,8 +872,6 @@
                         <div class="arrow_white"></div>
                     </div>
                 </div>
-
-
                 <div class="button">
                     <div class="button_label">
                         warsztatowa.z.domu
@@ -810,43 +880,47 @@
                         <div class="arrow_white"></div>
                     </div>
                 </div>
-
-
             </div>
-
 
             <div class="content-wrapper" id="samorzad-studencki">
                 <div class="baner" id="baner-samorzad-studencki">
                     <div class="logo">
                         Samorząd Studencki Akademii WIT
                     </div>
-
                 </div>
                 <h3>[TUTAJ FLIP-CARDS]</h3>
-
-                <p>Wszyscy studenci tworzą samorząd. Jego przedstawicielem jest Zarząd Studentów, który zaprasza do
+                <p>
+                    Wszyscy studenci tworzą samorząd. Jego przedstawicielem jest Zarząd Studentów, który zaprasza do
                     współpracy wszystkich chcących mieć wpływ na to, co się dzieje na uczelni. Zarząd Studentów
                     organizuje imprezy, informuje o wydarzeniach z życia szkoły oraz reprezentuje studentów na
-                    spotkaniach z władzami uczelni.</p>
-
+                    spotkaniach z władzami uczelni.
+                </p>
                 <div class="content-links">
                     <strong>Zarząd Studentów:</strong>
                     <div class="link">
-                        <div class="pointer"></div>
+                        <div class="pointer">
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
+                            </svg>
+                        </div>
                         <a href="">Przewodniczący: Witek Akademicki</a>
                     </div>
                     <div class="link">
-                        <div class="pointer"></div>
+                        <div class="pointer">
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
+                            </svg>
+                        </div>
                         <a href="">Wiceprzewodnicząca: Witosława Studentson</a>
                     </div>
                 </div>
-
-                <p>Samorząd Studentów WIT ma swoich delegatów m.in. w Parlamencie Studentów RP, Porozumieniu Uczelni
+                <p>
+                    Samorząd Studentów WIT ma swoich delegatów m.in. w Parlamencie Studentów RP, Porozumieniu Uczelni
                     Warszawskich oraz w Studenckim Forum BCC. Samorząd odgrywa ważną rolę w przydzielaniu stypendiów,
-                    starając się o jak najkorzystniejsze warunki dla studentów.</p>
+                    starając się o jak najkorzystniejsze warunki dla studentów.
+                </p>
 
                 <p>Więcej szczegółów znajdziesz na stronie Samorządu Studentów WIT:</p>
-
                 <div class="button">
                     <div class="button_label">
                         samorzad.wit.edu.pl
@@ -855,7 +929,6 @@
                         <div class="arrow_white"></div>
                     </div>
                 </div>
-
 
                 <div class="button">
                     <div class="button_label">
@@ -873,15 +946,12 @@
                         koła naukowe akademii wit
                     </div>
                 </div>
-
-
-                <p>W Akademii WIT działają koła naukowe, które oferują studentom możliwość rozwijania swoich pasji i
+                <p>
+                    W Akademii WIT działają koła naukowe, które oferują studentom możliwość rozwijania swoich pasji i
                     zainteresowań. Każde z nich ma swoją specyfikę i cel, a uczestnictwo w nich to doskonała okazja do
                     zdobycia dodatkowej wiedzy i umiejętności, które mogą okazać się nieocenione w przyszłej karierze.
                 </p>
-
                 <p>[PANELE DLA KÓŁ]</p>
-
                 <div class="button">
                     <div class="button_label">
                         Koła Naukowe WIT
@@ -904,20 +974,21 @@
                     </div>
                 </div>
                 <h3>Magazyn studencki [ fenomen ????]</h3>
-
-                <p>Studencki Magazyn Fenomen to publikacja prowadzona przez Studenckie Koło Naukowe Kwadrat na Akademii
-                    WIT.</p>
-
-                <p>Misją magazynu jest łączenie społeczności studenckiej Grafiki Akademii WIT i ożywienie twórcze przez
+                <p>
+                    Studencki Magazyn Fenomen to publikacja prowadzona przez Studenckie Koło Naukowe Kwadrat na Akademii
+                    WIT.
+                </p>
+                <p>
+                    Misją magazynu jest łączenie społeczności studenckiej Grafiki Akademii WIT i ożywienie twórcze przez
                     cykliczną aktywność tworzenia prac do opublikowania ich w magazynie. Projekt jest odpowiedzią na
                     zauważoną przez Studenckie Koło Naukowe Kwadrat chęć studentów Grafiki Akademii WIT na dzielenie się
-                    swoją twórczością w środowisku uczelnianym.</p>
-
+                    swoją twórczością w środowisku uczelnianym.
+                </p>
                 <strong>Twórcy magazynu i cżłonkowie redakcji:</strong>
-
-                <p>Markiz Kras, Mikołaj Żuraw, Zofia Gorbacz, Kseniya Kustouskaya, Paweł Matusik, Mikołaj Firych, Izaak
-                    Jeziorski, Jakub Adamiec</p>
-
+                <p>
+                    Markiz Kras, Mikołaj Żuraw, Zofia Gorbacz, Kseniya Kustouskaya, Paweł Matusik, Mikołaj Firych, Izaak
+                    Jeziorski, Jakub Adamiec
+                </p>
                 <div class="button">
                     <div class="button_label">
                         Odwiedź stronę
@@ -927,14 +998,11 @@
                     </div>
                 </div>
             </div>
-
             <div class="content-wrapper" id="CDK">
                 <div class="baner" id="baner-CDK">
                     <div class="logo"></div>
                 </div>
                 <h3>Centrum Doskonalenia Kompetencji</h3>
-
-
                 <p>
                 <ul>
                     <li>Czy chcesz <strong>poszerzyć swoją wiedzę, zdobyć nowe umiejętności i zwiększyć swoje
@@ -948,7 +1016,6 @@
                     </li>
                 </ul>
                 </p>
-
                 <p>
                     Jeśli tak, to zapraszamy Cię do skorzystania z oferty szkoleń, kursów i warsztatów organizowanych
                     przez
@@ -961,7 +1028,6 @@
                     odkryć nowe możliwości. Niezależnie od tego, czy interesuje Cię programowanie, bezpieczeństwo,
                     zarządzanie projektami, czy sztuka i kultura – znajdziesz u nas coś dla siebie.
                 </p>
-
                 <div class="button">
                     <div class="button_label">
                         cdk.wit.edu.pl
@@ -970,16 +1036,7 @@
                         <div class="arrow_white"></div>
                     </div>
                 </div>
-
-
-
             </div>
-
-
-
-
-
-
         </div>
     </div>
 </div>
