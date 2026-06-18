@@ -369,27 +369,124 @@
         row-gap: 10px;
     }
 
-    #co-u-nas #CDK li {
-        
-    }
-
-    #co-u-nas .content-wrapper .cards {
+    #co-u-nas #kadra-content .cards {
         display: flex;
+        flex-direction: row;
         align-items: flex-start;
         align-content: flex-start;
         gap: 30px;
         align-self: stretch;
         flex-wrap: wrap;
-
-        width: fit-content;
-        max-width: 970px;
     }
 
 
 
     /* FLIP CARD */
 
+    #co-u-nas .cards .card {
+        transition: 0.3s ease;
+        display: flex;
+        height: 300px;
+        min-width: 218px;
+        padding: 16px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        /* flex: 1 0 0; */
 
+        user-select: none;
+        overflow: hidden;
+        border-radius: 24px;
+        background: url(./card-placeholder.png) lightgray 50% / cover no-repeat;
+    }
+
+    #co-u-nas .cards .card .card-nametag {
+        transition: 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+        align-items: flex-start;
+        width: 100%;
+
+        transform: translateY(40px);
+
+        border-radius: 8px;
+        background: var(--szary-5, rgba(247, 247, 247, 0.95));
+    }
+
+    #co-u-nas #kadra-content .cards .card .card-nametag{
+        transform: translateY(40px);
+    }
+
+    #co-u-nas .cards .card .card-nametag .nametag-title {
+        color: var(--szary-85-tekst, #262626);
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+    #co-u-nas .cards .card .card-nametag .nametag-name {
+        color: var(--szary-85-tekst, #262626);
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
+
+
+    #co-u-nas .cards .card #card-button {
+        transition: 0.3s ease;
+        width: 100%;
+        justify-content: space-between;
+        padding: 8px;
+        border-radius: 8px;
+        background: var(--szary-5, rgba(247, 247, 247, 0.95));
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(40px);
+        /* Starts 10px lower */
+        /* transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease; */
+
+    }
+
+    #co-u-nas .cards .card:hover>#card-button {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        /* Slides up to its original position */
+    }
+
+    #co-u-nas #kadra-content .cards .card:hover>.card-nametag {
+        transform: translateY(0);
+    }
+
+    #co-u-nas .cards .card:hover {
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    #co-u-nas .cards .card #card-button:hover {
+        background: var(--WIT-GWNY, #900000);
+    }
+
+    #co-u-nas .cards .card #card-button:active {
+        background: var(--szary-90, #1A1A1A);
+    }
+
+    #co-u-nas #samorzad-studencki .cards {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #co-u-nas #samorzad-studencki .cards .card-nametag {
+        transform: translateY(0);
+    }
 
 
 
@@ -599,11 +696,118 @@
                 </div>
                 <div class="content">
                     <div class="cards">
-                        FLIP CARDS FLIP CARDS FLIP CARDS FLIP CARDS FLIP CARDS FLIP CARDS
-                        <!-- tu zostawiam dla siebie reference - Łukasz -->
-                        <!-- https://www.w3schools.com/howto/howto_css_flip_card.asp -->
-
-
+                        <div class="card">
+                            <div class="card-nametag">
+                                <div class="nametag-title">dr</div>
+                                <div class="nametag-name">Jan Placeholder</div>
+                            </div>
+                            <div class="button" id="card-button">
+                                <div class="button_label">
+                                    Więcej o prowadzącym
+                                </div>
+                                <div class="arrow_black">
+                                    <div class="arrow_white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-nametag">
+                                <div class="nametag-title">dr</div>
+                                <div class="nametag-name">Jan Placeholder</div>
+                            </div>
+                            <div class="button" id="card-button">
+                                <div class="button_label">
+                                    Więcej o prowadzącym
+                                </div>
+                                <div class="arrow_black">
+                                    <div class="arrow_white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-nametag">
+                                <div class="nametag-title">dr</div>
+                                <div class="nametag-name">Jan Placeholder</div>
+                            </div>
+                            <div class="button" id="card-button">
+                                <div class="button_label">
+                                    Więcej o prowadzącym
+                                </div>
+                                <div class="arrow_black">
+                                    <div class="arrow_white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-nametag">
+                                <div class="nametag-title">dr</div>
+                                <div class="nametag-name">Jan Placeholder</div>
+                            </div>
+                            <div class="button" id="card-button">
+                                <div class="button_label">
+                                    Więcej o prowadzącym
+                                </div>
+                                <div class="arrow_black">
+                                    <div class="arrow_white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-nametag">
+                                <div class="nametag-title">dr</div>
+                                <div class="nametag-name">Jan Placeholder</div>
+                            </div>
+                            <div class="button" id="card-button">
+                                <div class="button_label">
+                                    Więcej o prowadzącym
+                                </div>
+                                <div class="arrow_black">
+                                    <div class="arrow_white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-nametag">
+                                <div class="nametag-title">dr</div>
+                                <div class="nametag-name">Jan Placeholder</div>
+                            </div>
+                            <div class="button" id="card-button">
+                                <div class="button_label">
+                                    Więcej o prowadzącym
+                                </div>
+                                <div class="arrow_black">
+                                    <div class="arrow_white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-nametag">
+                                <div class="nametag-title">dr</div>
+                                <div class="nametag-name">Jan Placeholder</div>
+                            </div>
+                            <div class="button" id="card-button">
+                                <div class="button_label">
+                                    Więcej o prowadzącym
+                                </div>
+                                <div class="arrow_black">
+                                    <div class="arrow_white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-nametag">
+                                <div class="nametag-title">dr</div>
+                                <div class="nametag-name">Jan Placeholder</div>
+                            </div>
+                            <div class="button" id="card-button">
+                                <div class="button_label">
+                                    Więcej o prowadzącym
+                                </div>
+                                <div class="arrow_black">
+                                    <div class="arrow_white"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="carousel-controls">
                         tutaj będą kontrolki jeszcze nie wiem jak zaimplementować
@@ -696,25 +900,29 @@
                 <div class="content-links">
                     <strong>Zespół redakcyjny:</strong>
                     <div class="link">
-                        <div class="pointer">                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="pointer"> <svg width="7" height="7" viewBox="0 0 7 7" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
                             </svg></div>
                         <a href="">dr inż. Grzegorz Grodner</a>
                     </div>
                     <div class="link">
-                        <div class="pointer">                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="pointer"> <svg width="7" height="7" viewBox="0 0 7 7" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
                             </svg></div>
                         <a href="">dr Małgorzata Sobocińska-Kiss</a>
                     </div>
                     <div class="link">
-                        <div class="pointer">                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="pointer"> <svg width="7" height="7" viewBox="0 0 7 7" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
                             </svg></div>
                         <a href="">mgr Kamil Mirkowicz</a>
                     </div>
                     <div class="link">
-                        <div class="pointer">                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="pointer"> <svg width="7" height="7" viewBox="0 0 7 7" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="3.5" cy="3.5" r="3.5" fill="CurrentColor" />
                             </svg></div>
                         <a href="">dr inż. Magdalena Mirkowicz</a>
@@ -733,9 +941,6 @@
 
             <div class="content-wrapper" id="galeria-wit">
                 <div class="baner" id="baner-galeria-wit">
-                    <!-- <div class="logo"> -->
-                    <!-- <img src="./galeria-wit.svg" alt=""> -->
-                    <!-- </div> -->
                 </div>
                 <h3>Galeria WIT</h3>
                 <p>Galeria sztuki promująca twórczość młodych artystów poprzez prezentację różnych pracowni Grafiki WIT
@@ -888,7 +1093,20 @@
                         Samorząd Studencki Akademii WIT
                     </div>
                 </div>
-                <h3>[TUTAJ FLIP-CARDS]</h3>
+                <div class="cards" id="cards-samorzad">
+                    <div class="card">
+                        <div class="card-nametag">
+                            <div class="nametag-title">dr</div>
+                            <div class="nametag-name">Jan Placeholder</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-nametag">
+                            <div class="nametag-title">dr</div>
+                            <div class="nametag-name">Jan Placeholder</div>
+                        </div>
+                    </div>
+                </div>
                 <p>
                     Wszyscy studenci tworzą samorząd. Jego przedstawicielem jest Zarząd Studentów, który zaprasza do
                     współpracy wszystkich chcących mieć wpływ na to, co się dzieje na uczelni. Zarząd Studentów
