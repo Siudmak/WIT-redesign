@@ -167,6 +167,7 @@
     }
 
     #co-u-nas .content-wrapper .baner {
+        user-select: none;
         display: flex;
         min-height: 150px;
         padding: 30px;
@@ -415,7 +416,7 @@
         background: var(--szary-5, rgba(247, 247, 247, 0.95));
     }
 
-    #co-u-nas #kadra-content .cards .card .card-nametag{
+    #co-u-nas #kadra-content .cards .card .card-nametag {
         transform: translateY(40px);
     }
 
@@ -579,6 +580,58 @@
 
     #button-red:hover {
         background: var(--szary-90, #1A1A1A);
+    }
+
+    #co-u-nas #kola-naukowe .tiles {
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 20px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+
+    #co-u-nas #kola-naukowe .tiles .tile {
+        transition: 0.3s ease;
+
+        display: flex;
+        min-width: 350px;
+        padding: 20px;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        flex: 1 0 0;
+
+        border-radius: 20px;
+    }
+
+    #co-u-nas #kola-naukowe .tiles .tile:hover {
+        border-radius: 20px;
+        background: var(--szary-5, rgba(247, 247, 247, 0.95));
+
+        /* cień boxu */
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    #co-u-nas #kola-naukowe .tiles .tile .kn-label {
+        color: #000;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        user-select: none;
+    }
+
+    #co-u-nas #kola-naukowe .tiles .tile .kn-label strong {
+        color: #000;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        letter-spacing: 5px;
     }
 </style>
 
@@ -1169,7 +1222,44 @@
                     zainteresowań. Każde z nich ma swoją specyfikę i cel, a uczestnictwo w nich to doskonała okazja do
                     zdobycia dodatkowej wiedzy i umiejętności, które mogą okazać się nieocenione w przyszłej karierze.
                 </p>
-                <p>[PANELE DLA KÓŁ]</p>
+                <div class="tiles">
+                    <div class="tile" id="kn-bezpieczniki">
+                        <img src="./kn-bezpieczniki.svg" alt="">
+                        <div class="kn-label">
+                            Studenckie Koło Graficzne <br> <strong>BEZPIECZNIKI</strong>
+                        </div>
+                    </div>
+                    <div class="tile" id="kn-foks">
+                        <img src="./kn-foks.svg" alt="">
+                        <div class="kn-label">
+                            Studenckie Koło Naukowe <br> <strong>FOKS</strong>
+                        </div>
+                    </div>
+                    <div class="tile" id="kn-kwadrat">
+                        <img src="./kn-kwadrat.svg" alt="">
+                        <div class="kn-label">
+                            Studenckie Koło Naukowe <br> <strong>KWADRAT</strong>
+                        </div>
+                    </div>
+                    <div class="tile" id="kn-super-poster">
+                        <img src="./kn-super-poster.svg" alt="">
+                        <div class="kn-label">
+                            Studenckie Koło Naukowe <br> <strong>SUPER POSTER</strong>
+                        </div>
+                    </div>
+                    <div class="tile" id="kn-programistyczne">
+                        <img src="./kn-programistyczne.svg" alt="">
+                        <div class="kn-label">
+                            Koło <br> <strong>PROGRAMISTYCZNE</strong>
+                        </div>
+                    </div>
+                    <div class="tile" id="kn-leaders-vision">
+                        <img src="./kn-leaders-vision.svg" alt="">
+                        <div class="kn-label">
+                            Studenckie Koło Naukowe <br> <strong>LEADER's VISION</strong>
+                        </div>
+                    </div>
+                </div>
                 <div class="button">
                     <div class="button_label">
                         Koła Naukowe WIT
@@ -1191,7 +1281,7 @@
                         </svg>
                     </div>
                 </div>
-                <h3>Magazyn studencki [ fenomen ????]</h3>
+                <h3>Magazyn studencki</h3>
                 <p>
                     Studencki Magazyn Fenomen to publikacja prowadzona przez Studenckie Koło Naukowe Kwadrat na Akademii
                     WIT.
