@@ -1,0 +1,102 @@
+#co-u-nas #nasze-wystawy .wystawy .wystawa {
+        transition: 0.3s ease;
+        display: flex;
+        width: 300px;
+        max-width: 300px;
+        padding: 10px 10px 15px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        border-radius: 20px;
+    }
+
+    #co-u-nas #nasze-wystawy .wystawy .wystawa:hover {
+        border-radius: 20px;
+        background: var(--biay, #FFF);
+
+        /* cień boxu */
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    #co-u-nas #nasze-wystawy .wystawa .wystawa-label {
+        display: flex;
+        padding: 0 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        align-self: stretch;
+    }
+
+    #co-u-nas #nasze-wystawy .wystawa .wystawa-label h4 {
+        color: #000;
+        margin: 0;
+
+        /* H4-naglowek-srodtytul */
+        font-family: Roboto;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 140%;
+        /* 30.8px */
+    }
+
+    #co-u-nas #nasze-wystawy .wystawa .wystawa-label .wystawa-kurator {
+        color: #000;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        /* 17.6px */
+    }
+
+    #co-u-nas #nasze-wystawy .wystawa .wystawa-label .wystawa-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        align-self: stretch;
+
+        color: #000;
+
+        /* p-tresc-glowna */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 22.4px */
+    }
+
+    #co-u-nas #nasze-wystawy .wystawa .wystawa-label .wystawa-info .detal {
+        display: flex;
+        height: 22px;
+        align-items: center;
+        gap: 15px;
+        align-self: stretch;
+    }
+
+    #co-u-nas #nasze-wystawy .wystawa .wystawa-label .wystawa-info .detal .icon {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-repeat: no-repeat;
+    }
+
+    #co-u-nas #nasze-wystawy .wystawa .wystawa-label .wystawa-info .detal #data {
+        background: url(./data_icon.svg);
+        background-repeat: no-repeat;
+    }
+
+    #co-u-nas #nasze-wystawy .wystawa .wystawa-label .wystawa-info .detal #czas {
+        background: url(./czas_icon.svg);
+        background-repeat: no-repeat;
+    }
+
+    #co-u-nas #nasze-wystawy .wystawa .wystawa-label .wystawa-info .detal #miejsce {
+        background: url(./miejsce_icon.svg);
+        background-repeat: no-repeat;
+    }
