@@ -17,14 +17,17 @@
     body {
         padding: 0;
         margin: 0;
+        width: 100%;
     }
 
     #co-u-nas {
         display: flex;
-        width: 2000px;
-        padding: 40px 290px 60px 290px;
+        width: 100%;
+        /* padding: 40px 290px 60px 290px; */
+        padding: 40px 20px 60px 20px;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         gap: 40px;
 
         background: var(--WIT-GWNY, #900000);
@@ -44,6 +47,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        width: 100%;
+        max-width: 1420px;
         gap: 15px;
     }
 
@@ -73,7 +78,8 @@
 
     #co-u-nas .tabs {
         display: flex;
-        width: 1420px;
+        max-width: 1420px;
+        width: 100%;
         flex-direction: row;
         align-items: flex-start;
         /* gap: 10px; */
@@ -87,6 +93,7 @@
         display: flex;
         width: 370px;
         padding: 20px;
+        flex-shrink: 0;
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
@@ -149,13 +156,16 @@
     #co-u-nas .all-content {
         display: flex;
         flex-direction: column;
-        width: fit-content;
+        /* width: fit-content; */
+        flex: 1;
+        min-width: 0;
         height: fit-content;
     }
 
     #co-u-nas .content-wrapper {
         display: flex;
-        width: 1050px;
+        max-width: 1050px;
+        width: 100%;
         padding: 40px;
         flex-direction: column;
         align-items: flex-start;
@@ -179,6 +189,11 @@
 
         border-radius: 10px;
         background: var(--szary-85-tekst, #262626);
+    }
+
+    #co-u-nas .content-wrapper .baner .logo svg {
+        max-width: 100%;
+        height: auto;
     }
 
     #co-u-nas .content-wrapper #baner-upgrowth {
@@ -363,6 +378,12 @@
         color: var(--WIT-GWNY, #900000);
     }
 
+    #co-u-nas .content-wrapper .footer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
 
     #co-u-nas #CDK ul {
         display: flex;
@@ -373,16 +394,16 @@
     #co-u-nas #kadra-content .cards {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
-        align-content: flex-start;
+        align-items: center;
+        justify-content: space-evenly;
         gap: 30px;
         align-self: stretch;
         flex-wrap: wrap;
+        
+        max-height: 630px;
+        overflow: hidden; 
     }
-
-
-
-    /* FLIP CARD */
+     
 
     #co-u-nas .cards .card {
         transition: 0.3s ease;
@@ -468,7 +489,7 @@
     }
 
     #co-u-nas .cards .card:hover {
-        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.01);
     }
 
     #co-u-nas .cards .card #card-button:hover {
@@ -498,6 +519,9 @@
         gap: 20px;
         align-self: stretch;
         flex-wrap: wrap;
+
+        max-height: 1200px;
+        overflow: hidden;
     }
 
     #co-u-nas #nasze-wystawy .wystawy .wystawa {
@@ -517,7 +541,7 @@
         background: var(--biay, #FFF);
 
         /* cień boxu */
-        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
     }
 
     #co-u-nas #nasze-wystawy .wystawa .wystawa-label {
@@ -621,6 +645,9 @@
 
     .button_label {
         transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: var(--szary-85-tekst, #262626);
         font-family: Roboto;
         font-size: 14px;
@@ -973,16 +1000,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-controls">
-                        tutaj będą kontrolki jeszcze nie wiem jak zaimplementować
-                    </div>
-                </div>
-                <div class="button">
-                    <div class="button_label">
-                        Wszscy wykładowcy
-                    </div>
-                    <div class="arrow_black">
-                        <div class="arrow_white"></div>
+                    <div class="footer" id="kadra-footer">
+                        <div class="button">
+                            <div class="button_label">
+                                Wszscy wykładowcy
+                            </div>
+                            <div class="arrow_black">
+                                <div class="arrow_white"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            tutaj będą kontrolki jeszcze nie wiem jak zaimplementować
+                        </div>
                     </div>
                 </div>
             </div>
