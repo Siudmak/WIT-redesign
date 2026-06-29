@@ -105,6 +105,8 @@
 
     #co-u-nas .menu-item {
         transition: 0.3s ease;
+        cursor: pointer;
+        user-select: none;
 
         display: flex;
         padding: 10px;
@@ -399,11 +401,11 @@
         gap: 30px;
         align-self: stretch;
         flex-wrap: wrap;
-        
+
         max-height: 630px;
-        overflow: hidden; 
+        overflow: hidden;
     }
-     
+
 
     #co-u-nas .cards .card {
         transition: 0.3s ease;
@@ -510,6 +512,61 @@
         transform: translateY(0);
     }
 
+    #co-u-nas .carousel-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px;
+        /* Adjust based on desired spacing from cards */
+    }
+
+    /* Reset button styles for arrows */
+    #co-u-nas .carousel-arrow {
+        background: none;
+        border: none;
+        padding: 5px;
+        /* Creates a larger clickable area */
+        cursor: pointer;
+        color: var(--szary-90, #1A1A1A);
+        /* Dark gray chevron */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s ease;
+    }
+
+    #co-u-nas .carousel-arrow:hover {
+        /* color: var(--WIT-GWNY, #900000); */
+        /* Optional: hover effect using your brand red */
+    }
+
+    /* Indicators Container */
+    #co-u-nas .carousel-indicators {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* Individual Dots */
+    #co-u-nas .carousel-indicators button {
+        background: none;
+        border: none;
+        padding: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--szary-30, #E6E6E6);
+        /* Light gray for inactive */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Active Dot */
+    #co-u-nas .carousel-indicators button.active {
+        background-color: var(--szary-85-tekst, #262626);
+        /* Dark gray for active */
+    }
 
     #co-u-nas #nasze-wystawy .wystawy {
         display: flex;
@@ -1009,8 +1066,35 @@
                                 <div class="arrow_white"></div>
                             </div>
                         </div>
-                        <div class="carousel-controls">
-                            tutaj będą kontrolki jeszcze nie wiem jak zaimplementować
+                        <div class="carousel-controls" aria-label="Nawigacja karuzeli">
+                            <!-- Previous Button -->
+                            <button class="carousel-arrow" type="button" data-slide="prev" aria-label="Poprzednie">
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+
+                            <!-- Indicators (Dots) -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-slide-to="0" class="active" aria-current="true"
+                                    aria-label="Slide 1"></button>
+                                <button type="button" data-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-slide-to="5" aria-label="Slide 6"></button>
+                            </div>
+
+                            <!-- Next Button -->
+                            <button class="carousel-arrow" type="button" data-slide="next" aria-label="Następne">
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
