@@ -1,0 +1,453 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    @charset "utf-8";
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&display=swap');
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    #wystawy {
+        display: flex;
+        width: 100%;
+
+        padding: 40px 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        background: var(--szary-90, #1A1A1A);
+    }
+
+    #wystawy .header {
+        display: flex;
+        width: 100%;
+        max-width: 1420px;
+        justify-content: flex-start;
+    }
+
+    #wystawy .header h2 {
+        margin: 0;
+        color: var(--biay, #FFF);
+
+        /* H1-main-light */
+        font-family: Roboto;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    #wystawy .exhibitions-container {
+        display: flex;
+        width: 100%;
+        max-width: 1420px;
+        justify-content: flex-start;
+        gap: 20px;
+        height: fit-content;
+        /* flex-wrap: wrap; */
+        row-gap: 200px;
+        overflow: hidden;
+        mask-image: linear-gradient(to right, black 0%, black 95%, transparent 100%);
+        /* -webkit-mask-image: linear-gradient(to right, black 0%, black 85%, transparent 100%); */
+    }
+
+
+    #wystawy .exhibitions-container .exhibition {
+        transition: 0.3s ease;
+        display: flex;
+        width: 300px;
+        max-width: 300px;
+        height: fit-content;
+        padding: 10px 10px 15px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        border-radius: 20px;
+    }
+
+    #wystawy .exhibitions-container .exhibition:hover {
+        border-radius: 20px;
+        background: var(--WIT, #910000);
+
+        /* cień boxu */
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    #wystawy .exhibitions-container .exhibition .exhibition-title {
+        display: flex;
+        padding: 0 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        align-self: stretch;
+    }
+
+    #wystawy .exhibitions-container .exhibition .exhibition-title h4 {
+        margin: 0;
+        color: var(--biay, #FFF);
+
+        /* H4-naglowek-srodtytul */
+        font-family: Roboto;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 140%;
+        /* 30.8px */
+    }
+
+    #wystawy .exhibitions-container .exhibition .exhibition-curator {
+        color: var(--biay, #FFF);
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        /* 17.6px */
+    }
+
+    #wystawy .exhibitions-container .exhibition .exhibition-title .exhibition-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        align-self: stretch;
+
+        color: var(--biay, #FFF);
+
+        /* p-tresc-glowna */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 22.4px */
+    }
+
+    #wystawy .exhibitions-container .exhibition .exhibition-title .exhibition-details .detail {
+        display: flex;
+        height: 22px;
+        align-items: center;
+        gap: 15px;
+        align-self: stretch;
+    }
+
+    #wystawy .exhibitions-container .exhibition .exhibition-title .exhibition-details .detail .icon {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-repeat: no-repeat;
+    }
+
+    #wystawy .exhibitions-container .exhibition .exhibition-title .exhibition-details .detail #data {
+        background: url(./data_icon.svg);
+        background-repeat: no-repeat;
+    }
+
+    #wystawy .exhibitions-container .exhibition .exhibition-title .exhibition-details .detail #czas {
+        background: url(./czas_icon.svg);
+        background-repeat: no-repeat;
+    }
+
+    #wystawy .exhibitions-container .exhibition .exhibition-title .exhibition-details .detail #miejsce {
+        background: url(./miejsce_icon.svg);
+        background-repeat: no-repeat;
+    }
+
+    #wystawy .footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1420px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #wystawy .footer .button {
+        cursor: pointer;
+        user-select: none;
+
+        display: flex;
+        width: fit-content;
+        padding: 12px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        transition: 0.3s;
+        border-radius: 10px;
+        border-radius: 10px;
+        background: var(--szary-85-tekst, #262626);
+    }
+
+    #wystawy .footer .button_label {
+        transition: 0.3s;
+        color: var(--to, #FFF);
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    #wystawy .footer .arrow_black {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 13px;
+        width: 14px;
+        background: url(./arrow_white.svg);
+        position: relative;
+    }
+
+    #wystawy .footer .arrow_white {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 13px;
+        width: 14px;
+        background: url(./arrow_white.svg);
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    #wystawy .footer .button:hover {
+        transition: 0.3s;
+        background: var(--WIT-GWNY, #900000);
+    }
+
+    #wystawy .footer .button:hover>.button_label {
+        transition: 0.3s;
+        color: var(--to, #FFF);
+    }
+
+    #wystawy .footer .button:hover>.arrow_black>.arrow_white {
+        transition: 0.3s;
+        opacity: 1;
+    }
+
+    #wystawy .footer .button:active {
+        background: var(--szary-90, #1A1A1A);
+    }
+
+    #wystawy .footer .socials {
+        display: none;
+    }
+
+    @media all and (max-width: 1000px) {
+
+        #wystawy .header h2 {
+            margin: 0;
+            color: var(--biay, #FFF);
+
+            /* H2 mobile */
+            font-family: Roboto;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        #wystawy .exhibitions-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            overflow: scroll;
+            padding: 0px;
+            gap: 20px;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        #wystawy .exhibitions-container .exhibition {
+            width: 250px;
+        }
+
+        #wystawy .exhibitions-container .exhibition img {
+            width: 200px;
+            height: auto;
+        }
+    }
+</style>
+
+<div class="section" id="wystawy">
+    <div class="header">
+        <h2>Wystawy</h2>
+    </div>
+    <div class="exhibitions-container">
+        <div class="exhibition">
+            <img src="./wystawa-placeholder.svg" alt="">
+            <div class="exhibition-title">
+                <h4>Noc Muzeów</h4>
+                <div class="exhibition-curator">
+                    dr. hab. Grzegorz Rogala
+                </div>
+                <div class="exhibition-details">
+                    <div class="detail">
+                        <div class="icon" id="data"></div>
+                        05 października 2025
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="czas"></div>
+                        09:00 – 15:00
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="miejsce"></div>
+                        Newelska 6, 01-447 Warszawa
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exhibition">
+            <img src="./wystawa-placeholder.svg" alt="">
+            <div class="exhibition-title">
+                <h4>Noc Muzeów</h4>
+                <div class="exhibition-curator">
+                    dr. hab. Grzegorz Rogala
+                </div>
+                <div class="exhibition-details">
+                    <div class="detail">
+                        <div class="icon" id="data"></div>
+                        05 października 2025
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="czas"></div>
+                        09:00 – 15:00
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="miejsce"></div>
+                        Newelska 6, 01-447 Warszawa
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exhibition">
+            <img src="./wystawa-placeholder.svg" alt="">
+            <div class="exhibition-title">
+                <h4>Noc Muzeów</h4>
+                <div class="exhibition-curator">
+                    dr. hab. Grzegorz Rogala
+                </div>
+                <div class="exhibition-details">
+                    <div class="detail">
+                        <div class="icon" id="data"></div>
+                        05 października 2025
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="czas"></div>
+                        09:00 – 15:00
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="miejsce"></div>
+                        Newelska 6, 01-447 Warszawa
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exhibition">
+            <img src="./wystawa-placeholder.svg" alt="">
+            <div class="exhibition-title">
+                <h4>Noc Muzeów</h4>
+                <div class="exhibition-curator">
+                    dr. hab. Grzegorz Rogala
+                </div>
+                <div class="exhibition-details">
+                    <div class="detail">
+                        <div class="icon" id="data"></div>
+                        05 października 2025
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="czas"></div>
+                        09:00 – 15:00
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="miejsce"></div>
+                        Newelska 6, 01-447 Warszawa
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exhibition">
+            <img src="./wystawa-placeholder.svg" alt="">
+            <div class="exhibition-title">
+                <h4>Noc Muzeów</h4>
+                <div class="exhibition-curator">
+                    dr. hab. Grzegorz Rogala
+                </div>
+                <div class="exhibition-details">
+                    <div class="detail">
+                        <div class="icon" id="data"></div>
+                        05 października 2025
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="czas"></div>
+                        09:00 – 15:00
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="miejsce"></div>
+                        Newelska 6, 01-447 Warszawa
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exhibition">
+            <img src="./wystawa-placeholder.svg" alt="">
+            <div class="exhibition-title">
+                <h4>Noc Muzeów</h4>
+                <div class="exhibition-curator">
+                    dr. hab. Grzegorz Rogala
+                </div>
+                <div class="exhibition-details">
+                    <div class="detail">
+                        <div class="icon" id="data"></div>
+                        05 października 2025
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="czas"></div>
+                        09:00 – 15:00
+                    </div>
+                    <div class="detail">
+                        <div class="icon" id="miejsce"></div>
+                        Newelska 6, 01-447 Warszawa
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="button">
+            <div class="button_label">
+                Wszystkie wystawy
+            </div>
+            <div class="arrow_black">
+                <div class="arrow_white"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
