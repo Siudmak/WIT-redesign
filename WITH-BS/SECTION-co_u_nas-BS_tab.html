@@ -6,139 +6,11 @@
     <title>Co się u nas dzieje?</title>
 	<!-- CSS bootstrap 5.3.8 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<style>
-/* STYL - DESKTOP */
+    
+    <!-- CSS własne -->
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./co-u-nas.css">
 
-.flex-tab-accordion {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-}
-
-.flex-tab-accordion .tabs-side {
-  flex: 0 0 25%;
-}
-
-.flex-tab-accordion .content-side {
-  flex: 1;
-}
-
-.flex-tab-accordion .nav-tabs,
-.flex-tab-accordion .tab-content {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.flex-tab-accordion .nav-tabs {
-  border-bottom: none;
-}
-
-.flex-tab-accordion .nav-link {
-  margin-bottom: 5px;
-  text-align: left;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  color: #262626;
-  background-color: transparent;
-}
- 
-.flex-tab-accordion .nav-link:hover, 
-.flex-tab-accordion .nav-link.active {
-  background-color:black;
-  color: white;
-}
-
-.flex-tab-accordion .tab-pane {
-  border: none;
-  padding: 0;
-}
-
-
-/* STYLE - MOBILE (Ekran poniżej 768px - Akordeon) */
-
-@media (max-width: 767.98px) {
-  .flex-tab-accordion {
-	flex-direction: column;
-	gap: 0;
-  }
-
-  .flex-tab-accordion .tabs-side,
-  .flex-tab-accordion .content-side,
-  .flex-tab-accordion .nav-tabs,
-  .flex-tab-accordion .tab-content {
-	display: contents;
-  }
-
-  .flex-tab-accordion .nav-item {
-	width: 100%;
-	margin-bottom: 2px;
-  }
-
-  .flex-tab-accordion .nav-link {
-	width: 100%;
-	border-radius: 10px;
-	background-color: #f8f9fa;
-	padding: 12px 15px;
-  }
-
-  .flex-tab-accordion .nav-link:hover, 
-  .flex-tab-accordion .nav-link.active {
-	background-color: black;
-	color: white;
-  }
-  
-  /* Ukrywamy treść zakładki, jeśli nie jest aktywna */
-  .flex-tab-accordion .tab-pane:not(.active) {
-	display: none;
-  }
-
-  .flex-tab-accordion .tab-pane.active {
-	display: block;
-	width: 100%;
-	padding: 15px;
-	border-top: none;
-	margin-bottom: 10px;
-	border-radius: 0 0 0.25rem 0.25rem;
-	background: #fff;
-  }
-
-  /* KOLEJNOŚĆ ZAKŁADEK MOBILE */
-  .flex-tab-accordion .nav-item:nth-child(1) { order: 1; }
-  .flex-tab-accordion .tab-pane:nth-child(1) { order: 2; }
-
-  .flex-tab-accordion .nav-item:nth-child(2) { order: 3; }
-  .flex-tab-accordion .tab-pane:nth-child(2) { order: 4; }
-
-  .flex-tab-accordion .nav-item:nth-child(3) { order: 5; }
-  .flex-tab-accordion .tab-pane:nth-child(3) { order: 6; }
-
-  .flex-tab-accordion .nav-item:nth-child(4) { order: 7; }
-  .flex-tab-accordion .tab-pane:nth-child(4) { order: 8; }
-
-  .flex-tab-accordion .nav-item:nth-child(5) { order: 9; }
-  .flex-tab-accordion .tab-pane:nth-child(5) { order: 10; }
-
-  .flex-tab-accordion .nav-item:nth-child(6) { order: 11; }
-  .flex-tab-accordion .tab-pane:nth-child(6) { order: 12; }
-
-  .flex-tab-accordion .nav-item:nth-child(7) { order: 13; }
-  .flex-tab-accordion .tab-pane:nth-child(7) { order: 14; }
-
-  .flex-tab-accordion .nav-item:nth-child(8) { order: 15; }
-  .flex-tab-accordion .tab-pane:nth-child(8) { order: 16; }
-
-  .flex-tab-accordion .nav-item:nth-child(9) { order: 17; }
-  .flex-tab-accordion .tab-pane:nth-child(9) { order: 18; }
-
-  .flex-tab-accordion .nav-item:nth-child(10) { order: 19; }
-  .flex-tab-accordion .tab-pane:nth-child(10) { order: 20; }
-
-  .flex-tab-accordion .nav-item:nth-child(11) { order: 21; }
-  .flex-tab-accordion .tab-pane:nth-child(11) { order: 22; }
-}
-
-</style>
 </head>
 <body>
 <section id="co-u-nas">
@@ -152,37 +24,80 @@
 	<div class="tabs-side">
 	  <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
 		<li class="nav-item" role="presentation">
-		  <div class="nav-link active" id="kadra-tab" data-bs-toggle="tab" data-bs-target="#kadra-content" type="button" role="tab">Kadra wykładowców</div>
+		  <div class="nav-link active" id="kadra-tab" data-bs-toggle="tab" data-bs-target="#kadra-content" type="button" role="tab">
+            <div class="icon-frame"></div>
+            <div class="list-item-title">Kadra wykładowców</div>
+          </div>
 		</li>
+        <hr>
 		<li class="nav-item" role="presentation">
-		  <div class="nav-link" id="upgrowth-tab" data-bs-toggle="tab" data-bs-target="#upgrowth-content" type="button" role="tab">Najlepsze dyplomy Upgrowth</div>
+		  <div class="nav-link" id="upgrowth-tab" data-bs-toggle="tab" data-bs-target="#upgrowth-content" type="button" role="tab">
+            <div class="icon-frame"></div>
+            <div class="list-item-title">Najlepsze dyplomy UPGROWTH</div>
+        </div>
 		</li>
+        <hr>
 		<li class="nav-item" role="presentation">
-		  <div class="nav-link" id="dsignn-tab" data-bs-toggle="tab" data-bs-target="#dsignn-content" type="button" role="tab">Magazyn Naukowy dsignn</div>
+		  <div class="nav-link" id="dsignn-tab" data-bs-toggle="tab" data-bs-target="#dsignn-content" type="button" role="tab">
+            <div class="icon-frame"></div>
+            <div class="list-item-title">Magazyn Naukowy dsignn</div>
+          </div>
 		</li>
+        <hr>
 		<li class="nav-item" role="presentation">
-		  <div class="nav-link" id="galeria-wit-tab" data-bs-toggle="tab" data-bs-target="#galeria-wit-content" type="button" role="tab">Galeria WIT</div>
+		  <div class="nav-link" id="galeria-wit-tab" data-bs-toggle="tab" data-bs-target="#galeria-wit-content" type="button" role="tab">
+            <div class="icon-frame"></div>
+            <div class="list-item-title">Galeria WIT</div>
+          </div>
 		</li>
+        <hr>
 		<li class="nav-item" role="presentation">
-		  <div class="nav-link" id="nasze-wystawy-tab" data-bs-toggle="tab" data-bs-target="#nasze-wystawy-content" type="button" role="tab">Nasze wystawy</div>
+		  <div class="nav-link" id="nasze-wystawy-tab" data-bs-toggle="tab" data-bs-target="#nasze-wystawy-content" type="button" role="tab">
+            <div class="icon-frame"></div>
+            <div class="list-item-title">Nasze wystawy</div>
+          </div>
 		</li>
+        <hr>
 		<li class="nav-item" role="presentation">
-		  <div class="nav-link" id="galeria-grafiki-internetowej-tab" data-bs-toggle="tab" data-bs-target="#galeria-grafiki-internetowej-content" type="button" role="tab">Galeria Grafiki Internetowej</div>
+		  <div class="nav-link" id="galeria-grafiki-internetowej-tab" data-bs-toggle="tab" data-bs-target="#galeria-grafiki-internetowej-content" type="button" role="tab">
+            <div class="icon-frame"></div>
+            <div class="list-item-title">Galeria Grafiki Internetowej</div>
+          </div>
 		</li>
+        <hr>
 		<li class="nav-item" role="presentation">
-		  <div class="nav-link" id="grafika-warsztatowa-tab" data-bs-toggle="tab" data-bs-target="#grafika-warsztatowa-content" type="button" role="tab">Grafika warsztatowa</div>
+		  <div class="nav-link" id="grafika-warsztatowa-tab" data-bs-toggle="tab" data-bs-target="#grafika-warsztatowa-content" type="button" role="tab">
+            <div class="icon-frame"></div>
+            <div class="list-item-title">Grafika warsztatowa</div>
+          </div>
 		</li>
+        <hr>
 		<li class="nav-item" role="presentation">
-		  <div class="nav-link" id="samorzad-studencki-tab" data-bs-toggle="tab" data-bs-target="#samorzad-studencki-content" type="button" role="tab">Samorząd Studencki WIT</div>
+		  <div class="nav-link" id="samorzad-studencki-tab" data-bs-toggle="tab" data-bs-target="#samorzad-studencki-content" type="button" role="tab">
+            <div class="icon-frame"></div>
+            <div class="list-item-title">Samorząd Studencki WIT</div>
+          </div>
 		</li>
+        <hr>
 		<li class="nav-item" role="presentation">
-		  <div class="nav-link" id="kola-naukowe-tab" data-bs-toggle="tab" data-bs-target="#kola-naukowe-content" type="button" role="tab">Studenckie Koła Naukowe</div>
+		  <div class="nav-link" id="kola-naukowe-tab" data-bs-toggle="tab" data-bs-target="#kola-naukowe-content" type="button" role="tab">
+            <div class="icon-frame"></div>
+            <div class="list-item-title">Studenckie Koła Naukowe</div>
+          </div>
 		</li>
+        <hr>
 		<li class="nav-item" role="presentation">
-		  <div class="nav-link" id="fenomen-tab" data-bs-toggle="tab" data-bs-target="#fenomen-content" type="button" role="tab">Magazyn Studencki FENOMEN</div>
+		  <div class="nav-link" id="fenomen-tab" data-bs-toggle="tab" data-bs-target="#fenomen-content" type="button" role="tab">
+            <div class="icon-frame"></div>
+            <div class="list-item-title">Magazyn Studencki FENOMEN</div>
+          </div>
 		</li>
+        <hr>
 		<li class="nav-item" role="presentation">
-		  <div class="nav-link" id="cdk-tab" data-bs-toggle="tab" data-bs-target="#cdk-content" type="button" role="tab">Centrum Doskonalenia Kompetencji</div>
+		  <div class="nav-link" id="cdk-tab" data-bs-toggle="tab" data-bs-target="#cdk-content" type="button" role="tab">
+            <div class="icon-frame"></div>
+            <div class="list-item-title">Centrum Doskonalenia Kompetencji</div>
+          </div>
 		</li>
 	  </ul>
 	</div>
@@ -425,9 +340,9 @@
                     dizajnu, fotografów, projektantów produktów interaktywnych i interfejsów użytkownika, grafików 3D
                     oraz twórców filmów, animacji oraz innych form multimedialnych.</p>
 
-                <p>Magazyn wydawany jest w dwóch językach: polskim i angielskim.</p>
+                <p>Magazyn wydawany jest w dwóch językach: <strong>polskim</strong> i <strong>angielskim</strong>.</p>
 
-                <p>Czasopismo jest indeksowane w międzynarodowych bazach indeksacyjnych EBSCO i Index Copernicus.</p>
+                <p>Czasopismo jest indeksowane w międzynarodowych bazach indeksacyjnych <strong>EBSCO</strong> i <strong>Index Copernicus</strong>.</p>
 
                 <div class="content-links">
                     <strong>Zespół redakcyjny:</strong>
@@ -477,7 +392,7 @@
                 <p>Galeria sztuki promująca twórczość młodych artystów poprzez prezentację różnych pracowni Grafiki WIT
                     oraz wystawy międzynarodowe.</p>
 
-                <p id="p-underline">Pobierz plan Galerii WIT</p>
+                <a href=""><p id="p-underline">Pobierz plan Galerii WIT</p></a>
 
                 <p><strong>Adres:</strong>
                     <br>
@@ -518,7 +433,7 @@
 		<div class="tab-pane fade" id="nasze-wystawy-content" role="tabpanel" aria-labelledby="nasze-wystawy-tab">
                 <div class="wystawy">
                     <div class="wystawa">
-                        <img src="./wystawa-placeholder.svg" alt="">
+                        <img src="./icons/wystawa-placeholder.svg" alt="">
                         <div class="wystawa-label">
                             <h4>Noc Muzeów</h4>
                             <div class="wystawa-kurator">
@@ -541,7 +456,7 @@
                         </div>
                     </div>
                     <div class="wystawa">
-                        <img src="./wystawa-placeholder.svg" alt="">
+                        <img src="./icons/wystawa-placeholder.svg" alt="">
                         <div class="wystawa-label">
                             <h4>Noc Muzeów</h4>
                             <div class="wystawa-kurator">
@@ -564,7 +479,7 @@
                         </div>
                     </div>
                     <div class="wystawa">
-                        <img src="./wystawa-placeholder.svg" alt="">
+                        <img src="./icons/wystawa-placeholder.svg" alt="">
                         <div class="wystawa-label">
                             <h4>Noc Muzeów</h4>
                             <div class="wystawa-kurator">
@@ -587,7 +502,7 @@
                         </div>
                     </div>
                     <div class="wystawa">
-                        <img src="./wystawa-placeholder.svg" alt="">
+                        <img src="./icons/wystawa-placeholder.svg" alt="">
                         <div class="wystawa-label">
                             <h4>Noc Muzeów</h4>
                             <div class="wystawa-kurator">
@@ -610,7 +525,7 @@
                         </div>
                     </div>
                     <div class="wystawa">
-                        <img src="./wystawa-placeholder.svg" alt="">
+                        <img src="./icons/wystawa-placeholder.svg" alt="">
                         <div class="wystawa-label">
                             <h4>Noc Muzeów</h4>
                             <div class="wystawa-kurator">
@@ -633,7 +548,7 @@
                         </div>
                     </div>
                     <div class="wystawa">
-                        <img src="./wystawa-placeholder.svg" alt="">
+                        <img src="./icons/wystawa-placeholder.svg" alt="">
                         <div class="wystawa-label">
                             <h4>Noc Muzeów</h4>
                             <div class="wystawa-kurator">
@@ -698,7 +613,7 @@
                 </div>
 
                 <div class="button" id="button-internetowa">
-                    <img src="./BTN CTA jasny.png" alt="">
+                    <img src="./icons/BTN CTA jasny.png" alt="">
                 </div>
 
                 <div class="button">
@@ -835,37 +750,37 @@
                 </p>
                 <div class="tiles">
                     <div class="tile" id="kn-bezpieczniki">
-                        <img src="./kn-bezpieczniki.svg" alt="">
+                        <img src="./icons/kn-bezpieczniki.svg" alt="">
                         <div class="kn-label">
                             Studenckie Koło Graficzne <br> <strong>BEZPIECZNIKI</strong>
                         </div>
                     </div>
                     <div class="tile" id="kn-foks">
-                        <img src="./kn-foks.svg" alt="">
+                        <img src="./icons/kn-foks.svg" alt="">
                         <div class="kn-label">
                             Studenckie Koło Naukowe <br> <strong>FOKS</strong>
                         </div>
                     </div>
                     <div class="tile" id="kn-kwadrat">
-                        <img src="./kn-kwadrat.svg" alt="">
+                        <img src="./icons/kn-kwadrat.svg" alt="">
                         <div class="kn-label">
                             Studenckie Koło Naukowe <br> <strong>KWADRAT</strong>
                         </div>
                     </div>
                     <div class="tile" id="kn-super-poster">
-                        <img src="./kn-super-poster.svg" alt="">
+                        <img src="./icons/kn-super-poster.svg" alt="">
                         <div class="kn-label">
                             Studenckie Koło Naukowe <br> <strong>SUPER POSTER</strong>
                         </div>
                     </div>
                     <div class="tile" id="kn-programistyczne">
-                        <img src="./kn-programistyczne.svg" alt="">
+                        <img src="./icons/kn-programistyczne.svg" alt="">
                         <div class="kn-label">
                             Koło <br> <strong>PROGRAMISTYCZNE</strong>
                         </div>
                     </div>
                     <div class="tile" id="kn-leaders-vision">
-                        <img src="./kn-leaders-vision.svg" alt="">
+                        <img src="./icons/kn-leaders-vision.svg" alt="">
                         <div class="kn-label">
                             Studenckie Koło Naukowe <br> <strong>LEADER's VISION</strong>
                         </div>
@@ -902,7 +817,7 @@
                     zauważoną przez Studenckie Koło Naukowe Kwadrat chęć studentów Grafiki Akademii WIT na dzielenie się
                     swoją twórczością w środowisku uczelnianym.
                 </p>
-                <strong>Twórcy magazynu i cżłonkowie redakcji:</strong>
+                <strong>Twórcy magazynu i członkowie redakcji:</strong>
                 <p>
                     Markiz Kras, Mikołaj Żuraw, Zofia Gorbacz, Kseniya Kustouskaya, Paweł Matusik, Mikołaj Firych, Izaak
                     Jeziorski, Jakub Adamiec
