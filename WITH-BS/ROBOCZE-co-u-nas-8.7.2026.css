@@ -7,8 +7,19 @@
 #co-u-nas {
     font-family: 'Roboto', sans-serif;
     background-color: var(--WIT-GWNY, #900000);
-    padding: 40px 0 60px 0;
+    padding: 40px 20px 60px 20px;
     width: 100%;
+
+    /* <OVERRIDE> */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* </OVERRIDE> */
+
+
 }
 
 #co-u-nas .container {
@@ -21,25 +32,14 @@
     max-width: 1420px;
 
     user-select: none;
-}
 
-/* CONTROLLED GLOBALY */
+    /* <OVERRIDE> */
 
-/* #co-u-nas .container h2 {
+    --bs-gutter-x: 0;
     margin: 0;
-    width: 100%;
 
-    color: var(--biay, #FFF);
-    font-family: Roboto;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+    /* </OVERRIDE> */
 }
-
-#co-u-nas h2 strong {
-    font-weight: 900;
-} */
 
 /* ==== SIDE MENU ==== */
 
@@ -68,15 +68,6 @@
     flex-shrink: 0;
 
     border-bottom: none;
-}
-
-#co-u-nas .flex-tab-accordion .nav-tabs hr {
-    width: 320px;
-    height: 1px;
-
-    background: #E6E6E6;
-    border: none;
-    margin: 0;
 }
 
 #co-u-nas .flex-tab-accordion .nav-item {
@@ -646,6 +637,10 @@
 
 @media (max-width: 767.98px) {
 
+    #co-u-nas {
+        padding: 0 10px;
+    }
+
     #co-u-nas .container {
         gap: 20px;
     }
@@ -681,16 +676,15 @@
         display: contents;
     }
 
+    #co-u-nas .flex-tab-accordion .nav-tabs hr {
+        margin: 5px 0px;
+    }
+
     #co-u-nas.flex-tab-accordion .nav-item {
         display: block;
         width: 100%;
-        /* margin-bottom: 2px; */
         order: initial;
     }
-
-    /* #co-u-nas .flex-tab-accordion .nav hr {
-        display: none;
-    } */
 
     #co-u-nas .flex-tab-accordion .nav-link {
         width: 100%;
@@ -699,7 +693,7 @@
     }
 
 
-    
+
     #co-u-nas .flex-tab-accordion .nav-link:hover,
     #co-u-nas .flex-tab-accordion .nav-link.active {
         background-color: var(--biay, #FFF);
@@ -710,6 +704,27 @@
     #co-u-nas .tabs-side .nav-item .nav-link:hover .icon-frame,
     #co-u-nas .tabs-side .nav-item .nav-link.active .icon-frame {
         filter: none;
+    }
+
+    #co-u-nas .tabs-side .nav-item .nav-link::after {
+        transition: 0.3s ease;
+        background-image: none;
+        content: "+";
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1;
+        color: var(--szary-85-tekst, #262626);
+        width: auto;
+        height: auto;
+        transform: none;
+        margin-left: auto;
+    }
+
+    #co-u-nas .tabs-side .nav-item .nav-link.active::after {
+        transition: 0.3s ease;
+        background-image: none;
+        content: "−";
+        transform: none;
     }
 
 
@@ -729,8 +744,150 @@
         background: #fff;
     }
 
+    /* 1 — Kadra wykładowców */
+    #co-u-nas .flex-tab-accordion .nav-item:has(#kadra-tab) {
+        order: 1;
+    }
+
+    #co-u-nas .flex-tab-accordion #kadra-content {
+        order: 2;
+    }
+
+    #co-u-nas .flex-tab-accordion hr:nth-of-type(1) {
+        order: 3;
+    }
+
+    /* 2 — Najlepsze dyplomy UPGROWTH */
+    #co-u-nas .flex-tab-accordion .nav-item:has(#upgrowth-tab) {
+        order: 4;
+    }
+
+    #co-u-nas .flex-tab-accordion #upgrowth-content {
+        order: 5;
+    }
+
+    #co-u-nas .flex-tab-accordion hr:nth-of-type(2) {
+        order: 6;
+    }
+
+    /* 3 — Magazyn Naukowy dsignn */
+    #co-u-nas .flex-tab-accordion .nav-item:has(#dsignn-tab) {
+        order: 7;
+    }
+
+    #co-u-nas .flex-tab-accordion #dsignn-content {
+        order: 8;
+    }
+
+    #co-u-nas .flex-tab-accordion hr:nth-of-type(3) {
+        order: 9;
+    }
+
+    /* 4 — Galeria WIT */
+    #co-u-nas .flex-tab-accordion .nav-item:has(#galeria-wit-tab) {
+        order: 10;
+    }
+
+    #co-u-nas .flex-tab-accordion #galeria-wit-content {
+        order: 11;
+    }
+
+    #co-u-nas .flex-tab-accordion hr:nth-of-type(4) {
+        order: 12;
+    }
+
+    /* 5 — Nasze wystawy */
+    #co-u-nas .flex-tab-accordion .nav-item:has(#nasze-wystawy-tab) {
+        order: 13;
+    }
+
+    #co-u-nas .flex-tab-accordion #nasze-wystawy-content {
+        order: 14;
+    }
+
+    #co-u-nas .flex-tab-accordion hr:nth-of-type(5) {
+        order: 15;
+    }
+
+    /* 6 — Galeria Grafiki Internetowej */
+    #co-u-nas .flex-tab-accordion .nav-item:has(#galeria-grafiki-internetowej-tab) {
+        order: 16;
+    }
+
+    #co-u-nas .flex-tab-accordion #galeria-grafiki-internetowej-content {
+        order: 17;
+    }
+
+    #co-u-nas .flex-tab-accordion hr:nth-of-type(6) {
+        order: 18;
+    }
+
+    /* 7 — Grafika warsztatowa */
+    #co-u-nas .flex-tab-accordion .nav-item:has(#grafika-warsztatowa-tab) {
+        order: 19;
+    }
+
+    #co-u-nas .flex-tab-accordion #grafika-warsztatowa-content {
+        order: 20;
+    }
+
+    #co-u-nas .flex-tab-accordion hr:nth-of-type(7) {
+        order: 21;
+    }
+
+    /* 8 — Samorząd Studencki WIT */
+    #co-u-nas .flex-tab-accordion .nav-item:has(#samorzad-studencki-tab) {
+        order: 22;
+    }
+
+    #co-u-nas .flex-tab-accordion #samorzad-studencki-content {
+        order: 23;
+    }
+
+    #co-u-nas .flex-tab-accordion hr:nth-of-type(8) {
+        order: 24;
+    }
+
+    /* 9 — Studenckie Koła Naukowe */
+    #co-u-nas .flex-tab-accordion .nav-item:has(#kola-naukowe-tab) {
+        order: 25;
+    }
+
+    #co-u-nas .flex-tab-accordion #kola-naukowe-content {
+        order: 26;
+    }
+
+    #co-u-nas .flex-tab-accordion hr:nth-of-type(9) {
+        order: 27;
+    }
+
+    /* 10 — Magazyn Studencki FENOMEN */
+    #co-u-nas .flex-tab-accordion .nav-item:has(#fenomen-tab) {
+        order: 28;
+    }
+
+    #co-u-nas .flex-tab-accordion #fenomen-content {
+        order: 29;
+    }
+
+    #co-u-nas .flex-tab-accordion hr:nth-of-type(10) {
+        order: 30;
+    }
+
+    /* 11 — Centrum Doskonalenia Kompetencji (no trailing hr in source) */
+    #co-u-nas .flex-tab-accordion .nav-item:has(#cdk-tab) {
+        order: 31;
+    }
+
+    #co-u-nas .flex-tab-accordion #cdk-content {
+        order: 32;
+    }
+
+
+
+
     /* KOLEJNOŚĆ ZAKŁADEK MOBILE */
-    .flex-tab-accordion .nav-item:nth-child(1) {
+    /* .flex-tab-accordion .nav-item:nth-child(1) {
         order: 1;
     }
     .flex-tab-accordion .nav-item:nth-child(1) {
@@ -819,5 +976,5 @@
 
     .flex-tab-accordion .tab-pane:nth-child(11) {
         order: 22;
-    }
+    } */
 }
