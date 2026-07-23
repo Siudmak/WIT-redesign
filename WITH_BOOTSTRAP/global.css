@@ -1,0 +1,224 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* GLOBAL VARIABLES */
+
+:root {
+    --WIT-GWNY: #900000;
+    --biay: #FFF;
+    --szary-90: #1A1A1A;
+    --szary-85-tekst: #262626;
+    --szary-30: #B3B3B3;
+    --szary-5: rgba(247, 247, 247, 0.95);
+    --szary-3: #F7F7F7;
+    --UPGROWTH: #FFB800;
+    --dsignn: #FFEE00;
+}
+
+/* GLOBAL TAGS */
+
+h2 {
+    margin: 0;
+    width: 100%;
+
+    color: var(--biay, #FFF);
+    font-family: Roboto;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+h2 strong {
+    margin: 0;
+    width: 100%;
+
+    color: var(--biay, #FFF);
+    font-family: Roboto;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+h3 {
+    margin: 0;
+    width: 100%;
+
+    color: var(--szary-85-tekst, #262626);
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+h4 {
+    margin: 0;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+p strong {
+    font-weight: 700;
+}
+
+#p-underline {
+    text-decoration: underline;
+}
+
+a {
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: var(--szary-90, #1A1A1A);
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+
+    background: #E6E6E6;
+    border: none;
+    margin: 0;
+}
+
+underline {
+    color: #000;
+
+    /* p-tresc-glowna */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+
+/* COMMON CLASSES */
+
+/* ========================= LINK ===========================*/
+.link {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    transition: 0.3s ease;
+
+    color: var(--szary-90, #1A1A1A);
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.link .pointer {
+    transition: 0.3s ease;
+    color: var(--szary-30, #B3B3B3);
+}
+
+.link:hover {
+    font-weight: 700;
+}
+
+.link:hover .pointer {
+    color: var(--WIT-GWNY, #900000);
+}
+
+/* =========================================================== */
+
+/* ========================= BUTTON ===========================*/
+
+.button {
+    cursor: pointer;
+    user-select: none;
+
+    display: flex;
+    width: fit-content;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    transition: 0.3s;
+    border-radius: 10px;
+    background: var(--szary-3, #F7F7F7);
+}
+
+.button_label {
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--szary-85-tekst, #262626);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.arrow_black {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 13px;
+    width: 14px;
+    background: url(./icons/arrow_dark.svg);
+    position: relative;
+}
+
+.arrow_white {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 13px;
+    width: 14px;
+    background: url(./icons/arrow_white.svg);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transition: 0.3s;
+    background: var(--WIT-GWNY, #900000);
+}
+
+.button:hover>.button_label {
+    transition: 0.3s;
+    color: var(--to, #FFF);
+}
+
+.button:hover>.arrow_black>.arrow_white {
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.button:active {
+    background: var(--szary-90, #1A1A1A);
+}
+
+/* =========================================================== */
