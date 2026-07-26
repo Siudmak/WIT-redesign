@@ -14,12 +14,17 @@
     --szary-3: #F7F7F7;
     --UPGROWTH: #FFB800;
     --dsignn: #FFEE00;
-	--grafika: #FE8F07;
+    --grafika: #FE8F07;
     --informatyka: #00A23D;
     --itz: #0255DE;
     --zarzadzanie: #8A42D4;
     --podyplomowe: #B3B3B3;
+
+    /* RESET STYLOW Z BS */
+    --bs-body-line-height: 0;
 }
+
+
 
 /* GLOBAL TAGS */
 
@@ -61,6 +66,16 @@ h3 {
     line-height: normal;
 }
 
+h5 {
+    color: var(--szary-90, #1A1A1A);
+    margin: 0;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 p {
     margin: 0;
     font-size: 16px;
@@ -94,6 +109,8 @@ hr {
     background: #E6E6E6;
     border: none;
     margin: 0;
+    opacity: 1;
+    transition: 0.3s ease;
 }
 
 underline {
@@ -116,18 +133,19 @@ underline {
 /* COMMON CLASSES */
 
 .wit-logo {
-	display: flex;
-/*	background: url(./images/svg/witlogo_pl.svg);
+    display: flex;
+    /*	background: url(./images/svg/witlogo_pl.svg);
 	background-size: contain;
-	background-repeat: no-repeat;
-*/
+	background-repeat: no-repeat; */
+    height: 100%;
 }
 
 .wit-logo>img {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-width: 250px; */
+    width: 100%;
 }
 
 /* ========================= LINK ===========================*/
@@ -236,21 +254,24 @@ underline {
 #fixed-totop {
     position: fixed;
     bottom: 0px;
-    right:0px;
+    right: 0px;
     z-index: 20;
 
 }
+
 #fixed-totop a {
     display: block;
     height: 40px;
     width: 40px;
     border: 1px solid rgba(180, 180, 180, 0.3);
     transition: background .5s ease .300ms, color .5s ease .300ms;
-    background-color: rgba(0,0,0,0.2);
-    color: rgba(255,255,255,0.6);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.6);
 }
+
 #fixed-totop a.notouch:hover {
-    background-color: rgba(145,0,0,0.9);
-    color: rgba(255,255,255,1);
+    background-color: rgba(145, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 1);
 }
+
 /* * */

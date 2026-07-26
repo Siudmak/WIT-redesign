@@ -1,0 +1,700 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   STYLES.CSS
+   Style zawartości Mega Menu (WIT) — wersja Bootstrap
+
+   Ten plik zbiera style rozproszone wcześniej w osobnych plikach:
+     - o_uczelni.html  (scope: #menu-glowne-o-uczelni)
+     - studia.html     (scope: #menu-glowne-studia)
+     - student.html    (scope: #menu-glowne-student)
+
+   W megamenu_wit-BS.html wszystkie trzy podmenu współdzielą te same
+   nazwy klas (np. .menu-glowne-content-right-panel), a rozróżniane są
+   przez ID kontenera .menu-glowne-content nadawane w markupie:
+     #o-uczelni, #studia, #student
+   Dlatego zamiast trzech oddzielnych, zduplikowanych bloków CSS,
+   poniżej znajdują się:
+     1) style wspólne (obowiązujące we wszystkich trzech podmenu),
+     2) style specyficzne, doprecyzowane selektorem #studia / #o-uczelni /
+        #student tam, gdzie oryginalne pliki różniły się między sobą.
+
+   Kolejność importu w <head>:
+     bootstrap.css -> megamenu_wit_tmp.css (funkcje/akordeon) ->
+     global.css (zmienne/typografia) -> styles.css (ten plik, zawartość)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. RESET LOKALNY (w obrębie modułu mega menu)
+   ========================================================================== */
+
+#mainNavbar *,
+#mainNavbar *::before,
+#mainNavbar *::after {
+  box-sizing: border-box;
+}
+
+#mainNavbar a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* ==========================================================================
+   2. KARTA MENU (biały kontener rozwijanego panelu)
+   ========================================================================== */
+
+.menu-glowne-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  border-radius: 20px;
+  background: var(--szary-3, #F7F7F7);
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Na desktopie karta nie potrzebuje własnego cienia/tła w obrębie
+   .level-1 (to już zapewnia megamenu_wit_tmp.css) - patrz sekcja 6/7 tego pliku */
+@media (min-width: 992px) {
+  .menu-glowne-content {
+    box-shadow: none;
+    background: transparent;
+  }
+}
+
+
+/* ==========================================================================
+   3. KOLUMNA LEWA (opis sekcji + CTA "Rekrutacja")
+   ========================================================================== */
+
+.menu-glowne-content-left {
+  display: flex;
+  width: 230px;
+  min-width: 200px;
+  max-width: 300px;
+  padding-top: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.menu-glowne-content-left h5 {
+  color: var(--szary-90, #1A1A1A);
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.menu-glowne-content-left hr {
+  width: 230px;
+  height: 1px;
+  background: #E6E6E6;
+  margin: 0;
+  border: 0;
+}
+
+.menu-glowne-content-left p {
+  color: var(--szary-50, #808080);
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+
+/* ==========================================================================
+   4. PRZYCISKI MENU (warianty ".menu_button")
+
+   Uwaga: obok tego istnieje też ".button" (patrz global.css), używany
+   w wariancie "O uczelni" - obie klasy renderują wizualnie ten sam
+   przycisk, ".menu_button" to starsza nazwa zachowana w sekcjach
+   Studia/Student.
+   ========================================================================== */
+
+.menu_button {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  width: 100%;
+  padding: 21px 20px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.menu_button .button_label {
+  transition: 0.3s;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.menu_button .button_arrow {
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 13px;
+  width: 14px;
+  background: url(./images/svg/nav/arrow_dark.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Wariant biały (np. "Więcej o studiach") */
+.menu_button#menu_button_white {
+  background: var(--szary-3, #F7F7F7);
+}
+
+.menu_button#menu_button_white > .button_label {
+  color: var(--szary-85-tekst, #262626);
+}
+
+.menu_button#menu_button_white:hover {
+  background: var(--szary-90, #1A1A1A);
+}
+
+.menu_button#menu_button_white:hover .button_label {
+  color: var(--biay, #FFF);
+}
+
+.menu_button#menu_button_white:hover .button_arrow {
+  filter: invert(1);
+}
+
+/* Wariant czerwony (CTA "Rekrutacja") */
+.menu_button#menu_button_red {
+  background: var(--WIT, #910000);
+}
+
+.menu_button#menu_button_red > .button_label {
+  color: var(--biay, #FFF);
+}
+
+.menu_button#menu_button_red .button_arrow {
+  background: url(./images/svg/nav/arrow_white.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.menu_button#menu_button_red:hover,
+.menu_button#menu_button_red:active {
+  background: var(--szary-90, #1A1A1A);
+}
+
+
+/* ==========================================================================
+   5. KOLUMNA PRAWA — WSPÓLNE DLA WSZYSTKICH PODMENU
+   ========================================================================== */
+
+.menu-glowne-content-right {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+
+#o-uczelni .menu-glowne-content-right {
+  min-width: 400px;
+  width: fit-content;
+  justify-content: flex-start;
+}
+
+/* Panel bazowy: wariant elastyczny używany w "O uczelni" i "Strefa studenta".
+   Panel "Studia" (kafelki kierunków) ma stały rozmiar - patrz sekcja 6. */
+.menu-glowne-content-right-panel {
+  display: flex;
+  min-width: 200px;
+  width: 300px;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+
+  border-radius: 10px;
+  background: #FFF;
+}
+
+.menu-glowne-content-right-panel hr {
+  width: 100%;
+  height: 1px;
+  background: #E6E6E6;
+  margin: 0;
+  border: 0;
+}
+
+/* Nagłówek h6-h6 kolumny prawej (używany też jako zwykły nagłówek
+   niebędący akordeonem, np. "Social Media") */
+.menu-glowne-content-right h6,
+.menu-header {
+  color: var(--szary-90, #1A1A1A);
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.menu-glowne-panel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+
+  color: var(--szary-85-tekst, #262626);
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Linki listy (dawne zwykłe <a>, teraz oznaczone jako .menu-item) */
+.menu-item {
+  color: var(--szary-85-tekst, #262626);
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  color: var(--WIT, #910000);
+}
+
+/* Odtworzenie oryginalnego układu poziomego ikona+link w panelu CDK
+   (w o_uczelni.html był to dodatkowy <div style="display:flex; gap:5px">,
+   usunięty w markupie BS - odtwarzamy efekt tutaj) */
+#panel-cdk .menu-glowne-panel-content {
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+
+/* ==========================================================================
+   6. WARIANT "STUDIA" — kafelki kierunków studiów (kolorowe panele)
+   ========================================================================== */
+
+#studia .menu-glowne-content-right-panel {
+  transition: 0.3s ease;
+  flex: 0 1 auto;
+  width: 219px;
+  height: 391px;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
+}
+
+#studia .menu-glowne-content-right-panel:hover {
+  gap: 10px;
+}
+
+.panel_header {
+  transition: 0.3s ease;
+  display: flex;
+  min-height: 55px;
+  padding: 10px 16px;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  border-radius: 10px 10px 0 0;
+
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.panel_header_icon_n_title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel_header_title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.panel_header p {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.panel_header svg {
+  fill: var(--biay, #FFF);
+}
+
+.panel_content {
+  display: flex;
+  padding: 10px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.panel_tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+/* Kolory poszczególnych kierunków (etykieta + linia + hover) */
+#Grafika .panel_header { color: var(--grafika, #FE8F07); }
+#Informatyka .panel_header { color: var(--informatyka, #00A23D); }
+#ITZ .panel_header { color: var(--itz, #0255DE); }
+#Zarzadzanie .panel_header { color: var(--zarzadzanie, #8A42D4); }
+#Podyplomowe .panel_header { color: var(--szary-50, #808080); }
+
+#Grafika hr { background: var(--grafika, #FE8F07); }
+#Informatyka hr { background: var(--informatyka, #00A23D); }
+#ITZ hr { background: var(--itz, #0255DE); }
+#Zarzadzanie hr { background: var(--zarzadzanie, #8A42D4); }
+#Podyplomowe hr { background: var(--szary-50, #808080); }
+
+#Grafika:hover > .panel_header {
+  color: var(--biay, #FFF);
+  background: var(--grafika, #FE8F07);
+}
+
+#Informatyka:hover > .panel_header {
+  color: var(--biay, #FFF);
+  background: var(--informatyka, #00A23D);
+}
+
+#ITZ:hover > .panel_header {
+  color: var(--biay, #FFF);
+  background: var(--itz, #0255DE);
+}
+
+#Zarzadzanie:hover > .panel_header {
+  color: var(--biay, #FFF);
+  background: var(--zarzadzanie, #8A42D4);
+}
+
+#Podyplomowe:hover > .panel_header {
+  color: var(--biay, #FFF);
+  background: var(--szary-50, #808080);
+}
+
+#Grafika:hover hr,
+#Informatyka:hover hr,
+#ITZ:hover hr,
+#Zarzadzanie:hover hr,
+#Podyplomowe:hover hr {
+  background: #B3B3B3;
+}
+
+
+/* ==========================================================================
+   7. PANEL SPECJALNY — CDK / szybkie linki (UBI, Poczta, Pomoc) + Social Media
+   ========================================================================== */
+
+.menu-glowne-content-right-panel-special {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Wariant "O uczelni": CDK + social media, dopasowanie wysokości kolumny */
+#o-uczelni .menu-glowne-content-right-panel-special {
+  min-width: 200px;
+  max-width: 300px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+@media all and (max-width: 1275px) {
+  #o-uczelni .menu-glowne-content-right-panel-special {
+    flex-direction: row;
+    align-items: flex-start;
+    height: fit-content;
+  }
+}
+
+/* Wariant "Strefa studenta": UBI / Poczta / Pomoc + social media */
+#student .menu-glowne-content-right-panel-special {
+  width: 280px;
+  align-self: stretch;
+}
+
+.menu-glowne-content-right-panel-button {
+  display: flex;
+  min-width: 200px;
+  max-width: 300px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 10px;
+}
+
+.menu-glowne-content-right-panel-button h4 {
+  color: var(--biay, #FFF);
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 140%;
+}
+
+#button_ubi {
+  background: var(--UBI, #0055BB);
+}
+
+#button_poczta {
+  background: var(--szary-90, #1A1A1A);
+}
+
+#button_pomoc {
+  background: var(--szary-50, #808080);
+}
+
+/* Blok "Social Media" (współdzielony przez wszystkie 3 podmenu) */
+.menu-glowne-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.menu-glowne-socials h6,
+.menu-glowne-socials .menu-header {
+  margin-top: 8.7px;
+  margin-bottom: 8.7px;
+}
+
+.menu-glowne-socials-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.menu-glowne-socials-container a {
+  transition: 0.3s ease;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 10px;
+  background: var(--biay, #FFF);
+}
+
+.menu-glowne-socials-container a:hover {
+  background: var(--szary-80, #333);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.social-icon {
+  transition: 0.3s ease;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.menu-glowne-socials-container a:hover > .social-icon {
+  filter: invert(1);
+}
+
+#instagram-icon {
+  background: url(./images/svg/nav/instagram.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 14px;
+  width: 14px;
+}
+
+#discord-icon {
+  background: url(./images/svg/nav/discord.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 14px;
+  width: 19px;
+}
+
+#tiktok-icon {
+  background: url(./images/svg/nav/tiktok.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 17px;
+  width: 15px;
+}
+
+#linkedin-icon {
+  background: url(./images/svg/nav/linkedin.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 18px;
+}
+
+#facebook-icon {
+  background: url(./images/svg/nav/facebook.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 8px;
+}
+
+
+/* ==========================================================================
+   8. MENU MOBILNE (linki dodatkowe / kontrolki / social media)
+   Widoczne tylko <992px dzięki klasie bootstrapowej d-lg-none na
+   .mobile-extras (patrz megamenu_wit-BS.html)
+   ========================================================================== */
+
+.mobile-extras {
+  display: flex;
+  width: 100%;
+  padding: 15px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu_mobile_links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-self: stretch;
+  width: 100%;
+  max-width: 350px;
+}
+
+.menu_mobile_links a {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--biay, #FFF);
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.menu_mobile_controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.menu_mobile_controls .controler {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--biay, #FFF);
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+
+#dark-mode-mobile {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 17px;
+  width: 17px;
+  background: url(./images/svg/nav/dark_mode.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.menu_mobile_socials {
+  width: 100%;
+  padding: 10px;
+  max-width: 350px;
+}
+
+.menu_mobile_socials_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 350px;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.menu_mobile_socials_container a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 10px;
+  background: var(--WIT-ciemny, #640000);
+}
+
+/* W wersji mobilnej ikony social media są zawsze białe (odwrócone),
+   niezależnie od hover - tło pod nimi jest już ciemnoczerwone */
+.menu_mobile_socials_container .social-icon {
+  filter: invert(1);
+}
