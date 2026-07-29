@@ -4,25 +4,40 @@
 /* GLOBAL VARIABLES */
 
 :root {
-    --WIT-GWNY: #900000;
-    --biay: #FFF;
+    --WIT: #910000;
+    --biay: #FFFFFF;
     --szary-90: #1A1A1A;
+    --szary-80: #333333;
     --szary-85-tekst: #262626;
     --szary-30: #B3B3B3;
     --szary-5: rgba(247, 247, 247, 0.95);
     --szary-3: #F7F7F7;
     --UPGROWTH: #FFB800;
     --dsignn: #FFEE00;
+    --grafika: #FE8F07;
+    --informatyka: #00A23D;
+    --itz: #0255DE;
+    --zarzadzanie: #8A42D4;
+    --podyplomowe: #B3B3B3;
+
+    /* RESET STYLOW Z BS */
+    --bs-body-line-height: 0;
 }
 
+
+
 /* GLOBAL TAGS */
+
+body {
+    color: #000;
+    font-family: "Roboto", sans-serif;
+}
 
 h2 {
     margin: 0;
     width: 100%;
 
     color: var(--biay, #FFF);
-    font-family: Roboto;
     font-size: 60px;
     font-style: normal;
     font-weight: 300;
@@ -34,7 +49,6 @@ h2 strong {
     width: 100%;
 
     color: var(--biay, #FFF);
-    font-family: Roboto;
     font-size: 60px;
     font-style: normal;
     font-weight: 900;
@@ -46,18 +60,24 @@ h3 {
     width: 100%;
 
     color: var(--szary-85-tekst, #262626);
-    font-family: Roboto;
     font-size: 30px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
 }
 
+h5 {
+    color: var(--szary-90, #1A1A1A);
+    margin: 0;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 p {
     margin: 0;
-
-    color: #000;
-    font-family: Roboto;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -78,7 +98,7 @@ a {
     color: var(--szary-90, #1A1A1A);
 }
 
-a:hover {
+a:hover :not(.mainNavbar) {
     font-weight: 700;
 }
 
@@ -89,13 +109,14 @@ hr {
     background: #E6E6E6;
     border: none;
     margin: 0;
+    opacity: 1;
+    transition: 0.3s ease;
 }
 
 underline {
     color: #000;
 
     /* p-tresc-glowna */
-    font-family: Roboto;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -111,6 +132,22 @@ underline {
 
 /* COMMON CLASSES */
 
+.wit-logo {
+    display: flex;
+    /*	background: url(./images/svg/witlogo_pl.svg);
+	background-size: contain;
+	background-repeat: no-repeat; */
+    height: 100%;
+}
+
+.wit-logo>img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-width: 250px; */
+    width: 100%;
+}
+
 /* ========================= LINK ===========================*/
 .link {
     display: flex;
@@ -119,8 +156,6 @@ underline {
     transition: 0.3s ease;
 
     color: var(--szary-90, #1A1A1A);
-
-    font-family: Roboto;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -137,7 +172,7 @@ underline {
 }
 
 .link:hover .pointer {
-    color: var(--WIT-GWNY, #900000);
+    color: var(--WIT-GWNY, #910000);
 }
 
 /* =========================================================== */
@@ -147,14 +182,12 @@ underline {
 .button {
     cursor: pointer;
     user-select: none;
-
     display: flex;
     width: fit-content;
     padding: 12px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
-
     transition: 0.3s;
     border-radius: 10px;
     background: var(--szary-3, #F7F7F7);
@@ -166,7 +199,6 @@ underline {
     align-items: center;
     justify-content: center;
     color: var(--szary-85-tekst, #262626);
-    font-family: Roboto;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -180,7 +212,7 @@ underline {
     align-items: center;
     height: 13px;
     width: 14px;
-    background: url(./icons/arrow_dark.svg);
+    background: url(./images/svg/arrow_dark.svg);
     position: relative;
 }
 
@@ -192,14 +224,14 @@ underline {
     align-items: center;
     height: 13px;
     width: 14px;
-    background: url(./icons/arrow_white.svg);
+    background: url(./images/svg/arrow_white.svg);
     opacity: 0;
     transition: 0.3s;
 }
 
 .button:hover {
     transition: 0.3s;
-    background: var(--WIT-GWNY, #900000);
+    background: var(--WIT-GWNY, #910000);
 }
 
 .button:hover>.button_label {
@@ -217,3 +249,29 @@ underline {
 }
 
 /* =========================================================== */
+
+/* TO TOP */
+#fixed-totop {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 20;
+
+}
+
+#fixed-totop a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(180, 180, 180, 0.3);
+    transition: background .5s ease .300ms, color .5s ease .300ms;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#fixed-totop a.notouch:hover {
+    background-color: rgba(145, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 1);
+}
+
+/* * */

@@ -16,7 +16,8 @@
 </head>
 
 <body>
-    <div class="kierunek-hero" id="grafika">
+    <section id="hero-grafika">
+        <img class="pka-seal d-none d-xl-flex" src="./icons/OCENA_PKA.png">
         <div class="content">
             <div class="naglowek-podstrony">
                 WIT / STUDIA / GRAFIKA
@@ -31,7 +32,8 @@
                     licencjackie (6 semestrów) | magisterskie (4 semestry)
                 </div>
                 <p>
-                    Na studiach licencjackich z&nbsp;Grafiki w&nbsp;WIT opanujesz tradycyjne techniki, takie jak rysunek
+                    Na studiach licencjackich z&nbsp;Grafiki w&nbsp;WIT opanujesz tradycyjne techniki, takie jak
+                    rysunek
                     i&nbsp;malarstwo,
                     oraz nowoczesne narzędzia do&nbsp;projektowania 2D i&nbsp;3D. Zdobędziesz umiejętności tworzenia
                     wirtualnych
@@ -47,7 +49,8 @@
                     <div class="redirect-content">
                         <div>
                             Rekrutację prowadzimy raz w&nbsp;roku. <br>Zapoznaj się&nbsp;z&nbsp;
-                            <a href="wit.edu.pl" target="_blank">ważnymi informacjami dla&nbsp;kandydatów.</a>
+                            <a href="https://www.wit.edu.pl" target="_blank">ważnymi informacjami
+                                dla&nbsp;kandydatów.</a>
                         </div>
                         <div class="button">
                             <div class="button_label">
@@ -61,20 +64,52 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="sticky-menu" id="sticky-grafika">
-        <ul>
-            <a href="">Specjalności</a>
-            <a href="">Opis Kierunku</a>
-            <a href="">Laboratoria</a>
-            <a href="">Korzyści</a>
-            <a href="">Licencjat</a>
-            <a href="">Magisterium</a>
-            <a href="">Wykładowcy</a>
-            <a href="">Galeria WIT</a>
-            <a href="">Erasmus+</a>
-            <a href="">Opłaty</a>
-            <a href="">Rekrutacja</a>
-        </ul>
-    </div>
+    </section>
+    <nav class="navbar navbar-expand-xxl custom-navbar">
+        <div class="container-fluid">
+            <!-- Mobile toggle button -->
+            <button class="navbar-toggler d-flex d-xxl-none w-100 justify-content-between align-items-center"
+                type="button" data-bs-toggle="collapse" data-bs-target="#mainNavCollapse"
+                aria-controls="mainNavCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span>Poznaj szczegóły</span>
+                <span class="toggle-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+
+            <!-- Collapsible content (accordion on mobile, flex row on desktop) -->
+            <div class="collapse navbar-collapse" id="mainNavCollapse">
+                <ul class="navbar-nav w-100 d-flex flex-xxl-row flex-column justify-content-xxl-between">
+                    <li class="nav-item"><a class="nav-link" href="#">Specjalności</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Opis&nbsp;kierunku</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Laboratoria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Korzyści</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Licencjat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Magisterium</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Wykładowcy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Galeria&nbsp;WIT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Erasmus+</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Opłaty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Rekrutacja</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <section id="pka">
+        <div class="content">
+            <div class="container text-center">
+                <div class="row align-items-start">
+                    <div class="col">
+                        PKA-LOGO
+                    </div>
+                    <div class="col">
+                        OPIS
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
