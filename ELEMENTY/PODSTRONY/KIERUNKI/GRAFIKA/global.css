@@ -5,25 +5,31 @@
 
 :root {
     --WIT: #910000;
+
     --biay: #FFFFFF;
-    --szary-90: #1A1A1A;
+    --szary-3: #F7F7F7;
+    --szary-5: rgba(247, 247, 247, 0.95);
+    --szary-10: #E6E6E6;
+    --szary-30: #B3B3B3;
     --szary-80: #333333;
     --szary-85-tekst: #262626;
-    --szary-30: #B3B3B3;
-    --szary-5: rgba(247, 247, 247, 0.95);
-    --szary-3: #F7F7F7;
+    --szary-90: #1A1A1A;
+
     --UPGROWTH: #FFB800;
     --dsignn: #FFEE00;
     --grafika: #FE8F07;
+    --grafika-ciemny: #DB5F07;
     --informatyka: #00A23D;
     --itz: #0255DE;
     --zarzadzanie: #8A42D4;
     --podyplomowe: #B3B3B3;
 
+    
+
     /* RESET STYLOW Z BS */
     --bs-body-line-height: 0;
-}
 
+}
 
 
 /* GLOBAL TAGS */
@@ -77,7 +83,9 @@ h5 {
 }
 
 p {
+    color: var(--szary-85-tekst);
     margin: 0;
+    font-family: Roboto;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

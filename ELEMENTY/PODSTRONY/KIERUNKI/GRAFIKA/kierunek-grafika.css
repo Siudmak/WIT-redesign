@@ -1,5 +1,11 @@
+
+
 :root {
     --cmw: 1460px;
+
+    /* kolor kierunku - żeby łatwiej było przerobić dla innych kierunków  */
+    --theme: var(--grafika);
+    --theme-dark: var(--grafika-ciemny)
 }
 
 
@@ -15,6 +21,8 @@ section {
 
 }
 
+
+
 #hero-grafika {
     background: url(./grafika-hero-bg.png);
 }
@@ -26,7 +34,6 @@ section {
     max-width: var(--cmw);
     padding: 0 40px;
     gap: 20px;
-
 }
 
 #hero-grafika .naglowek-podstrony {
@@ -210,7 +217,7 @@ section {
 }
 
 .custom-navbar .navbar-toggler {
-    background-color: var(--grafika);
+    background-color: var(--theme);
     border-radius: 0;
     border: none;
     padding: 20px;
@@ -251,18 +258,23 @@ section {
 }
 
 .custom-navbar .nav-link:hover {
-    background: var(--grafika);
+    background: var(--theme);
     font-weight: 600;
 }
 
 /* Mobile accordion look */
 @media (max-width: 1330px) {
     .custom-navbar .navbar-collapse {
-        background-color: #1c1c1c;
+        background: url(./grafika-hero-bg-dark.png);
+    }
+
+    .custom-navbar .navbar-collapse .nav-link:hover {
+        background: none;
     }
 
     .custom-navbar .nav-item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        justify-content: center;
     }
 
     .custom-navbar .nav-link {
@@ -279,8 +291,257 @@ section {
     background: #034293;
 }
 
-#pka .content{
+#pka .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
     max-width: var(--cmw);
 }
 
+#pka img {
+    scale: 60%;
+}
+
+#pka .divider hr {
+    width: 1px;
+    height: 100%;
+}
+
+#pka .row {
+    padding: 30px 20px;
+    --bs-gutter-x: 0;
+}
+
+#pka #text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#pka h5 {
+    color: var(--biay);
+    font-family: Roboto;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+#pka p {
+    color: var(--biay);
+
+    /* p-tresc-glowna */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 22.4px */
+}
+
+#pka p strong {
+    color: #FFF;
+
+    /* p-tresc-glowna */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+/* ====================
+      00 - reusables
+   ==================== */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--cmw);
+    padding: 40px 20px;
+    gap: 65px;
+}
+
+.kierunek-header {
+    justify-self: flex-start;
+
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    height: 250px;
+    overflow: hidden;
+
+    border-bottom: 1px solid #262626;
+}
+
+.kierunek-header .number {
+    align-self: flex-start;
+
+    color: var(--theme);
+    font-family: Roboto;
+    font-size: 300px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 140%;
+    /* 420px */
+}
+
+.kierunek-header .title {
+    align-self: flex-end;
+
+    color: var(--szary-85-tekst);
+
+    /* H2-naglowek-sekcji */
+    font-family: Roboto;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+
+
+/* =======================
+      01 - specjalnosci
+   ======================= */
+
+#specjalnosci-1 h5 {
+    color: var(--theme);
+
+    /* H3-naglowek-tabu */
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+#specjalnosci-1 .divider hr {
+    width: 1px;
+    height: 100%;
+}
+
+#specjalnosci-1 .row {
+    --bs-gutter-x: 0;
+}
+
+#specjalnosci-1 .col-5 {
+    /* padding: 30px 20px; */
+    --bs-gutter-x: 0;
+    gap: 20px;
+}
+
+#specjalnosci-1 .specjalnosci {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#specjalnosci-1 .specjalnosci .stopien {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#specjalnosci-1 .specjalnosci .stopien .stopien-num {
+    color: var(--theme-dark);
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    /* 56px */
+}
+
+#specjalnosci-1 .specjalnosci .stopien .stopien-name {
+    display: flex;
+    align-items: center;
+    color: var(--szary-85-tekst);
+
+    /* H3-naglowek-tabu */
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+#specjalnosci-1 .specjalnosci .cards {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+#specjalnosci-1 .specjalnosci .cards .card {
+    --bs-card-inner-border-radius: 20px;
+    --bs-card-outer-border-radius: 20px;
+    width: 450px;
+    height: fit-content;
+    border-radius: 20px;
+    border: 1px solid var(--szary-10);
+    background: var(--biay);
+
+    transition: 0.3s ease;
+}
+
+#specjalnosci-1 .specjalnosci .cards .card:hover {
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+}
+
+#specjalnosci-1 .specjalnosci .cards .card img {
+    height: 200px;
+}
+
+#specjalnosci-1 .specjalnosci .cards .card-body {
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+#specjalnosci-1 .specjalnosci .cards h5 {
+    align-self: flex-start;
+    color: var(--theme);
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#specjalnosci-1 .specjalnosci .cards .card-text {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: fit-content;
+}
+
+#specjalnosci-1 .specjalnosci .cards ul {
+    color: var(--szary-85-tekst);
+    margin: 0;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 240%;
+}
+
+#specjalnosci-1 #card-button {
+    background: transparent;
+    border: 1px solid var(--szary-10);
+    padding: 18px 40px;
+}
+
+#specjalnosci-1 #card-button:hover {
+    background: var(--theme);
+}
+
+/* ===============
+    przyszlosc-2
+   ===============*/
+
+#przyszlosc-2 {
+    background-color: var(--szary-3);
+}
