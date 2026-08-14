@@ -24,7 +24,7 @@
     --zarzadzanie: #8A42D4;
     --podyplomowe: #B3B3B3;
 
-    
+
 
     /* RESET STYLOW Z BS */
     --bs-body-line-height: 0;
@@ -72,13 +72,23 @@ h3 {
     line-height: normal;
 }
 
+h4 {
+    color: var(--szary-90, #1A1A1A);
+    margin: 0;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 140%;
+}
+
 h5 {
     color: var(--szary-90, #1A1A1A);
     margin: 0;
     font-family: Roboto;
-    font-size: 20px;
+    font-size: 30px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: normal;
 }
 

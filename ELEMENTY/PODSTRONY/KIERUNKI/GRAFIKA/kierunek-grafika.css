@@ -1,5 +1,3 @@
-
-
 :root {
     --cmw: 1460px;
 
@@ -351,6 +349,7 @@ section {
     font-weight: 700;
     line-height: 140%;
 }
+
 /* ====================
       00 - reusables
    ==================== */
@@ -374,6 +373,8 @@ section {
     overflow: hidden;
 
     border-bottom: 1px solid #262626;
+
+    user-select: none;
 }
 
 .kierunek-header .number {
@@ -407,36 +408,34 @@ section {
       01 - specjalnosci
    ======================= */
 
-#specjalnosci-1 h5 {
-    color: var(--theme);
-
-    /* H3-naglowek-tabu */
-    font-family: Roboto;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+/* drugi stopien ma ciemniejszy kolor */
+#st-II {
+    --theme: var(--theme-dark)
 }
 
-#specjalnosci-1 .divider hr {
-    width: 1px;
-    height: 100%;
+#specjalnosci-1 h3 {
+    border-right: 1px solid #E6E6E6;
 }
 
-#specjalnosci-1 .row {
+
+#specjalnosci-1 .row .col {
+    --bs-gutter-x: 2.5rem;
+    gap: 40px;
+}
+
+#specjalnosci-1 .stopien-opis {
     --bs-gutter-x: 0;
+    gap: 16px;
 }
 
-#specjalnosci-1 .col-5 {
-    /* padding: 30px 20px; */
+#specjalnosci-1 .stopien-opis .col {
     --bs-gutter-x: 0;
-    gap: 20px;
 }
 
 #specjalnosci-1 .specjalnosci {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 }
 
 #specjalnosci-1 .specjalnosci .stopien {
@@ -446,7 +445,7 @@ section {
 }
 
 #specjalnosci-1 .specjalnosci .stopien .stopien-num {
-    color: var(--theme-dark);
+    color: var(--theme);
     font-family: Roboto;
     font-size: 40px;
     font-style: normal;
@@ -544,4 +543,185 @@ section {
 
 #przyszlosc-2 {
     background-color: var(--szary-3);
+    padding-bottom: 0;
+}
+
+#przyszlosc-2 .content {
+    padding-bottom: 0;
+}
+
+#przyszlosc-2-text {
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+#przyszlosc-2-text .row {
+    gap: 20px;
+    height: fit-content;
+}
+
+#przyszlosc-2-text .button {
+    background: var(--theme);
+}
+
+#przyszlosc-2-text .button .button_label {
+    color: var(--biay);
+}
+
+#przyszlosc-2-text .button .arrow_black {
+    background: url(./images/svg/arrow_white.svg);
+}
+
+#przyszlosc-2-text .button:hover {
+    background: var(--WIT);
+}
+
+#przyszlosc-2-image {
+    width: 950px;
+    overflow: visible;
+}
+
+/* 
+======================
+    pracownie - 3
+======================
+*/
+
+#pracownie {
+    background: url(./grafika-hero-bg-dark.png);
+}
+
+#pracownie .kierunek-header {
+    color: var(--biay, #FFF);
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#pracownie .title,
+#pracownie .number {
+    color: var(--biay, #FFF);
+}
+
+#pracownie .col{
+    gap: 20px;
+}
+
+#pracownie h3 {
+    color: var(--theme);
+}
+
+#pracownie p {
+    color: var(--biay, #FFF);
+}
+
+
+#pracownie .row {
+    --bs-gutter-x: 0;
+}
+
+#pracownie .col-5 {
+    /* padding: 30px 20px; */
+    --bs-gutter-x: 0;
+    gap: 20px;
+}
+
+#pracownie .col ul {
+    color: var(--theme);
+    margin: 0;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 240%;
+}
+
+/* 
+=================
+    opinie - 4
+================= 
+*/
+
+#opinie .kierunek-header {
+    height: 255px;
+}
+
+#opinie h3 {
+    color: var(--theme);
+}
+
+
+#opinie .divider hr {
+    width: 0px;
+    height: 100%;
+}
+
+#opinie .col {
+    --bs-gutter-x: 0;
+    gap: 40px;
+}
+
+#opinie .row {
+    --bs-gutter-x: 0;
+    gap: 20px;
+}
+
+
+/* 
+=================
+    program - 5
+================= 
+*/
+
+#program {
+    background-color: var(--szary-3);
+}
+
+#program h3 {
+    color: var(--theme);
+}
+
+
+#program .divider hr {
+    width: 100%;
+    height: 1px;
+    background: #CCC;
+}
+
+#program .col {
+    --bs-gutter-x: 0;
+    gap: 40px;
+}
+
+#program .row {
+    --bs-gutter-x: 0;
+    gap: 20px;
+}
+
+
+#program .specjalnosci .stopien {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#program .specjalnosci .stopien .stopien-num {
+    color: var(--theme-dark);
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    /* 56px */
+}
+
+#program .specjalnosci .stopien .stopien-name {
+    display: flex;
+    align-items: center;
+    color: var(--szary-85-tekst);
+
+    /* H3-naglowek-tabu */
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
