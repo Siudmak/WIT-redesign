@@ -10,6 +10,7 @@
     --szary-3: #F7F7F7;
     --szary-5: rgba(247, 247, 247, 0.95);
     --szary-10: #E6E6E6;
+    --szary-20: #CCCCCC;
     --szary-30: #B3B3B3;
     --szary-80: #333333;
     --szary-85-tekst: #262626;
@@ -93,6 +94,7 @@ h5 {
 }
 
 p {
+    transition: 0.3s ease;
     color: var(--szary-85-tekst);
     margin: 0;
     font-family: Roboto;
@@ -103,10 +105,12 @@ p {
 }
 
 p strong {
+    transition: 0.3s ease;
     font-weight: 700;
 }
 
 #p-underline {
+    transition: 0.3s ease;
     text-decoration: underline;
 }
 
@@ -132,6 +136,7 @@ hr {
 }
 
 underline {
+    transition: 0.3s ease;
     color: #000;
 
     /* p-tresc-glowna */

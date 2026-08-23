@@ -402,7 +402,20 @@ section {
     line-height: normal;
 }
 
+#card-button,
+#card-button-darker {
+    background: var(--biay);
+    border: 1px solid var(--szary-10);
+    padding: 18px 40px;
+}
 
+#card-button:hover {
+    background: var(--theme);
+}
+
+#card-button-darker:hover {
+    background: var(--theme-dark);
+}
 
 /* =======================
       01 - specjalnosci
@@ -601,7 +614,7 @@ section {
     color: var(--biay, #FFF);
 }
 
-#pracownie .col{
+#pracownie .col {
     gap: 20px;
 }
 
@@ -639,15 +652,14 @@ section {
     opinie - 4
 ================= 
 */
+#opinie,
+#opinie .content {
+    padding-bottom: 0;
+}
 
 #opinie .kierunek-header {
     height: 255px;
 }
-
-#opinie h3 {
-    color: var(--theme);
-}
-
 
 #opinie .divider hr {
     width: 0px;
@@ -656,7 +668,7 @@ section {
 
 #opinie .col {
     --bs-gutter-x: 0;
-    gap: 40px;
+    gap: 20px;
 }
 
 #opinie .row {
@@ -665,46 +677,142 @@ section {
 }
 
 
+#opinie .bg-quote-mark {
+    display: flex;
+    align-self: flex-end;
+    justify-self: flex-end;
+
+    width: 430px;
+    height: 360px;
+}
+
+#opinie .bg-quote-mark img {
+    width: 430px;
+    height: 360px;
+    opacity: 0.3;
+}
+
 /* 
 =================
-    program - 5
+    projekty - 5
 ================= 
 */
 
-#program {
-    background-color: var(--szary-3);
+#projekty {
+    background: url(./images/projekty-bg.jpg);
+    background-size: cover;
+    background-position: 20%;
+    padding-top: 0;
+    padding-bottom: 60px;
 }
 
-#program h3 {
-    color: var(--theme);
+#projekty .content {
+    padding: 0;
 }
 
-
-#program .divider hr {
-    width: 100%;
-    height: 1px;
-    background: #CCC;
+#projekty .kierunek-header {
+    color: var(--biay, #FFF);
+    border-bottom: 1px solid #e4e4e4;
 }
 
-#program .col {
-    --bs-gutter-x: 0;
-    gap: 40px;
+#projekty .title,
+#projekty .number {
+    color: var(--biay, #FFF);
 }
 
-#program .row {
-    --bs-gutter-x: 0;
+#projekty .col {
+    --bs-gutter-x: 10px;
     gap: 20px;
 }
 
+#projekty p {
+    color: var(--biay, #FFF);
+}
 
-#program .specjalnosci .stopien {
+#projekty #UPGROWTH {
+    background: var(--UPGROWTH);
+}
+
+/* 
+===============
+    galeria - 6
+===============
+*/
+
+#galeria {
+    background: url(./grafika-hero-bg.png);
+}
+
+#galeria .kierunek-header {
+    color: var(--biay, #FFF);
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#galeria .title,
+#galeria .number {
+    color: var(--biay, #FFF);
+}
+
+#galeria .row .col,
+#galeria .row .col-8 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#galeria .akapit {
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+#galeria .akapit h3,
+#galeria .akapit p {
+    color: var(--biay, #FFF);
+}
+
+#galeria .content .wystawy-cards {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#galeria .content .wystawy-cards .wystawa-card {
+    max-width: 290px;
+    height: fit-content;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 0.5px solid var(--szary-30, #B3B3B3);
+    background: #FFF;
+}
+
+#galeria .wystawa-card img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 20px;
+}
+
+#galeria .wystawa-card p img {
+    height: 19px;
+    width: 19px;
+    border-radius: 0;
+}
+
+/* 
+===============
+    program - 7
+===============
+ */
+#program {
+    background: var(--szary-3);
+}
+
+#program .stopien {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-#program .specjalnosci .stopien .stopien-num {
-    color: var(--theme-dark);
+#program .stopien .stopien-num {
+    color: var(--theme);
     font-family: Roboto;
     font-size: 40px;
     font-style: normal;
@@ -713,7 +821,11 @@ section {
     /* 56px */
 }
 
-#program .specjalnosci .stopien .stopien-name {
+#program #II-stopien .stopien-num {
+    color: var(--theme-dark);
+}
+
+#program .stopien .stopien-name {
     display: flex;
     align-items: center;
     color: var(--szary-85-tekst);
@@ -724,4 +836,381 @@ section {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+}
+
+#program .cards .card {
+    transition: 0.3s ease;
+    position: relative;
+    padding-top: 50px;
+    --bs-card-inner-border-radius: 20px;
+    --bs-card-outer-border-radius: 20px;
+    width: 400px;
+    height: fit-content;
+    border-radius: 20px;
+    background: var(--biay);
+    border: none;
+    z-index: 999;
+    color: var(--theme);
+}
+
+#program #cards-II .card,
+#program #cards-II .card #card-button:hover {
+    color: var(--theme-dark);
+}
+
+#program .cards .card .circle {
+    transition: 0.3s ease;
+    position: absolute;
+    top: -80px;
+    border-radius: 9999px;
+    padding: 110px;
+    background: var(--biay);
+    z-index: 1;
+}
+
+#program .cards .card .circle svg {
+    position: absolute;
+    top: 20px;
+    left: 65px;
+    z-index: 100;
+    height: 100px;
+    width: 89px;
+    /* color: var(--theme); */
+}
+
+#program .cards .card h5 {
+    /* color: var(--theme); */
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    z-index: 100;
+}
+
+#program .cards .card p {
+    text-align: center;
+    z-index: 100;
+}
+
+#program .cards .card-body {
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+#program .cards .card-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#program .cards .button_label {
+    font-size: 18px;
+}
+
+#program #card-efekty .card-text .button {
+    padding: 8px 40px;
+}
+
+#program .cards .card-text .button {
+    padding: 16px 24px;
+}
+
+#program .cards .card-text .button .arrow_black {
+    background: url(./icons/Shortcut.svg);
+}
+
+#program .cards .card-text .button .arrow_white {
+    background: url(./icons/Shortcut_white.svg);
+}
+
+#program #II-stopien,
+#program #cards-II .cards .card {
+    color: var(--theme-dark);
+}
+
+/* 
+==============
+    kadra - 8
+==============
+*/
+
+#kadra {
+    background: url(./grafika-hero-bg-dark.png);
+}
+
+#kadra {
+    background: url(./grafika-hero-bg-dark.png);
+}
+
+#kadra .kierunek-header {
+    color: var(--biay, #FFF);
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#kadra .title,
+#kadra .number {
+    color: var(--biay, #FFF);
+}
+
+#kadra .col {
+    gap: 20px;
+}
+
+#kadra h3 {
+    color: var(--theme);
+}
+
+#kadra p {
+    color: var(--biay, #FFF);
+}
+
+/* 
+==============
+    erasmus - 9
+==============
+*/
+
+#erasmus {
+    background: url(./images/erasmus.png);
+}
+
+#erasmus .kierunek-header {
+    color: var(--biay, #FFF);
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#erasmus .title,
+#erasmus .number {
+    color: var(--biay, #FFF);
+}
+
+#erasmus .col {
+    gap: 20px;
+}
+
+#erasmus h3,
+#erasmus p {
+    color: var(--biay, #FFF);
+}
+
+#erasmus p strong {
+    color: var(--theme);
+    font-weight: 800;
+    font-size: 22px;
+}
+
+#erasmus .row {
+    --bs-gutter-x: 0px;
+}
+
+#erasmus .col {
+    --bs-gutter-x: 0px;
+    gap: 20px;
+}
+
+#erasmus #lower .col {
+    --bs-gutter-x: 0px;
+    gap: 20px;
+    max-width: 340px;
+}
+
+#erasmus #col-buttons {
+    gap: 30px;
+}
+
+/* 
+==============
+    kariera - 10
+==============
+*/
+
+#kariera {
+    background: black;
+}
+
+#kariera .kierunek-header {
+    color: var(--biay, #FFF);
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#kariera .title,
+#kariera .number {
+    color: var(--biay, #FFF);
+}
+
+#kariera .col {
+    gap: 20px;
+}
+
+#kariera h3,
+#kariera p {
+    color: var(--biay, #FFF);
+}
+
+#kariera .col-1 {
+    max-width: 40px;
+}
+
+#kariera-col-II {
+    gap: 40px;
+}
+
+#kariera-col-II .col {
+    gap: 12px;
+}
+
+#kariera-col-II h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--theme-dark);
+}
+
+
+/* 
+==============
+    opłaty - 11
+==============
+*/
+
+#oplaty {
+    background: var(--szary-3);
+}
+
+#oplaty .col {
+    gap: 20px;
+}
+
+#oplaty h4 {
+    color: var(--theme);
+}
+
+#oplaty .col-1 {
+    max-width: 40px;
+}
+
+#oplaty .col-fill {
+    padding: 20px;
+    gap: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--obrys-jasnoszary, #E6E6E6);
+    background: var(--biay);
+}
+
+#oplaty #I h4 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#oplaty #II h4 {
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--szary-85-tekst);
+}
+
+#oplaty #ceny h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#oplaty #ceny h4 strong {
+    font-weight: 600;
+}
+
+#oplaty #ceny #header {
+    background: var(--theme);
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px;
+}
+
+#oplaty #ceny #header .col {
+    width: fit-content;
+}
+
+#oplaty #ceny #header p {
+    color: var(--biay, #FFF);
+    text-align: center;
+
+    /* btn WIęcej */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#oplaty #ceny #tabela {
+    background: var(--biay);
+    border-radius: 20px;
+    padding: 0px 12px 12px 12px;
+    gap: 10px;
+}
+
+#oplaty #ceny #row-content {
+    padding: 0px 20px;
+}
+
+#oplaty #ceny #row-content p {
+    text-align: center;
+}
+
+#oplaty .card {
+    max-width: 420px;
+    padding: 0px;
+    border: none;
+    opacity: 0.7;
+    height: fit-content;
+}
+
+#oplaty .card .card-body {
+    padding: 20px;
+    gap: 20px;
+}
+
+#oplaty .card .card-body a{
+    transition: 0.3s ease;
+}
+
+#oplaty .card .card-img-top {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    align-self: center;
+}
+
+#oplaty #yellow {
+    background: #FFE5AD;
+}
+
+#oplaty #gray {
+    background: #EBEBEB;
+}
+
+#oplaty #blue {
+    background: #91D1FF;;
+}
+
+
+/* 
+==============
+    rekrutacja - 12
+==============
+*/
+
+#rekrutacja {
+    background: var(--WIT);
+}
+
+#rekrutacja .kierunek-header {
+    color: var(--biay, #FFF);
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#rekrutacja .kierunek-header .number,
+#rekrutacja .kierunek-header .title {
+    color: var(--biay)
 }
