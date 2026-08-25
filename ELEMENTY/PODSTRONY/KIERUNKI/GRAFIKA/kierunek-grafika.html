@@ -17,49 +17,56 @@
 
 <body>
     <section id="hero-grafika">
-        <img class="pka-seal d-none d-xl-flex" src="./icons/OCENA_PKA.png">
         <div class="content">
-            <div class="naglowek-podstrony">
+            <div class="naglowek-podstrony d-md-inline d-none">
                 WIT / STUDIA / GRAFIKA
             </div>
             <div class="kierunek-title">
-                <div>KIERUNEK</div>
+                <div class="d-md-inline d-none">Kierunek Grafika • studia I i II stopnia</div>
+                <div class="d-md-none d-inline">KIERUNEK</div>
                 <h2>GRAFIKA</h2>
             </div>
-            <div class="RHS">
-                <div class="RHS-header">
-                    <h3>Studia Dzienne i zaoczne</h3>
-                    licencjackie (6 semestrów) | magisterskie (4 semestry)
-                </div>
-                <p>
-                    Na studiach licencjackich z&nbsp;Grafiki w&nbsp;WIT opanujesz tradycyjne techniki, takie jak
-                    rysunek
-                    i&nbsp;malarstwo,
-                    oraz nowoczesne narzędzia do&nbsp;projektowania 2D i&nbsp;3D. Zdobędziesz umiejętności tworzenia
-                    wirtualnych
-                    światów i&nbsp;zaawansowanych grafik cyfrowych, korzystając z&nbsp;nowoczesnych pracowni
-                    komputerowych
-                    na&nbsp;Wydziale
-                    Informatyki i&nbsp;Grafiki.
-                </p>
+            <div class="d-md-flex d-none RHS">
+
+                <h3>Twórz. Projektuj. Buduj portfolio.</h3>
+                <ul>
+                    <li>
+                        <p>Studia I stopnia: 6 semestrów, tytuł licencjata.</p>
+                    </li>
+                    <li>
+                        <p>Studia II stopnia: 4 semestrów, tytuł magistra sztuki.</p>
+                    </li>
+                    <li>
+                        <p>Tryb: studia stacjonarne i niestacjonarne.</p>
+                    </li>
+                    <li>
+                        <p>Miejsce: Akademia WIT, Warszawa</p>
+                    </li>
+                </ul>
                 <div class="rekrutacja-redirect">
-                    <h4>Rekrutacja <br>
-                        2026/2027 <br>
-                        ruszyła!</h4>
+                    <h4>Rekrutacja 2026/2027 ruszyła!</h4>
                     <div class="redirect-content">
-                        <div>
-                            Rekrutację prowadzimy raz w&nbsp;roku. <br>Zapoznaj się&nbsp;z&nbsp;
-                            <a href="https://www.wit.edu.pl" target="_blank">ważnymi informacjami
-                                dla&nbsp;kandydatów.</a>
-                        </div>
                         <div class="button">
                             <div class="button_label">
-                                Zapisz się na studia
+                                Rozpocznij rekrutację
                             </div>
                             <div class="arrow_black">
                                 <div class="arrow_white"></div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-md-none d-flex flex-column RHS-mobile">
+                <h3><strong>Studia dzienne i zaoczne</strong></h3>
+                <h5><strong>licencjackie (6 semestrów) | <br>magisterskie (4 semestry)</strong></h5>
+                <h4 class="mt-4 mb-2"><strong>Rekrutacja 2026/2027 ruszyła!</strong></h4>
+                <div class="button">
+                    <div class="button_label">
+                        Rozpocznij rekrutację
+                    </div>
+                    <div class="arrow_black">
+                        <div class="arrow_white"></div>
                     </div>
                 </div>
             </div>
@@ -72,13 +79,13 @@
                 type="button" data-bs-toggle="collapse" data-bs-target="#mainNavCollapse"
                 aria-controls="mainNavCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span>Poznaj szczegóły</span>
-                <span class="toggle-caret"><i class="bi bi-chevron-down"></i></span>
+                <span class="toggle-caret"><i class="bi bi-chevron"></i></span>
             </button>
 
             <!-- Collapsible content (accordion on mobile, flex row on desktop) -->
             <div class="collapse navbar-collapse" id="mainNavCollapse">
                 <ul class="navbar-nav w-100 d-flex flex-xxl-row flex-column justify-content-xxl-between">
-                    <li class="nav-item"><a class="nav-link" href="#">Specjalności</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#specjalnosci-1">Specjalności</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Opis&nbsp;kierunku</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Laboratoria</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Korzyści</a></li>
@@ -539,7 +546,7 @@
                     </div> -->
 
                 </div>
-                <div class="col-lg-6 d-flex flex-column justify-content-end" id="przyszlosc-2-image">
+                <div class="col-6 d-xxl-flex flex-column d-none justify-content-end" id="przyszlosc-2-image">
                     <img src="./images/witaminka-wskazuje-2.jpg">
                 </div>
             </div>
@@ -1291,7 +1298,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-1 d-flex flex-column align-items-center divider"></div>
+                <!-- <div class="col-1 d-flex flex-column align-items-center divider"></div> -->
                 <div class="col d-flex flex-column justify-content-start">
                     <h4><strong>Czesne</strong> – studia niestacjonarne</h4>
                     <p>Płatności można dokonać z góry za cały semestr lub co miesiąc.</p>
@@ -1345,7 +1352,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row d-flex d-row flex-nowrap justify-content-around">
+            <div class="row d-flex flex-row justify-content-around">
                 <div class="card" id="yellow">
                     <img class="card-img-top" src="./icons/wykrzyknik.svg" alt="">
                     <div class="card-body d-flex flex-column">
@@ -1426,9 +1433,124 @@
                     <p>Opłata wpisowa dla rozpoczynających studia w <strong>roku akademickim 2024/2025</strong></p>
                 </div>
                 <div class="col-1 d-flex flex-column align-items-center divider"></div>
-                <div class="col d-flex flex-column justify-content-start">
-                    <h4>Płatności w ratach</h4>
-                    <p>Opłata wpisowa dla rozpoczynających studia w <strong>roku akademickim 2024/2025</strong></p>
+                <div class="col d-flex flex-column" id="tabela-platnosci">
+                    <div class="row d-flex flex-row justify-content-center" id="header">
+                        <h4>semestr zimowy</h4>
+                    </div>
+                    <div class="row d-flex flex-row justify-content-center" id="sub-header">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            <p><strong>rata</strong></p>
+                        </div>
+                        <div class="col-6 d-flex align-items-center justify-content-start">
+                            <p><strong>termin płatności</strong></p>
+                        </div>
+                    </div>
+                    <div class="col d-flex flex-column" id="tabela-content">
+                        <div class="row d-flex flex-row justify-content-center" id="row-content">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <p>I</p>
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                                <p>do&nbsp;15&nbsp;września&nbsp;2024&nbsp;r.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex flex-row justify-content-center" id="row-content">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <p>II</p>
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                                <p>do&nbsp;10&nbsp;października&nbsp;2024&nbsp;r.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex flex-row justify-content-center" id="row-content">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <p>III</p>
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                                <p>do&nbsp;10&nbsp;listopada&nbsp;2024&nbsp;r.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex flex-row justify-content-center" id="row-content">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <p>IV</p>
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                                <p>do&nbsp;10&nbsp;grudnia&nbsp;2024&nbsp;r.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex flex-row justify-content-center" id="row-content">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <p>V</p>
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                                <p>do&nbsp;10&nbsp;stycznia&nbsp;2025&nbsp;r.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 d-flex flex-column align-items-center divider"></div>
+                <div class="col d-flex flex-column" id="tabela-platnosci">
+                    <div class="row d-flex flex-row justify-content-center" id="header">
+                        <h4>semestr letni</h4>
+                    </div>
+                    <div class="row d-flex flex-row justify-content-center" id="sub-header">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            <p><strong>rata</strong></p>
+                        </div>
+                        <div class="col-6 d-flex align-items-center justify-content-start">
+                            <p><strong>termin płatności</strong></p>
+                        </div>
+                    </div>
+                    <div class="col d-flex flex-column" id="tabela-content">
+                        <div class="row d-flex flex-row justify-content-center" id="row-content">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <p>I</p>
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                                <p>do&nbsp;15&nbsp;września&nbsp;2024&nbsp;r.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex flex-row justify-content-center" id="row-content">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <p>II</p>
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                                <p>do&nbsp;10&nbsp;października&nbsp;2024&nbsp;r.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex flex-row justify-content-center" id="row-content">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <p>III</p>
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                                <p>do&nbsp;10&nbsp;listopada&nbsp;2024&nbsp;r.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex flex-row justify-content-center" id="row-content">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <p>IV</p>
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                                <p>do&nbsp;10&nbsp;grudnia&nbsp;2024&nbsp;r.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row d-flex flex-row justify-content-center" id="row-content">
+                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                <p>V</p>
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                                <p>do&nbsp;10&nbsp;stycznia&nbsp;2025&nbsp;r.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
     </section>
@@ -1438,6 +1560,92 @@
             <div class="kierunek-header">
                 <div class="number">12</div>
                 <div class="title">Rekrutacja</div>
+            </div>
+            <div class="row d-flex flex-lg-row flex-column justify-content-between">
+                <div class="col d-flex flex-column justify-content-start">
+                    <h4>Gotowy na rozpoczęcie kariery w Grafice?</h4>
+                    <p>Rekrutacj odbywa się w systemie UBI. <br> Załóż konto, wybierz poziom i specjalność, wgraj
+                        dokumenty, a po zakwalifikowaniu podpisz dokumenty elektronicznie za pomocą Profilu Zaufanego.
+                    </p>
+                </div>
+                <div class="col-1 d-flex flex-column align-items-center divider"></div>
+                <div class="col d-flex flex-column justify-content-start">
+                    <h4>Najważniejsze terminy 2026/2027</h4>
+                    <ul>
+                        <li>
+                            <p><strong>1 czerwca 2026 r.</strong> - rozpoczęcie rekrutacji na studia I i II stopnia,</p>
+                        </li>
+                        <li>
+                            <p><strong>14-24 sierpnia 2026 r.</strong> - przerwa wakacyjna; Biuro Rekrutacji pracuje
+                                online,</p>
+                        </li>
+                        <li>
+                            <p><strong>15 października 2026 r.</strong> - planowane zakończenie rekrutacji lub
+                                wcześniej, jeśli wyczerpią się miejsca.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="FAQ">
+        <div class="content">
+            <h2><strong>FAQ</strong> - Często zadawane pytania</h2>
+            <div class="col d-flex flex-column justify-content-start">
+                <div class="accordion d-flex flex-column" id="akordeon faq">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="accordion-custom-icon"></div>
+                                <h4>Czy Grafikę w WIT można studiować zaocznie?</h4>
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="accordion-custom-icon"></div>
+                                <h4>Czy Grafikę w WIT można studiować zaocznie?</h4>
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="accordion-custom-icon"></div>
+                                <h4>Czy Grafikę w WIT można studiować zaocznie?</h4>
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

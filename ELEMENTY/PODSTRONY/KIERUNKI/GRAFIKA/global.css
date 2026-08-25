@@ -16,6 +16,8 @@
     --szary-85-tekst: #262626;
     --szary-90: #1A1A1A;
 
+
+    --obrys-jasnoszary: #E6E6E6;
     --UPGROWTH: #FFB800;
     --dsignn: #FFEE00;
     --grafika: #FE8F07;
@@ -73,24 +75,63 @@ h3 {
     line-height: normal;
 }
 
-h4 {
-    color: var(--szary-90, #1A1A1A);
+h3 strong {
     margin: 0;
+    width: 100%;
+
+    color: var(--szary-85-tekst, #262626);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h4 {
+    margin: 0;
+    width: 100%;
+
+    color: var(--szary-90, #1A1A1A);
     font-family: Roboto;
     font-size: 22px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+h4 strong{
+    margin: 0;
+    width: 100%;
+
+    color: var(--szary-90, #1A1A1A);
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
     line-height: 140%;
 }
 
 h5 {
-    color: var(--szary-90, #1A1A1A);
     margin: 0;
+    width: 100%;
+
+    color: var(--szary-90, #1A1A1A);
     font-family: Roboto;
-    font-size: 30px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+}
+
+h5 strong {
+    margin: 0;
+    width: 100%;
+
+    color: var(--szary-90, #1A1A1A);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
 }
 
 p {
