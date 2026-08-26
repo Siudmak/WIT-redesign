@@ -18,21 +18,74 @@ section {
     padding: 20px 20px;
 }
 
-.content {
+/* .content {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: var(--cmw);
     padding: 0 40px;
     gap: 40px;
+} */
+
+.flex-column {
+    gap: 10px;
 }
 
 @media (max-width: 768px) {
     .content {
-        padding: 0px;
+        padding: 20px 0px !important;
+        gap: 20px !important;
     }
+
+    h4 {
+        font-family: Roboto;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    h5 {
+        font-size: 26px !important;
+    }
+
+    .kierunek-header {
+        height: 115px !important;
+    }
+
+    .kierunek-header .number {
+        font-size: 140px !important;
+    }
+
+    .kierunek-header .title {
+        font-size: 24px !important;
+    }
+
 }
 
+/* cos nie działa w przestawieniu kolejnosci -- nw czemu */
+
+/* @media (max-width: 768px) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section:nth-child(1)  { order: 1; }
+  section:nth-child(2)  { order: 2; }
+  section:nth-child(3)  { order: 3; }
+  section:nth-child(4)  { order: 4; }
+  section:nth-child(5)  { order: 5; }
+  section:nth-child(6)  { order: 6; }
+  section:nth-child(7)  { order: 10; }
+  section:nth-child(8)  { order: 9; }
+  section:nth-child(9)  { order: 7; }
+  section:nth-child(10) { order: 8; }
+  section:nth-child(11) { order: 11; }
+  section:nth-child(13) { order: 12; }
+  section:nth-child(14) { order: 13; }
+} */
 
 
 #hero-grafika {
@@ -307,6 +360,7 @@ section {
 
 #pka img {
     scale: 60%;
+
 }
 
 #pka .divider hr {
@@ -315,7 +369,6 @@ section {
 }
 
 #pka .row {
-    padding: 30px 20px;
     --bs-gutter-x: 0;
 }
 
@@ -399,7 +452,7 @@ section {
 
 .kierunek-header .title {
     align-self: flex-end;
-
+    width: fit-content;
     color: var(--szary-85-tekst);
 
     /* H2-naglowek-sekcji */
@@ -498,6 +551,7 @@ section {
     --bs-card-inner-border-radius: 20px;
     --bs-card-outer-border-radius: 20px;
     width: 450px;
+    min-width: 450px;
     height: fit-content;
     border-radius: 20px;
     border: 1px solid var(--szary-10);
@@ -567,34 +621,67 @@ section {
     padding-bottom: 0;
 }
 
-#przyszlosc-2 .content {
+/* #przyszlosc-2 .content {
     padding-bottom: 0;
-}
+} */
 
-#przyszlosc-2-text {
+#przyszlosc-2-text-desktop {
     gap: 60px;
     padding-bottom: 60px;
 }
 
-#przyszlosc-2-text .row {
+#przyszlosc-2-text-desktop .row {
     gap: 20px;
     height: fit-content;
 }
 
-#przyszlosc-2-text .button {
+#przyszlosc-2-text-desktop .button {
     background: var(--theme);
 }
 
-#przyszlosc-2-text .button .button_label {
+#przyszlosc-2-text-desktop .button .button_label {
     color: var(--biay);
 }
 
-#przyszlosc-2-text .button .arrow_black {
+#przyszlosc-2-text-desktop .button .arrow_black {
     background: url(./images/svg/arrow_white.svg);
 }
 
-#przyszlosc-2-text .button:hover {
+#przyszlosc-2-text-desktop .button:hover {
     background: var(--WIT);
+}
+
+#przyszlosc-2-text-mobile .rok-card h4 {
+    color: var(--theme);
+    font-size: 22px;
+}
+
+#przyszlosc-2-text-mobile .rok-card p {
+    font-size: 14px;
+}
+
+#przyszlosc-2-text-mobile {
+    gap: 12px;
+}
+
+#przyszlosc-2-text-mobile .dark-card p{
+    color: var(--biay);
+}
+
+#przyszlosc-2-text-mobile .dark-card {
+    gap: 12px;
+    padding: 12px;
+    border-radius: 11.667px;
+    border: 0.583px solid var(--szary-10, #E6E6E6);
+    background: var(--szary-85-tekst, #262626);
+}
+
+#przyszlosc-2-text-mobile .light-card {
+    gap: 12px;
+    padding: 12px;
+    border-radius: 11.667px;
+    border: 0.583px solid var(--szary-10, #E6E6E6);
+    color: var(--szary-85-tekst);
 }
 
 #przyszlosc-2-image {
@@ -813,8 +900,6 @@ section {
 }
 
 #program .stopien {
-    display: flex;
-    flex-direction: row;
     gap: 20px;
 }
 
@@ -1089,9 +1174,9 @@ section {
     gap: 20px;
 }
 
-#oplaty h4 {
+#oplaty h4,
+#oplaty h4 strong {
     color: var(--theme);
-    font-weight: 600;
 }
 
 #oplaty .col-1 {

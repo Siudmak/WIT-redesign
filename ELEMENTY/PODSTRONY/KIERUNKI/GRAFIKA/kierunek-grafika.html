@@ -103,16 +103,16 @@
     <section id="pka">
         <div class="content">
             <!-- <div class="container-fluid"> -->
-            <div class="row d-flex flex-lg-row flex-column justify-content-center">
-                <div class="col-5 d-flex flex-column justify-content-center">
+            <div class="row d-flex flex-lg-row flex-column justify-lg-content-center justify-content-start">
+                <div class="col-lg-5 col d-flex flex-column justify-lg-content-center justify-content-start">
                     <img src="./icons/pka-logo-large.svg">
                 </div>
                 <div class="col-1 d-flex flex-column align-items-center divider">
                     <hr>
                 </div>
-                <div class="col-5 d-flex flex-column justify-content-start" id="text">
-                    <h5>Kierunek Grafika z pozytywną oceną PKA</h5>
-                    <p><strong>Polska Komisja Akredytacyjna</strong> pozytywnie oceniła jakość kształcenia na
+                <div class="col-lg-5 col d-flex flex-column justify-content-start" id="text">
+                    <h5>Grafika&nbsp;w&nbsp;WIT z&nbsp;pozytywną&nbsp;oceną&nbsp;PKA</h5>
+                    <p><strong>Polska Komisja Akredytacyjna</strong> potwierdziła jakość kształcenia na
                         kierunku Grafika w
                         Akademii WIT w Warszawie, na <strong>studiach I i II stopnia.</strong></p>
                     <p>W raporcie podkreślono m.in. spełnienie wszystkich wymaganych kryteriów, skuteczność procesu
@@ -128,7 +128,7 @@
     </section>
     <section id="specjalnosci-1">
         <div class="content">
-            <div class="row d-flex flex-lg-row flex-column justify-content-between">
+            <div class="row d-lg-flex d-none flex-lg-row flex-column justify-content-between">
                 <div class="col d-flex flex-column justify-content-start">
                     <h3>Połącz warsztat artystyczny z projektowaniem i technologiami cyfrowymi.</h3>
                 </div>
@@ -165,12 +165,22 @@
                 <div class="number">01</div>
                 <div class="title">Specjalności dla Ciebie</div>
             </div>
+            <div class="col d-flex flex-column justify-content-start">
+                <p>Kierunek Grafika w Akademii WIT pozwala rozwijać umiejętności w obszarach, które najlepiej
+                    odpowiadają Twoim zainteresowaniom i planom zawodowym. Możesz skupić się na projektowaniu
+                    graficznym, komunikacji wizualnej, mediach cyfrowych, interfejsach, animacji, grafice 3D lub
+                    działaniach łączących sztukę, technologię i nowe media. </p>
+
+                <p>Dzięki specjalnościom wybierasz nie tylko zakres nauki, ale także kierunek własnego rozwoju
+                    twórczego.</p>
+            </div>
+            <hr class="d-lg-none d-inline">
             <div class="specjalnosci" id="st-I">
-                <div class="stopien" id="I stopien">
+                <div class="stopien  d-flex flex-lg-row flex-column" id="I stopien">
                     <div class="stopien-num">I stopień</div>
                     <div class="stopien-name">Specjalności na studiach licencjackich</div>
                 </div>
-                <div class="row d-flex flex-column justify-content-start stopien-opis">
+                <div class="row d-lg-flex d-none flex-column justify-content-start stopien-opis">
                     <div class="col">
                         <h3>Zbuduj mocne podstawy i pierwsze profesjonalne portfolio</h3>
                     </div>
@@ -180,7 +190,7 @@
                             ukończeniu studiów uzyskasz tytuł licencjata.</p>
                     </div>
                 </div>
-                <div class="cards">
+                <div class="cards d-flex flex-wrap justify-content-center">
 
                     <div class="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="128" height="127" viewBox="0 0 128 127"
@@ -337,12 +347,13 @@
                     </div>
                 </div>
             </div>
+            <hr class="d-lg-none d-inline">
             <div class="specjalnosci" id="st-II">
-                <div class="stopien" id="II stopien">
+                <div class="stopien d-flex flex-lg-row flex-column" id="II stopien">
                     <div class="stopien-num">II stopień</div>
                     <div class="stopien-name">Specjalności na studiach magisterskich</div>
                 </div>
-                <div class="row d-flex flex-column justify-content-start stopien-opis">
+                <div class="row d-lg-flex d-none flex-column justify-content-start stopien-opis">
                     <div class="col">
                         <h3>Rozwiń autorski język i zaawansowane kompetencje</h3>
                     </div>
@@ -352,7 +363,7 @@
                             projekty indywidualne oraz zespołowe.</p>
                     </div>
                 </div>
-                <div class="cards">
+                <div class="cards d-flex flex-wrap justify-content-center">
                     <div class="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="128" height="127" viewBox="0 0 128 127"
                             fill="none" style="position: absolute; left: 16px; top: 37px;">
@@ -466,7 +477,7 @@
                 <div class="title">Dla kogo są te studia?</div>
             </div>
             <div class="row d-flex flex-row flex-nowrap justify-content-between">
-                <div class="col-6 d-flex flex-column justify-content-start" id="przyszlosc-2-text">
+                <div class="col-lg-6 col d-lg-flex d-none flex-column justify-content-start" id="przyszlosc-2-text-desktop">
                     <div class="row d-flex">
                         <h3>Lorem ipsum dolor sit amet</h3>
                         <p>
@@ -517,35 +528,35 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- <div class="row d-flex" id="lata-studiow">
-                        <div class="row d-flex rok-card dark-card">
-                            <h3>I ROK</h3>
-                            <h4>Podstawy teoretyczne i praktyczne</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                        <div class="row d-flex rok-card">
-                            <h3>II ROK</h3>
-                            <h4>Nabierasz doświadczenia i wprawy</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris.
-                            </p>
-                        </div>
-                        <div class="row d-flex rok-card">
-                            <h3>III ROK</h3>
-                            <h4>Wybierasz specjalizację i wchodzisz w praktykę</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div> -->
-
                 </div>
+                <div class="row d-lg-none d-flex justify-content-center" id="przyszlosc-2-text-mobile">
+                        <div class="row d-flex rok-card dark-card">
+                            <h4>I ROK</h4>
+                            <p><strong>Podstawy teoretyczne i praktyczne</strong></p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                        <div class="row d-flex rok-card light-card">
+                            <h4>II ROK</h4>
+                            <p><strong>Podstawy teoretyczne i praktyczne</strong></p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                        <div class="row d-flex rok-card light-card">
+                            <h4>III ROK</h4>
+                            <p><strong>Podstawy teoretyczne i praktyczne</strong></p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+
+
                 <div class="col-6 d-xxl-flex flex-column d-none justify-content-end" id="przyszlosc-2-image">
                     <img src="./images/witaminka-wskazuje-2.png">
                 </div>
@@ -647,7 +658,7 @@
 
 
     </section>
-    <section id="projekty">
+    <section class="d-none d-md-flex" id="projekty">
         <div class="content">
             <div class="kierunek-header">
                 <div class="number">05</div>
@@ -728,8 +739,12 @@
     </section>
     <section id="galeria">
         <div class="content">
-            <div class="kierunek-header">
+            <div class="kierunek-header d-lg-flex d-none">
                 <div class="number">06</div>
+                <div class="title">Galeria WIT i wystawy</div>
+            </div>
+            <div class="kierunek-header mobile d-lg-none d-flex">
+                <div class="number">07</div>
                 <div class="title">Galeria WIT i wystawy</div>
             </div>
             <div class="row d-flex flex-lg-row flex-column justify-content-between">
@@ -1353,7 +1368,7 @@
                 </div>
             </div>
             <div class="row d-flex flex-row justify-content-around">
-                <div class="card" id="yellow">
+                <div class="card flex-shrink" id="yellow">
                     <img class="card-img-top" src="./icons/wykrzyknik.svg" alt="">
                     <div class="card-body d-flex flex-column">
                         <div class="card-text">
@@ -1411,8 +1426,8 @@
             </div>
             <hr>
             <div class="row d-flex flex-lg-row flex-column justify-content-between">
-                <div class="col-6 d-flex flex-column justify-content-start">
-                    <h4>Terminy płatności jednorazowych</h4>
+                <div class="col-lg-6 col d-flex flex-column justify-content-start">
+                    <h4><strong>Terminy płatności jednorazowych</strong></h4>
                     <p>Płatności za semestr można dokonać jednorazowo w określonych termiach:</p>
                 </div>
                 <div class="col-1 d-flex flex-column align-items-center divider"></div>
@@ -1590,7 +1605,7 @@
     </section>
 
     <section id="FAQ">
-        <div class="content">
+        <div class="content d-lg-inline d-none ">
             <h2><strong>FAQ</strong> - Często zadawane pytania</h2>
             <div class="col d-flex flex-column justify-content-start">
                 <div class="accordion d-flex flex-column" id="akordeon faq">
