@@ -621,9 +621,9 @@ section {
     padding-bottom: 0;
 }
 
-/* #przyszlosc-2 .content {
+#przyszlosc-2 .content {
     padding-bottom: 0;
-} */
+}
 
 #przyszlosc-2-text-desktop {
     gap: 60px;
@@ -651,6 +651,16 @@ section {
     background: var(--WIT);
 }
 
+#przyszlosc-2-text-mobile,
+#przyszlosc-2-text-mobile h4,
+#przyszlosc-2-text-mobile p {
+    padding: 0;
+}
+
+#przyszlosc-2-text-mobile h4 {
+    color: var(--theme);
+}
+
 #przyszlosc-2-text-mobile .rok-card h4 {
     color: var(--theme);
     font-size: 22px;
@@ -661,7 +671,7 @@ section {
 }
 
 #przyszlosc-2-text-mobile {
-    gap: 12px;
+    gap: 20px;
 }
 
 #przyszlosc-2-text-mobile .dark-card p{
@@ -937,12 +947,17 @@ section {
     --bs-card-inner-border-radius: 20px;
     --bs-card-outer-border-radius: 20px;
     width: 400px;
+    min-width: 400px;
     height: fit-content;
     border-radius: 20px;
     background: var(--biay);
     border: none;
     z-index: 999;
     color: var(--theme);
+}
+
+#program .cards .card h5 {
+    width: fit-content;
 }
 
 #program #cards-II .card,
@@ -1247,7 +1262,10 @@ section {
 #oplaty #ceny #row-content {
     padding: 0px 20px;
     max-width: 690px;
-    width: 690px;
+}
+
+#oplaty #ceny #row-content .col{
+    width: fit-content;
 }
 
 #oplaty #ceny #row-content p {
