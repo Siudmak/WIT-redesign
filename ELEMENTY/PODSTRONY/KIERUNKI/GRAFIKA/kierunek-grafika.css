@@ -322,7 +322,7 @@ section {
 }
 
 
-@media (max-width: 1330px) {
+@media (max-width: 1400px) {
     .custom-navbar .navbar-collapse {
         background: url(./grafika-hero-bg-dark.png);
     }
@@ -651,11 +651,11 @@ section {
     background: var(--WIT);
 }
 
-#przyszlosc-2-text-mobile,
+/* #przyszlosc-2-text-mobile,
 #przyszlosc-2-text-mobile h4,
 #przyszlosc-2-text-mobile p {
     padding: 0;
-}
+} */
 
 #przyszlosc-2-text-mobile h4 {
     color: var(--theme);
@@ -670,11 +670,15 @@ section {
     font-size: 14px;
 }
 
+#przyszlosc-2-text-mobile .rok-card p strong {
+    font-size: 16px;
+}
+
 #przyszlosc-2-text-mobile {
     gap: 20px;
 }
 
-#przyszlosc-2-text-mobile .dark-card p{
+#przyszlosc-2-text-mobile .dark-card p {
     color: var(--biay);
 }
 
@@ -723,7 +727,8 @@ section {
     gap: 20px;
 }
 
-#pracownie h3 {
+#pracownie h3,
+#pracownie h4 {
     color: var(--theme);
 }
 
@@ -750,6 +755,14 @@ section {
     font-style: normal;
     font-weight: 700;
     line-height: 240%;
+}
+
+#pracownie #pracownie-mobile p {
+    font-size: 14px;
+}
+
+#pracownie #pracownie-mobile .col {
+    gap: 16px;
 }
 
 /* 
@@ -868,8 +881,9 @@ section {
     padding-bottom: 40px;
 }
 
-#galeria .akapit h3,
-#galeria .akapit p {
+#galeria h4,
+#galeria h3,
+#galeria p {
     color: var(--biay, #FFF);
 }
 
@@ -894,10 +908,18 @@ section {
     border-radius: 20px;
 }
 
+#galeria .wystawa-card p {
+    color: var(--szary-85-tekst);
+}
+
 #galeria .wystawa-card p img {
     height: 19px;
     width: 19px;
     border-radius: 0;
+}
+
+#galeria #wystawy-mobile p {
+    font-size: 14px;
 }
 
 /* 
@@ -942,7 +964,7 @@ section {
 
 #program .cards .card {
     transition: 0.3s ease;
-    position: relative;
+    /* position: relative; */
     padding-top: 50px;
     --bs-card-inner-border-radius: 20px;
     --bs-card-outer-border-radius: 20px;
@@ -954,6 +976,12 @@ section {
     border: none;
     z-index: 999;
     color: var(--theme);
+}
+
+@media (max-width: 1316px) {
+    #program .cards .card {
+        margin-top: 100px !important;
+    }
 }
 
 #program .cards .card h5 {
@@ -1264,7 +1292,7 @@ section {
     max-width: 690px;
 }
 
-#oplaty #ceny #row-content .col{
+#oplaty #ceny #row-content .col {
     width: fit-content;
 }
 
@@ -1274,6 +1302,7 @@ section {
 
 #oplaty .card {
     max-width: 420px;
+    min-width: 420px;
     padding: 0px;
     border: none;
     opacity: 0.7;
