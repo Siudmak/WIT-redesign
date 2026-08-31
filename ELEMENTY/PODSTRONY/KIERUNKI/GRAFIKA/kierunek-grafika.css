@@ -1465,15 +1465,18 @@ section {
     transition: 0.3s ease;
     width: 25px;
     height: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 #FAQ .accordion .accordion-button:not(.collapsed) .accordion-custom-icon {
     background-image: url(./images/svg/accordion-arrow-active.svg);
-    transform: rotate(90deg);
 }
 
 #FAQ .accordion .accordion-button.collapsed .accordion-custom-icon {
     background-image: url(./images/svg/accordion-arrow-active.svg);
     filter: grayscale(1) opacity(0.3);
+    transform: rotate(-90deg);
 
 }
