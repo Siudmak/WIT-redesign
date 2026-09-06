@@ -20,14 +20,19 @@
     --obrys-jasnoszary: #E6E6E6;
     --UPGROWTH: #FFB800;
     --dsignn: #FFEE00;
+
     --grafika: #FE8F07;
     --grafika-ciemny: #DB5F07;
+
     --informatyka: #00A23D;
+    --informatyka-ciemny: #00803E;
+
     --itz: #0255DE;
+    --itz-ciemny: #0E47A1;
+
     --zarzadzanie: #8A42D4;
-    --podyplomowe: #B3B3B3;
-
-
+    
+    --podyplomowe: #E6CDB4;
 
     /* RESET STYLOW Z BS */
     --bs-body-line-height: 0;
@@ -46,7 +51,7 @@ h2 {
     margin: 0;
     width: 100%;
 
-    color: var(--biay, #FFF);
+    color: var(--szary-85-tekst, #262626);
     font-size: 60px;
     font-style: normal;
     font-weight: 300;
@@ -57,7 +62,7 @@ h2 strong {
     margin: 0;
     width: 100%;
 
-    color: var(--biay, #FFF);
+    color: var(--szary-85-tekst, #262626);
     font-size: 60px;
     font-style: normal;
     font-weight: 900;
@@ -145,6 +150,9 @@ p {
     line-height: 140%;
 }
 
+.p-smaller {
+    font-size: 14px;
+}
 p strong {
     transition: 0.3s ease;
     font-weight: 700;

@@ -11,22 +11,22 @@
 
     <!-- CSS własne -->
     <link rel="stylesheet" href="./global.css">
-    <link rel="stylesheet" href="./kierunek-grafika.css">
+    <link rel="stylesheet" href="./kierunek.css">
 
 </head>
 
-<body>
-    <section id="hero-grafika">
+<body class="theme-grafika">
+    <section id="hero">
         <div class="content">
-            <div class="naglowek-podstrony d-md-inline d-none">
-                WIT / STUDIA / GRAFIKA
-            </div>
             <div class="kierunek-title">
-                <div class="d-md-inline d-none">Kierunek Grafika • studia I i II stopnia</div>
+                <div class="naglowek-podstrony d-md-inline d-none justify-content-start align-items-center">
+                    WIT / STUDIA / GRAFIKA
+                </div>
+                <div class="d-md-inline d-none mt-5">Kierunek Grafika • studia I i II stopnia</div>
                 <div class="d-md-none d-inline">KIERUNEK</div>
                 <h2>GRAFIKA</h2>
             </div>
-            <div class="d-md-flex d-none RHS">
+            <div class="RHS d-md-flex d-none flex-column justify-content-center align-items-start">
 
                 <h3>Twórz. Projektuj. Buduj portfolio.</h3>
                 <ul>
@@ -43,18 +43,18 @@
                         <p>Miejsce: Akademia WIT, Warszawa</p>
                     </li>
                 </ul>
-                <div class="rekrutacja-redirect">
+                <div class="rekrutacja-redirect justify-content-between">
                     <h4>Rekrutacja 2026/2027 ruszyła!</h4>
-                    <div class="redirect-content">
-                        <div class="button">
-                            <div class="button_label">
-                                Rozpocznij rekrutację
-                            </div>
-                            <div class="arrow_black">
-                                <div class="arrow_white"></div>
-                            </div>
+
+                    <div class="button">
+                        <div class="button_label">
+                            Rozpocznij rekrutację
+                        </div>
+                        <div class="arrow_black">
+                            <div class="arrow_white"></div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="col d-md-none d-flex flex-column RHS-mobile">
@@ -78,7 +78,9 @@
             <button class="navbar-toggler d-flex d-xxl-none w-100 justify-content-between align-items-center"
                 type="button" data-bs-toggle="collapse" data-bs-target="#mainNavCollapse"
                 aria-controls="mainNavCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span>Poznaj szczegóły</span>
+                <span>
+                    <p><strong>Poznaj szczegóły</strong></p>
+                </span>
                 <span class="toggle-caret"><i class="bi bi-chevron"></i></span>
             </button>
 
@@ -101,16 +103,20 @@
         </div>
     </nav>
     <section id="pka">
-        <div class="content">
+        <div class="content top-padded">
             <!-- <div class="container-fluid"> -->
-            <div class="row d-flex flex-lg-row flex-column justify-md-content-center justify-content-start">
-                <div class="col-lg-5 col d-flex flex-column justify-md-content-center justify-content-start">
-                    <img src="./icons/pka-logo-large.svg">
+            <div class="row d-flex flex-xl-row flex-column">
+                <div class="col d-xl-flex d-none" id="pka-logo-lg">
+                    <img src="./images/pka-large.svg">
                 </div>
-                <div class="col-1 d-flex flex-column align-items-center divider">
+                <div class="col d-flex d-xl-none justify-content-start">
+                    <img src="./images/pka-small.svg">
+                </div>
+                <hr class="d-flex d-xl-none" style="opacity: 0.5;">
+                <div class="col d-xl-flex d-none flex-column align-items-center divider">
                     <hr>
                 </div>
-                <div class="col-lg-5 col d-flex flex-column justify-content-start" id="text">
+                <div class="col d-flex flex-column justify-content-start" id="text">
                     <h5>Grafika&nbsp;w&nbsp;WIT z&nbsp;pozytywną&nbsp;oceną&nbsp;PKA</h5>
                     <p><strong>Polska Komisja Akredytacyjna</strong> potwierdziła jakość kształcenia na
                         kierunku Grafika w
@@ -126,16 +132,16 @@
             <!-- </div> -->
         </div>
     </section>
-    <section id="specjalnosci-1">
-        <div class="content">
+    <section id="specjalnosci">
+        <div class="content top-padded">
             <div class="row d-lg-flex d-none flex-lg-row flex-column justify-content-between">
                 <div class="col d-flex flex-column justify-content-start">
                     <h3>Połącz warsztat artystyczny z projektowaniem i technologiami cyfrowymi.</h3>
                 </div>
 
-                <!-- <div class="col-1 d-flex align-items-start divider">
+                <div class="col-1 d-lg-flex d-none align-items-start divider">
                     <hr>
-                </div> -->
+                </div>
                 <div class="col d-flex flex-column justify-content-start">
                     <p>Kierunek Grafika w Akademii WIT pozwala rozwijać umiejętności w obszarach, które najlepiej
                         odpowiadają Twoim zainteresowaniom i planom zawodowym. Możesz skupić się na projektowaniu
@@ -163,7 +169,9 @@
             </div>
             <div class="kierunek-header">
                 <div class="number">01</div>
-                <div class="title">Specjalności dla Ciebie</div>
+                <div class="title">
+                    <h2>Specjalności dla Ciebie</h2>
+                </div>
             </div>
             <div class="col d-flex flex-column justify-content-start">
                 <p>Kierunek Grafika w Akademii WIT pozwala rozwijać umiejętności w obszarach, które najlepiej
@@ -190,7 +198,7 @@
                             ukończeniu studiów uzyskasz tytuł licencjata.</p>
                     </div>
                 </div>
-                <div class="cards d-flex flex-wrap justify-content-lg-start justify-content-center">
+                <div class="cards d-flex flex-wrap justify-content-xxl-start justify-content-center">
 
                     <div class="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="128" height="127" viewBox="0 0 128 127"
@@ -363,7 +371,7 @@
                             projekty indywidualne oraz zespołowe.</p>
                     </div>
                 </div>
-                <div class="cards d-flex flex-wrap justify-content-lg-start justify-content-center">
+                <div class="cards d-flex flex-wrap justify-content-xxl-start justify-content-center">
                     <div class="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="128" height="127" viewBox="0 0 128 127"
                             fill="none" style="position: absolute; left: 16px; top: 37px;">
@@ -474,11 +482,13 @@
         <div class="content">
             <div class="kierunek-header">
                 <div class="number">02</div>
-                <div class="title">Dla kogo są te studia?</div>
+                <div class="title">
+                    <h2>Dla kogo są te studia?</h2>
+                </div>
             </div>
             <!-- Desktop -->
             <div class="row d-flex flex-row flex-nowrap justify-content-between">
-                <div class="col-lg-6 col d-lg-flex d-none flex-column justify-content-start"
+                <div class="col-xxl-6 col d-lg-flex d-none flex-column justify-content-start"
                     id="przyszlosc-2-text-desktop">
                     <div class="row d-flex">
                         <h3>Lorem ipsum dolor sit amet</h3>
@@ -572,7 +582,7 @@
                     <div class="col d-flex flex-column rok-card dark-card">
                         <h4>I ROK</h4>
                         <p><strong>Podstawy teoretyczne i praktyczne</strong></p>
-                        <p>
+                        <p class="p-smaller">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.
                         </p>
@@ -580,7 +590,7 @@
                     <div class="col d-flex flex-column rok-card light-card">
                         <h4>II ROK</h4>
                         <p><strong>Podstawy teoretyczne i praktyczne</strong></p>
-                        <p>
+                        <p class="p-smaller">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.
                         </p>
@@ -588,7 +598,7 @@
                     <div class="col d-flex flex-column rok-card light-card">
                         <h4>III ROK</h4>
                         <p><strong>Podstawy teoretyczne i praktyczne</strong></p>
-                        <p>
+                        <p class="p-smaller">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.
                         </p>
@@ -601,10 +611,12 @@
         </div>
     </section>
     <section id="pracownie">
-        <div class="content">
-            <div class="kierunek-header">
+        <div class="content light-text">
+            <div class="kierunek-header header-light">
                 <div class="number">03</div>
-                <div class="title">Laboratoria i pracownie</div>
+                <div class="title">
+                    <h2>Laboratoria i pracownie</h2>
+                </div>
             </div>
             <!-- Desktop -->
             <div class="row d-lg-flex d-none flex-lg-row flex-column justify-content-between">
@@ -664,7 +676,9 @@
         <div class="content">
             <div class="kierunek-header">
                 <div class="number">04</div>
-                <div class="title">Dlaczego warto</div>
+                <div class="title">
+                    <h2>Dlaczego warto</h2>
+                </div>
             </div>
             <div class="col d-flex flex-column">
                 <!-- Desktop -->
@@ -709,7 +723,7 @@
                 <!-- OPINIE KARUZELA TUTAJ !!!!-->
                 <img class="bg-quote-mark" src="./images/svg/quote.svg" alt="">
                 <!-- Mobile -->
-                <div class="col d-lg-none d-flex flex-column justify-content-start">
+                <div class="col d-lg-none d-flex flex-column justify-content-start opinie-mobile">
                     <h4>Pozycja na rynku pracy</h4>
                     <p>Reprehenderit commodo ullamco qui aliqua irure enim enim. Duis reprehenderit qui occaecat laboris
                         reprehenderit fugiat excepteur excepteur enim eiusmod. Nulla laboris consequat ipsum dolore
@@ -736,7 +750,7 @@
                         cillum.</p>
                 </div>
                 <hr>
-                <div class="col d-lg-none d-flex flex-column justify-content-start">
+                <div class="col d-lg-none d-flex flex-column justify-content-start opinie-mobile">
                     <h4>Opinia o studiach</h4>
                     <p>Occaecat sunt occaecat anim minim.</p>
                     <h2>KARUZELA OPINIE</h2>
@@ -746,13 +760,21 @@
 
 
     </section>
-    <section class="d-none d-lg-flex" id="projekty">
-        <div class="content">
-            <div class="kierunek-header">
+    <section id="projekty">
+        <div class="content light-text">
+            <div class="kierunek-header header-light d-lg-flex d-none">
                 <div class="number">05</div>
-                <div class="title">Projekty i osiągnięcia studentów</div>
+                <div class="title">
+                    <h2>Projekty i osiągnięcia studentów</h2>
+                </div>
             </div>
-            <div class="row d-flex flex-lg-row flex-column justify-content-between">
+            <div class="kierunek-header header-light d-lg-none d-flex">
+                <div class="number">08</div>
+                <div class="title">
+                    <h2>Projekty i osiągnięcia studentów</h2>
+                </div>
+            </div>
+            <div class="row d-none d-lg-flex flex-row justify-content-between">
                 <div class="col d-flex flex-column justify-content-start">
 
 
@@ -826,10 +848,12 @@
 
     </section>
     <section id="galeria">
-        <div class="content d-lg-flex d-none" id="wystawy-desktop">
-            <div class="kierunek-header">
+        <div class="content d-lg-flex d-none light-text" id="wystawy-desktop">
+            <div class="kierunek-header header-light">
                 <div class="number">06</div>
-                <div class="title">Galeria WIT i wystawy</div>
+                <div class="title">
+                    <h2>Galeria WIT i wystawy</h2>
+                </div>
             </div>
             <div class="row d-flex flex-lg-row flex-column justify-content-lg-between">
                 <div class="col d-flex flex-column justify-content-start">
@@ -849,6 +873,8 @@
                 </div>
                 <!-- <div class="col-1 d-flex flex-column align-items-center divider"></div> -->
                 <div class="col-8 d-flex flex-column justify-content-center">
+
+                    <!----------------------- PLACEHOLDER ------------------------------->
                     <div class="wystawy-cards d-flex flex-row justify-content-center">
                         <div class="wystawa-card d-flex flex-column flex-nowrap">
                             <img src="./images/wystawa-placeholder.png" alt="">
@@ -916,10 +942,12 @@
                 </div>
             </div>
         </div>
-        <div class="content d-lg-none d-flex" id="wystawy-mobile">
-            <div class="kierunek-header">
+        <div class="content light-text d-lg-none d-flex" id="wystawy-mobile">
+            <div class="kierunek-header header-light">
                 <div class="number">07</div>
-                <div class="title">Wystawy i Galeria WIT</div>
+                <div class="title">
+                    <h2>Wystawy i Galeria WIT</h2>
+                </div>
             </div>
             <div class="col d-flex flex-column justify-content-center">
                 <h4>Wystawy</h4>
@@ -941,11 +969,19 @@
     </section>
     <section id="program">
         <div class="content">
-            <div class="kierunek-header">
+            <div class="kierunek-header d-lg-flex d-none">
                 <div class="number">07</div>
-                <div class="title">Program studiów i dokumenty</div>
+                <div class="title">
+                    <h2>Program studiów i dokumenty</h2>
+                </div>
             </div>
-            <p>Sprawdź pełny plan studiów, efekty uczenia się i zasady dyplomowania. <br>
+            <div class="kierunek-header d-lg-none d-flex">
+                <div class="number">05</div>
+                <div class="title">
+                    <h2>Program studiów</h2>
+                </div>
+            </div>
+            <p class="d-lg-flex d-none">Sprawdź pełny plan studiów, efekty uczenia się i zasady dyplomowania. <br>
                 Dokumenty są dostępne osobno dla studiów I i II stopnia oraz dla trybu stacjonarnego i
                 niestacjonarnego.</p>
 
@@ -953,7 +989,8 @@
                 <div class="stopien-num">I stopień</div>
                 <div class="stopien-name">Program studiów licencjackich</div>
             </div>
-            <div class="cards d-flex flex-lg-row flex-column flex-wrap justify-content-around align-items-lg-start align-items-center">
+            <div
+                class="cards d-flex flex-lg-row flex-column flex-wrap justify-content-around align-items-lg-start align-items-center">
                 <div class="card justify-content-center mt-5" id="card-efekty">
                     <div class="card-body d-flex flex-column">
                         <div class="circle">
@@ -1061,7 +1098,8 @@
                 <div class="stopien-num">II stopień</div>
                 <div class="stopien-name">Program studiów magisterskich</div>
             </div>
-            <div class="cards d-flex flex-lg-row flex-column flex-wrap justify-content-around align-items-lg-start align-items-center" id="cards-II">
+            <div class="cards d-flex flex-lg-row flex-column flex-wrap justify-content-around align-items-lg-start align-items-center"
+                id="cards-II">
                 <div class="card justify-content-center mt-5" id="card-efekty">
                     <div class="card-body d-flex flex-column">
                         <div class="circle">
@@ -1165,14 +1203,21 @@
             </div>
         </div>
     </section>
-
     <section id="kadra">
-        <div class="content">
-            <div class="kierunek-header">
+        <div class="content light-text">
+            <div class="kierunek-header header-light d-lg-flex d-none">
                 <div class="number">08</div>
-                <div class="title">Kadra</div>
+                <div class="title">
+                    <h2>Kadra</h2>
+                </div>
             </div>
-            <div class="col d-flex flex-column justify-content-start">
+            <div class="kierunek-header header-light d-lg-none d-flex">
+                <div class="number">06</div>
+                <div class="title">
+                    <h2>Kadra profesjonalistów</h2>
+                </div>
+            </div>
+            <div class="col d-lg-flex d-none flex-column justify-content-start">
                 <h3>Kadra, która zna branżę od środka</h3>
                 <p>Na Grafice uczysz się od artystów, projektantów, fotografów, twórców multimediów, specjalistów UI/UX
                     i
@@ -1185,73 +1230,120 @@
                     własnej
                     drogi projektowej.</p>
             </div>
+            <div class="d-lg-flex d-none kafelki-desktop">
+                <h2>kafelki kadrowe - desktop</h2>
+            </div>
+            <div class="d-lg-none d-flex kafelki-desktop">
+                <h2>kafelki kadrowe - mobile</h2>
+            </div>
         </div>
     </section>
-
     <section id="erasmus">
-        <div class="content">
-            <div class="kierunek-header">
+        <div class="content light-text">
+            <div class="kierunek-header header-light">
                 <div class="number">09</div>
-                <div class="title">Program Erasmus+</div>
-            </div>
-            <div class="row d-flex flex-lg-row flex-column justify-content-between">
-                <div class="col d-flex flex-column justify-content-start">
-                    <h3>Projektuj bez granic z Erasmus+</h3>
-                    <p>Studiując Grafikę w Akademii WIT w Warszawie, możesz wyjechać w ramach programu Erasmus+ na część
-                        studiów, praktykę zawodową lub krótszą mobilność. Poznasz inne kultury projektowe, rozwiniesz
-                        kompetencje językowe i zdobędziesz międzynarodowe doświadczenie, które wzbogaci Twoje portfolio
-                        oraz CV.
-                    </p>
-                </div>
-                <div class="col-1 d-flex flex-column align-items-center divider"></div>
-                <div class="col d-flex flex-column justify-content-start">
-                    <h3>Możesz otrzymać wsparcie finansowe</h3>
-                    <p>Zakwalifikowany uczestnik może otrzymać stypendium Erasmus+ stanowiące dofinansowanie dodatkowych
-                        kosztów wyjazdu i pobytu. Jego wysokość zależy między innymi od kraju, rodzaju i długości
-                        mobilności oraz zasad obowiązujących w danym naborze.</p>
-                    <p>Dodatkowe wsparcie może być dostępne dla osób z mniejszymi szansami oraz uczestników
-                        wybierających bardziej ekologiczny sposób podróży.</p>
+                <div class="title">
+                    <h2>Program Erasmus+</h2>
                 </div>
             </div>
-            <div class="row d-flex flex-lg-row flex-column justify-content-between" id="lower">
-                <div class="col d-flex flex-column justify-content-start">
-                    <p><strong>Studiujesz na zagranicznej uczelni</strong></p>
-                    <p>Możesz spędzić od 3 do 12 miesięcy na uczelni partnerskiej. Poznasz nowe metody pracy, odmienne
-                        podejścia do komunikacji wizualnej i projekty realizowane w międzynarodowym środowisku.</p>
+            <div class="col d-lg-flex d-none flex-column" id="erasmus-desktop">
+                <div class="row d-flex flex-lg-row flex-column justify-content-between">
+                    <div class="col d-flex flex-column justify-content-start">
+                        <h3>Projektuj bez granic z Erasmus+</h3>
+                        <p>Studiując Grafikę w Akademii WIT w Warszawie, możesz wyjechać w ramach programu Erasmus+ na
+                            część
+                            studiów, praktykę zawodową lub krótszą mobilność. Poznasz inne kultury projektowe,
+                            rozwiniesz
+                            kompetencje językowe i zdobędziesz międzynarodowe doświadczenie, które wzbogaci Twoje
+                            portfolio
+                            oraz CV.
+                        </p>
+                    </div>
+                    <div class="col-1 d-flex flex-column align-items-center divider"></div>
+                    <div class="col d-flex flex-column justify-content-start">
+                        <h3>Możesz otrzymać wsparcie finansowe</h3>
+                        <p>Zakwalifikowany uczestnik może otrzymać stypendium Erasmus+ stanowiące dofinansowanie
+                            dodatkowych
+                            kosztów wyjazdu i pobytu. Jego wysokość zależy między innymi od kraju, rodzaju i długości
+                            mobilności oraz zasad obowiązujących w danym naborze.</p>
+                        <p>Dodatkowe wsparcie może być dostępne dla osób z mniejszymi szansami oraz uczestników
+                            wybierających bardziej ekologiczny sposób podróży.</p>
+                    </div>
                 </div>
-                <!-- <div class="col-1 d-flex flex-column align-items-center divider"></div> -->
-                <div class="col d-flex flex-column justify-content-start">
-                    <p><strong>Zdobywasz doświadczenie zawodowe</strong></p>
-                    <p>
-                        Rozwijaj zainteresowania poza planem zajęć. Studenckie Koło Naukowe KWADRAT stwarza okazję do
-                        wspólnej pracy nad projektami, organizowania i przeprowadzania wydarzeń na uczelni i poza
-                        nią.</p>
+                <div class="row d-flex flex-lg-row flex-column justify-content-between" id="lower">
+                    <div class="col d-flex flex-column justify-content-start">
+                        <p><strong>Studiujesz na zagranicznej uczelni</strong></p>
+                        <p>Możesz spędzić od 3 do 12 miesięcy na uczelni partnerskiej. Poznasz nowe metody pracy,
+                            odmienne
+                            podejścia do komunikacji wizualnej i projekty realizowane w międzynarodowym środowisku.</p>
+                    </div>
+                    <!-- <div class="col-1 d-flex flex-column align-items-center divider"></div> -->
+                    <div class="col d-flex flex-column justify-content-start">
+                        <p><strong>Zdobywasz doświadczenie zawodowe</strong></p>
+                        <p>
+                            Rozwijaj zainteresowania poza planem zajęć. Studenckie Koło Naukowe KWADRAT stwarza okazję
+                            do
+                            wspólnej pracy nad projektami, organizowania i przeprowadzania wydarzeń na uczelni i poza
+                            nią.</p>
+                    </div>
+                    <div class="col d-flex flex-column justify-content-start">
+                        <p><strong>Rozwijasz międzynarodowe portfolio</strong>
+                        <p>
+                            Projekty wykonane podczas studiów lub praktyk za granicą mogą stać się mocnym elementem
+                            Twojego
+                            portfolio. Rozwijasz własny język wizualny, zdobywasz nowe inspiracje i budujesz sieć
+                            międzynarodowych kontaktów.</p>
+                    </div>
+                    <div class="col d-flex flex-column justify-content-start">
+                        <p><strong>Nie tracisz ciągłości studiów</strong>
+                        <p>Program zajęć ustalasz przed wyjazdem w ramach Learning Agreement. Zdobyte punkty ECTS i
+                            oceny
+                            mogą zostać uznane przez Akademię WIT, a podczas wyjazdu na studia nie płacisz czesnego w
+                            WIT za
+                            okres pobytu za granicą. Wyjazd może być również objęty stypendium Erasmus+.</p>
+                    </div>
                 </div>
-                <div class="col d-flex flex-column justify-content-start">
-                    <p><strong>Rozwijasz międzynarodowe portfolio</strong>
-                    <p>
-                        Projekty wykonane podczas studiów lub praktyk za granicą mogą stać się mocnym elementem Twojego
-                        portfolio. Rozwijasz własny język wizualny, zdobywasz nowe inspiracje i budujesz sieć
-                        międzynarodowych kontaktów.</p>
-                </div>
-                <div class="col d-flex flex-column justify-content-start">
-                    <p><strong>Nie tracisz ciągłości studiów</strong>
-                    <p>Program zajęć ustalasz przed wyjazdem w ramach Learning Agreement. Zdobyte punkty ECTS i oceny
-                        mogą zostać uznane przez Akademię WIT, a podczas wyjazdu na studia nie płacisz czesnego w WIT za
-                        okres pobytu za granicą. Wyjazd może być również objęty stypendium Erasmus+.</p>
+                <div class="row d-flex flex-xl-row flex-column justify-content-between">
+                    <div class="col d-flex flex-column justify-content-start">
+                        <h3>Sprawdź, czy możesz się zakwalifikować</h3>
+                        <p>Zgodnie z aktualnymi zasadami Akademii WIT kandydat powinien ukończyć pierwszy rok studiów,
+                            spełnić wymagania dotyczące znajomości języka obcego i mieć wysoką średnią. Szczegółowe
+                            kryteria, terminy oraz lista dostępnych uczelni partnerskich są ustalane dla każdego naboru,
+                            dlatego przed zgłoszeniem sprawdź aktualne informacje Biura Współpracy Zagranicznej.
+                        </p>
+                    </div>
+                    <div class="col-1 d-flex flex-column align-items-center divider"></div>
+                    <div class="col d-flex flex-row justify-content-start align-items-center" id="col-buttons">
+                        <a href="#" target="_blank" style="width: fit-content;">
+                            <div class="button" id="card-button">
+                                <div class="button_label">Sprawdź szczegóły Erasmus+</div>
+                                <div class="arrow_black">
+                                    <div class="arrow_white"></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" target="_blank" style="width: fit-content;">
+                            <div class="button" id="card-button">
+                                <div class="button_label">Relacje uczestników</div>
+                                <div class="arrow_black">
+                                    <div class="arrow_white"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="row d-flex flex-lg-row flex-column justify-content-between">
-                <div class="col d-flex flex-column justify-content-start">
-                    <h3>Sprawdź, czy możesz się zakwalifikować</h3>
-                    <p>Zgodnie z aktualnymi zasadami Akademii WIT kandydat powinien ukończyć pierwszy rok studiów,
-                        spełnić wymagania dotyczące znajomości języka obcego i mieć wysoką średnią. Szczegółowe
-                        kryteria, terminy oraz lista dostępnych uczelni partnerskich są ustalane dla każdego naboru,
-                        dlatego przed zgłoszeniem sprawdź aktualne informacje Biura Współpracy Zagranicznej.
-                    </p>
-                </div>
-                <div class="col-1 d-flex flex-column align-items-center divider"></div>
-                <div class="col d-flex flex-row justify-content-start align-items-center" id="col-buttons">
+            <div class="col d-lg-none d-flex flex-column" id="erasmus-mobile">
+                <div class="col d-flex d-column"></div>
+                <h4>Twoja grafika może wyjść poza granice Polski</h4>
+                <p>Et labore commodo ullamco duis ad deserunt in ea dolor velit consectetur ut nostrud. Ea sint mollit
+                    qui do eiusmod nostrud. Qui cupidatat sit ex enim ullamco aliquip veniam. Lorem et commodo anim
+                    amet.</p>
+                <p>Laboris laborum nisi do dolor eu nostrud duis deserunt aliqua reprehenderit sint amet. Duis
+                    consectetur sit in veniam exercitation nisi laborum commodo. Et do quis culpa adipisicing aliqua
+                    laborum amet sunt adipisicing sit aliqua. Ex ipsum veniam adipisicing duis pariatur minim velit.
+                    Irure magna proident aute laboris et Lorem duis ea mollit non aute excepteur.</p>
+                <div class="col d-flex flex-column justify-content-start align-items-center" id="col-buttons">
                     <a href="#" target="_blank" style="width: fit-content;">
                         <div class="button" id="card-button">
                             <div class="button_label">Sprawdź szczegóły Erasmus+</div>
@@ -1269,15 +1361,37 @@
                         </div>
                     </a>
                 </div>
+                <hr>
+                <h4>Studiujesz za granicą</h4>
+                <p>Nulla dolor qui aliquip ex sit voluptate veniam labore laboris ad voluptate anim id. Non laboris
+                    adipisicing id ex anim id in commodo eu. Consequat aliqua pariatur reprehenderit elit non est
+                    laboris. Velit esse Lorem mollit sunt eiusmod nostrud.</p>
+                <hr>
+                <h4>Robisz praktyki międzynarodowe</h4>
+                <p>Nulla dolor qui aliquip ex sit voluptate veniam labore laboris ad voluptate anim id. Non laboris
+                    adipisicing id ex anim id in commodo eu. Consequat aliqua pariatur reprehenderit elit non est
+                    laboris. Velit esse Lorem mollit sunt eiusmod nostrud.</p>
+                <hr>
+                <h4>Zbierasz doświadczenia do portfolio</h4>
+                <p>Nulla dolor qui aliquip ex sit voluptate veniam labore laboris ad voluptate anim id. Non laboris
+                    adipisicing id ex anim id in commodo eu. Consequat aliqua pariatur reprehenderit elit non est
+                    laboris. Velit esse Lorem mollit sunt eiusmod nostrud.</p>
+                <hr>
+                <h4>Nie tracisz ciągłości studiów</h4>
+                <p>Nulla dolor qui aliquip ex sit voluptate veniam labore laboris ad voluptate anim id. Non laboris
+                    adipisicing id ex anim id in commodo eu. Consequat aliqua pariatur reprehenderit elit non est
+                    laboris. Velit esse Lorem mollit sunt eiusmod nostrud.</p>
             </div>
         </div>
+        </div>
     </section>
-
-    <section id="kariera">
-        <div class="content">
-            <div class="kierunek-header">
+    <section class="d-lg-flex d-none" id="kariera">
+        <div class="content light-text">
+            <div class="kierunek-header header-light">
                 <div class="number">10</div>
-                <div class="title">Droga kariery</div>
+                <div class="title">
+                    <h2>Droga kariery</h2>
+                </div>
             </div>
             <div class="row d-flex flex-lg-row flex-column justify-content-between">
                 <div class="col d-flex flex-column justify-content-start">
@@ -1338,12 +1452,19 @@
             </div>
         </div>
     </section>
-
     <section id="oplaty">
         <div class="content">
-            <div class="kierunek-header">
+            <div class="kierunek-header d-lg-flex d-none" id="oplaty-desktop">
                 <div class="number">11</div>
-                <div class="title">Opłaty</div>
+                <div class="title">
+                    <h2>Opłaty</h2>
+                </div>
+            </div>
+            <div class="kierunek-header d-lg-none d-flex" id="oplaty-desktop">
+                <div class="number">10</div>
+                <div class="title">
+                    <h2>Opłaty</h2>
+                </div>
             </div>
             <p>Poniższe stawki dotyczą osób rozpoczynających studia w roku akademickim 2026/2027.
                 <br>Czesne możesz opłacić jednorazowo za semestr albo rozłożyć na pięć rat.
@@ -1473,7 +1594,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col d-flex flex-lg-row flex-column flex-wrap justify-content-around align-items-lg-start align-items-center">
+            <div
+                class="col d-flex flex-lg-row flex-column flex-wrap justify-content-around align-items-lg-start align-items-center">
                 <div class="card" id="yellow">
                     <img class="card-img-top" src="./icons/wykrzyknik.svg" alt="">
                     <div class="card-body d-flex flex-column">
@@ -1675,23 +1797,32 @@
                 </div>
             </div>
     </section>
-
     <section id="rekrutacja">
-        <div class="content">
-            <div class="kierunek-header">
+        <div class="content light-text">
+            <div class="kierunek-header header-light d-lg-flex d-none">
                 <div class="number">12</div>
-                <div class="title">Rekrutacja</div>
+                <div class="title">
+                    <h2>Rekrutacja</h2>
+                </div>
             </div>
-            <div class="row d-flex flex-lg-row flex-column justify-content-between">
+            <div class="kierunek-header header-light d-lg-none d-flex">
+                <div class="number">11</div>
+                <div class="title">
+                    <h2>Rekrutacja</h2>
+                </div>
+            </div>
+
+            <!-- desktop -->
+            <div class="row d-lg-flex d-none flex-lg-row flex-column justify-content-between">
                 <div class="col d-flex flex-column justify-content-start">
-                    <h4>Gotowy na rozpoczęcie kariery w Grafice?</h4>
+                    <h4><strong>Gotowy na rozpoczęcie kariery w Grafice?</strong></h4>
                     <p>Rekrutacj odbywa się w systemie UBI. <br> Załóż konto, wybierz poziom i specjalność, wgraj
                         dokumenty, a po zakwalifikowaniu podpisz dokumenty elektronicznie za pomocą Profilu Zaufanego.
                     </p>
                 </div>
                 <div class="col-1 d-flex flex-column align-items-center divider"></div>
                 <div class="col d-flex flex-column justify-content-start">
-                    <h4>Najważniejsze terminy 2026/2027</h4>
+                    <h4><strong>Najważniejsze terminy 2026/2027</strong></h4>
                     <ul>
                         <li>
                             <p><strong>1 czerwca 2026 r.</strong> - rozpoczęcie rekrutacji na studia I i II stopnia,</p>
@@ -1707,11 +1838,35 @@
                     </ul>
                 </div>
             </div>
+            <!-- MOBILE -->
+            <div class="col d-lg-none d-flex" id="rekrutacja-mobile">
+                <div class="col d-flex flex-column">
+                    <h4>Gotowy na rozpoczęcie kariery w Grafice?</h4>
+                    <p>Veniam do eu ut aliqua proident sint ad officia sit. Elit amet labore eu esse labore labore
+                        tempor. Adipisicing et pariatur eu eu ea. Nulla voluptate reprehenderit velit ut quis fugiat
+                        esse nisi. Culpa tempor incididunt minim reprehenderit pariatur cillum amet.</p>
+                    <hr>
+                    <h4>Dołącz do nas!</h4>
+                    <p>Veniam do eu ut aliqua proident sint ad officia sit. Elit amet labore eu esse labore labore
+                        tempor. Adipisicing et pariatur eu eu ea. Nulla voluptate reprehenderit velit ut quis fugiat
+                        esse nisi. Culpa tempor incididunt minim reprehenderit pariatur cillum amet.</p>
+                    <hr>
+                    <h4>Zbierasz doświadczenia do portfolio</h4>
+                    <p>Veniam do eu ut aliqua proident sint ad officia sit. Elit amet labore eu esse labore labore
+                        tempor. Adipisicing et pariatur eu eu ea. Nulla voluptate reprehenderit velit ut quis fugiat
+                        esse nisi. Culpa tempor incididunt minim reprehenderit pariatur cillum amet.</p>
+                    <hr>
+                    <h4>Nie tracisz ciągłości studiów</h4>
+                    <p>Veniam do eu ut aliqua proident sint ad officia sit. Elit amet labore eu esse labore labore
+                        tempor. Adipisicing et pariatur eu eu ea. Nulla voluptate reprehenderit velit ut quis fugiat
+                        esse nisi. Culpa tempor incididunt minim reprehenderit pariatur cillum amet.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="d-lg-flex d-none" id="FAQ">
-        <div class="content d-lg-inline d-none">
+        <div class="content top-padded light-text d-lg-inline d-none">
             <h2><strong>FAQ</strong> - Często zadawane pytania</h2>
             <div class="col d-flex flex-column justify-content-start">
                 <div class="accordion mt-5 d-flex flex-column" id="akordeon faq">
@@ -1720,7 +1875,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
                                 <div class="accordion-custom-icon"></div>
-                                <h4>Czy Grafikę w WIT można studiować zaocznie?</h4>
+                                <h4><strong>Czy Grafikę w WIT można studiować zaocznie?</strong></h4>
                             </button>
                         </h3>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingTwo"
@@ -1737,7 +1892,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 <div class="accordion-custom-icon"></div>
-                                <h4>Czy Grafikę w WIT można studiować zaocznie?</h4>
+                                <h4><strong>Czy Grafikę w WIT można studiować zaocznie?</strong></h4>
                             </button>
                         </h3>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
@@ -1754,7 +1909,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
                                 <div class="accordion-custom-icon"></div>
-                                <h4>Czy Grafikę w WIT można studiować zaocznie?</h4>
+                                <h4><strong>Czy Grafikę w WIT można studiować zaocznie?</strong></h4>
                             </button>
                         </h3>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingTwo"
